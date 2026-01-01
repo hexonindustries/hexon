@@ -60,7 +60,7 @@ body {
     background: #081a2b;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-
+    margin: 0;
 }
 
 .container {
@@ -133,7 +133,19 @@ section p{
     position: relative;
     height: calc(100vh - 90px); /* accounts for navbar */
     overflow: hidden;
+    margin-top: 0;
+    width: 100vw;
 }
+
+.hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    color: white;
+    z-index: 2;
+}
+
 
 .slide {
     position: absolute;
