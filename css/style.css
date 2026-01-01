@@ -5,8 +5,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .site-header {
-    background-color: #041424;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
   
 .nav {
@@ -26,6 +26,12 @@
     letter-spacing: 2px;
     font-size: 18px;
 }
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
   
 .nav-links {
     list-style: none;
@@ -34,13 +40,14 @@
 }
   
 .nav-links a {
-    color: white;
+    color: #1f6b4a;
     text-decoration: none;
-    opacity: 0.8;
+    font-weight: 500;
+    opacity: 1;
 }
   
 .nav-links a:hover {
-    opacity: 1;
+    color: #144a33;
 }
   
 body {
