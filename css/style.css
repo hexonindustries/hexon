@@ -30,13 +30,13 @@
 @media (max-width: 768px) {
 
     .nav {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
         padding: 14px 16px;
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         align-items: center;
     }
