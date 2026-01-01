@@ -1,45 +1,49 @@
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-let current = 0;
-let interval;
-const delay = 5000;
+document.addEventListener("DOMContentLoaded", () => {
 
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-}
+    let current = 0;
+    let interval;
+    const delay = 5000;
 
-function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-}
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
 
-function startSlideshow() {
-    interval = setInterval(nextSlide, delay);
-}
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    }
 
-function stopSlideshow() {
-    clearInterval(interval);
-}
-
-// dot click
-dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-        stopSlideshow();
-        current = parseInt(dot.dataset.slide);
+    function nextSlide() {
+        current = (current + 1) % slides.length;
         showSlide(current);
-        startSlideshow();
+    }
+
+    function startSlideshow() {
+        interval = setInterval(nextSlide, delay);
+    }
+
+    function stopSlideshow() {
+        clearInterval(interval);
+    }
+
+    // Dot clicks
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            stopSlideshow();
+            current = parseInt(dot.dataset.slide);
+            showSlide(current);
+            startSlideshow();
+        });
     });
+
+    // Pause on hover
+    const slider = document.querySelector(".hero-slider");
+    slider.addEventListener("mouseenter", stopSlideshow);
+    slider.addEventListener("mouseleave", startSlideshow);
+
+    // INIT PROPERLY
+    showSlide(0);
+    startSlideshow();
 });
-
-// pause on hover
-const slider = document.querySelector(".hero-slider");
-slider.addEventListener("mouseenter", stopSlideshow);
-slider.addEventListener("mouseleave", startSlideshow);
-
-// init
-showSlide(0);
-startSlideshow();
