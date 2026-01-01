@@ -67,7 +67,7 @@ body {
 .container {
     text-align: center;
     padding: 0;
-    padding-top: 90px; /* space for sticky navbar */
+    padding-top: 0; /* space for sticky navbar */
 }
 
 .hero h1 {
@@ -155,27 +155,20 @@ section p{
     background-size: cover;
     background-position: center;
     opacity: 0;
+    transform: scale(1.05);
     transition: opacity 1s ease, transform 6s ease;
-    /*display: flex;
-    align-items: center;*/
-    transform: scale(1);
+    display: flex;
+    align-items: center;
 }
 
 .slide.active {
     opacity: 1;
-    z-index: 1;
     transform: scale(1);
-    animation: zoomSlide 12s linear forwards;
+    z-index: 1;
 }
 
-@keyframes zoomSlide {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.08);
-    }
-}
+
+
 
 /* Dark overlay for readability */
 .slide::before {
