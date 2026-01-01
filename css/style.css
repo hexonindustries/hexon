@@ -132,9 +132,10 @@ section p{
 /* HERO SLIDER */
 .hero-slider {
     position: relative;
-    height: calc(100vh - 90px); /* accounts for navbar */
+    height: 100vh; /* accounts for navbar */
     overflow: hidden;
-    margin-top: 0;
+    margin-top: -90px;
+    padding-top: 90px;
     width: 100vw;
 }
 
@@ -154,7 +155,7 @@ section p{
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, transform 6s ease;
     /*display: flex;
     align-items: center;*/
     transform: scale(1);
@@ -163,6 +164,7 @@ section p{
 .slide.active {
     opacity: 1;
     z-index: 1;
+    transform: scale(1);
     animation: zoomSlide 12s linear forwards;
 }
 
