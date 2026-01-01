@@ -30,18 +30,19 @@
 
     .nav {
         flex-direction: column;
-        gap: 16px;
-        padding: 16px 20px;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
     }
 
     .nav-links {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
         align-items: center;
     }
 
     .logo img {
-        height: 48px; /* slightly smaller on mobile */
+        height: 44px; /* slightly smaller on mobile */
     }
 }
 
