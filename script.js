@@ -42,8 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".hero-slider");
     slider.addEventListener("mouseenter", stopSlideshow);
     slider.addEventListener("mouseleave", startSlideshow);
-
+    window.addEventListener("load", () => {
+        showSlide(0);
+        startSlideshow();
+    })
     // INIT PROPERLY
-    showSlide(0);
-    startSlideshow();
+    
 });
