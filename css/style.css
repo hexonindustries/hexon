@@ -7,6 +7,10 @@
 .site-header {
     background-color: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
   
 .nav {
@@ -17,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* REQUIRED */
 }
   
 .logo a {
@@ -61,6 +66,7 @@ body {
 .container {
     text-align: center;
     padding: 40px;
+    padding-top: 120px; /* space for sticky navbar */
 }
 
 .hero h1 {
@@ -108,6 +114,7 @@ section p{
         flex-direction: row;
         gap: 12px;
         padding: 14px 16px;
+        flex-wrap: wrap; /* REQUIRED */
     }
 
     .nav-links {
