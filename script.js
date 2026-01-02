@@ -71,6 +71,47 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowLeft") {
             prevBtn.click();
         }
-    });    
+    });
+    
+    /* =========================
+    MOBILE SWIPE SUPPORT
+    ========================= */
+
+    let startX = 0;
+    let endX = 0;
+    const swipeThreshold = 50; // minimum px to count as swipe
+
+    slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", () => {
+        if (!startX || !endX) return;
+
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            stopSlideshow();
+
+            if (diff > 0) {
+                // swipe left → next slide
+                nextSlide();
+            } else {
+                // swipe right → previous slide
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            }
+
+            startSlideshow();
+        }
+
+        startX = 0;
+        endX = 0;
+    });
+
     
 });
