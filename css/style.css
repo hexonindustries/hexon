@@ -326,3 +326,56 @@ section p{
     }
 }
 
+/* ABOUT PAGE – FULL WIDTH GRAPHIC */
+.about-hero-graphic {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-graphic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.about-focus {
+    padding: 100px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1f6b4a;
+    margin-bottom: 16px;
+}
+
+.about-focus h2 {
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.about-focus p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cfd8e3;
+    max-width: 720px;
+}
+@media (max-width: 768px) {
+    .about-focus {
+        padding: 60px 20px;
+    }
+
+    .about-focus h2 {
+        font-size: 30px;
+    }
+
+    .about-focus p {
+        font-size: 16px;
+    }
+}
