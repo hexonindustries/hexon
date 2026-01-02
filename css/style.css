@@ -365,7 +365,7 @@ section p{
     font-size: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #1f6b4a;
+    color: #349a6e;
     margin-bottom: 16px;
 }
 
@@ -408,4 +408,78 @@ section p{
         rgba(0,0,0,0.25),
         rgba(0,0,0,0.15)
     );
+}
+
+/* WHY US SECTION */
+.why-us {
+    background: #ffffff;
+    color: #0b1c2d;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.why-us-header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+}
+
+.why-us-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.why-us-header p {
+    font-size: 18px;
+    color: #4b5b6b;
+    line-height: 1.6;
+}
+
+/* Full-width graphic */
+.why-us-graphic {
+    width: 100%;
+    margin: 40px 0 60px;
+}
+
+.why-us-graphic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Key points */
+.why-us-points {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f6b4a;
+}
+
+@media (max-width: 768px) {
+
+    .why-us {
+        padding: 60px 0 80px;
+    }
+
+    .why-us-header h2 {
+        font-size: 32px;
+    }
+
+    .why-us-header p {
+        font-size: 16px;
+    }
+
+    .why-us-points {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        font-size: 15px;
+    }
 }
