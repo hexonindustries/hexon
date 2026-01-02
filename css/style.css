@@ -412,53 +412,35 @@ section p{
 
 /* WHY US SECTION */
 .why-us {
-    width: 100%;
-    background: linear-gradient(
-        to bottom,
-        #0b2f22 0%,
-        #0e3b2c 100%
-    );
-    color: #ffffff;
-    padding: 100px 0 0;
-}
-
-
-.why-us-header {
-    max-width: 900px;
-    margin: 0 auto 60px;
-    padding: 0 24px;
+    background: #ffffff;
+    color: #0b1c2d;
+    padding: 80px 0 100px;
     text-align: center;
 }
 
-.why-us-eyebrow {
-    display: inline-block;
-    font-size: 13px;
-    letter-spacing: 3px;
-    font-weight: 600;
-    color: #7fd3b2;
-    margin-bottom: 16px;
+.why-us-header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
 }
 
 .why-us-header h2 {
     font-size: 42px;
     font-weight: 700;
-    margin-bottom: 18px;
-    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
 }
-
 
 .why-us-header p {
     font-size: 18px;
     color: #4b5b6b;
     line-height: 1.6;
-    opacity: 0.9;
 }
 
 /* Full-width graphic */
 .why-us-graphic {
     width: 100%;
     margin: 40px 0 60px;
-    position: relative;
 }
 
 .why-us-graphic img {
@@ -484,11 +466,11 @@ section p{
 @media (max-width: 768px) {
 
     .why-us {
-        padding: 70px 0 80px;
+        padding: 60px 0 80px;
     }
 
     .why-us-header h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .why-us-header p {
