@@ -47,5 +47,30 @@ document.addEventListener("DOMContentLoaded", () => {
         startSlideshow();
     })
     // INIT PROPERLY
+
+    const prevBtn = document.querySelector(".slider-arrow.prev");
+    const nextBtn = document.querySelector(".slider-arrow.next");
+
+    prevBtn.addEventListener("click", () => {
+        stopSlideshow();
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+        startSlideshow();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        stopSlideshow();
+        nextSlide();
+        startSlideshow();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+            nextBtn.click();
+        }
+        if (e.key === "ArrowLeft") {
+            prevBtn.click();
+        }
+    });    
     
 });

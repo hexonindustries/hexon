@@ -263,3 +263,70 @@ section p{
         bottom: 16px;
     }
 }
+
+
+/* SLIDER ARROWS */
+/* SLIDER ARROWS */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1f6b4a;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* HIDDEN BY DEFAULT */
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+/* Show arrows ONLY when hovering the slider */
+.hero-slider:hover .slider-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slider-arrow:hover {
+    background: #1f6b4a;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.slider-arrow.prev {
+    left: 24px;
+}
+
+.slider-arrow.next {
+    right: 24px;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .slider-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+
+    .slider-arrow.prev {
+        left: 12px;
+    }
+
+    .slider-arrow.next {
+        right: 12px;
+    }
+}
+
