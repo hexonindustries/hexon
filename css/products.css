@@ -159,6 +159,12 @@
 }
 
 
+
+
+
+
+
+
 /* CATEGORY HERO */
 .category-grid {
     background: #ffffff;
@@ -246,39 +252,68 @@
     z-index: 2;
 }
 
+/* FULL-WIDTH CATEGORY HERO */
 .category-hero {
-    padding: 90px 24px 60px;
-    background: #ffffff;
-    max-width: 1200px;
-    margin: 0 auto;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 120px 0 90px;
+
+    background-image: url("../assets/cabinets-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.category-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.25)
+    );
 }
 
-.category-hero h1 {
-    font-size: 46px;
+.category-hero-inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    color: #ffffff;
+}
+
+.category-hero-inner h1 {
+    font-size: 48px;
     font-weight: 700;
-    color: #1f6b4a;
+    /*color: #1f6b4a;*/
     margin-bottom: 16px;
 }
 
-.category-hero p {
+.category-hero-inner p {
     max-width: 720px;
     font-size: 18px;
-    color: #555;
     line-height: 1.6;
+    opacity: 0.9;
+    color: #555;
 }
+
 
 @media (max-width: 900px) {
 
+    
     .category-hero {
-        padding: 60px 20px 40px;
+        padding: 90px 0 70px;
     }
 
-    .category-hero h1 {
-        font-size: 32px;
+    .category-hero-inner h1 {
+        font-size: 34px;
     }
-    .category-hero p {
+
+    .category-hero-inner p {
         font-size: 16px;
     }
+    
 
     .category-grid {
         grid-template-columns: 1fr;
@@ -330,7 +365,7 @@
     font-size: 12px;
     font-weight: 500;
     margin-top: 6px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0);
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
