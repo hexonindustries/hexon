@@ -542,6 +542,10 @@ section p{
     width: 100%;
     height: auto;
     border-radius: 6px;
+    transition: transform 0.4s ease;
+}
+.application-card:hover img {
+    transform: scale(1.05);
 }
 
 .application-card h4 {
@@ -604,5 +608,44 @@ section p{
 
     .application-subtitle {
         font-size: 15px;
+    }
+}
+/* IMAGE WRAPPER */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* OVERLAY */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 107, 74, 0.92); /* HEXON green */
+    color: #ffffff;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.card-overlay p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* SHOW ON HOVER */
+.application-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .card-overlay {
+        display: none;
     }
 }
