@@ -672,6 +672,16 @@ section p{
     width: 48px;
 }
 
+.accent-line {
+    width: 0;
+    height: 2px;
+    background: #1f6b4a;
+    margin-bottom: 12px;
+    transition: width 0.35s ease;
+}
+.application-card:hover .accent-line {
+    width: 48px;
+}
 @media (max-width: 768px) {
     .card-overlay {
         display: none;
