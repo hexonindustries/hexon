@@ -483,3 +483,95 @@ section p{
         font-size: 15px;
     }
 }
+
+/* APPLICATION SECTION */
+.application-section {
+    background: #ffffff;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+/* Header with slanted lines */
+.application-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.application-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1f6b4a;
+    letter-spacing: 0.5px;
+}
+
+/* Decorative slanted lines */
+.decor-line {
+    width: 50px;
+    height: 3px;
+    background: #1f6b4a;
+    transform: skewX(-30deg);
+    opacity: 0.9;
+}
+
+/* Subtitle */
+.application-subtitle {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* Product grid */
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.application-card {
+    background: #ffffff;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.application-card h4 {
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Hover effect */
+.application-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+@media (max-width: 900px) {
+    .application-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-header h2 {
+        font-size: 28px;
+    }
+
+    .application-subtitle {
+        font-size: 15px;
+    }
+}
