@@ -190,9 +190,9 @@
 /* CATEGORY GRID */
 .category-grid {
     background: #ffffff;
-    padding: 60px 80px 120px;
+    padding: 80px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 40px;
 }
 
