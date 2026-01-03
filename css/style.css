@@ -556,6 +556,37 @@ section p{
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
+.application-card h4 {
+    text-align: center;
+}
+.application-card img {
+    background: #f6f6f6;
+    padding: 14px;
+}
+.application-grid {
+    max-width: 1200px;
+}
+.application-header h2 {
+    letter-spacing: 1px;
+}
+
+.application-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.application-card:nth-child(1) { animation-delay: 0.1s; }
+.application-card:nth-child(2) { animation-delay: 0.2s; }
+.application-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 900px) {
     .application-grid {
         grid-template-columns: repeat(2, 1fr);
