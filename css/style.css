@@ -527,13 +527,14 @@ section p{
 /* Product grid */
 .application-grid {
     display: grid;
-    grid-template-columns: repeat(3, minimax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 48px;
     
     width: 100%;
-    max-width: none;   /* KEY: removes center constraint */
+    /*max-width: none; */  /* KEY: removes center constraint */
     padding: 0 80px;   /* breathing space from edges */
     margin: 0 auto;
+
 }
 
 .application-card {
@@ -575,9 +576,7 @@ section p{
     object-fit: cover;
     border-radius: 6px;
 }
-.application-grid {
-    max-width: 1200px;
-}
+
 .application-header h2 {
     letter-spacing: 1px;
 }
