@@ -23,6 +23,105 @@
     align-items: center;
     flex-wrap: wrap; /* REQUIRED */
 }
+/* DROPDOWN WRAPPER */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    padding: 36px 40px;
+    min-width: 900px;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    z-index: 999;
+}
+
+/* SHOW ON HOVER */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* COLUMN */
+.dropdown-column h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f6b4a;
+    margin-bottom: 16px;
+}
+
+.dropdown-column h4 span {
+    font-weight: 500;
+    font-size: 13px;
+    color: #777;
+}
+
+.dropdown-column ul {
+    list-style: none;
+}
+
+.dropdown-column ul li {
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+.dropdown-column a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-column a:hover {
+    color: #1f6b4a;
+}
+
+/* SUB GROUPS (Closet, Racks) */
+.sub-group > span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 6px;
+    color: #555;
+}
+
+.sub-group ul {
+    padding-left: 12px;
+}
+
+.sub-group ul li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+    .dropdown-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
   
 .logo a {
     color: white;
