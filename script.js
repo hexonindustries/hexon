@@ -115,3 +115,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 });
+
+document.querySelectorAll('.application-card').forEach(card => {
+    card.addEventListener('click', () => {
+        // Close other cards
+        document.querySelectorAll('.application-card').forEach(c => {
+            if (c !== card) c.classList.remove('active');
+        });
+
+        // Toggle current card
+        card.classList.toggle('active');
+    });
+});
+

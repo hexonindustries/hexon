@@ -691,3 +691,26 @@ section p{
         box-shadow: none;
     }
 }
+
+/* MOBILE TAP STATE */
+.application-card.active .card-overlay {
+    opacity: 1;
+}
+
+.application-card.active .card-overlay p {
+    transform: translateY(0);
+}
+
+.application-card.active .accent-line {
+    width: 48px;
+}
+@media (hover: none) {
+    .application-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .application-card:hover .card-overlay {
+        opacity: 0;
+    }
+}
