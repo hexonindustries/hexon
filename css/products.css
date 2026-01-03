@@ -1,0 +1,159 @@
+.products-mobile {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .products-mobile {
+        display: block;
+        padding: 20px;
+    }
+
+    .product-group {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .group-title {
+        width: 100%;
+        padding: 16px 0;
+        font-size: 16px;
+        font-weight: 600;
+        background: none;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .group-content {
+        display: none;
+        padding-bottom: 12px;
+    }
+
+    .group-content a {
+        display: block;
+        padding: 10px 0;
+        color: #1f6b4a;
+        text-decoration: none;
+    }
+}
+
+/* PRODUCTS HERO */
+.products-hero {
+    background: #ffffff;
+    padding: 100px 24px 80px;
+    text-align: center;
+}
+
+.products-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1f6b4a;
+    margin-bottom: 16px;
+}
+
+.products-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CATEGORY SECTIONS */
+.products-categories {
+    background: #ffffff;
+    padding: 0 0 120px;
+}
+
+/* INDIVIDUAL CATEGORY */
+.product-category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* Alternate layout */
+.product-category.reverse {
+    direction: rtl;
+}
+
+.product-category.reverse > * {
+    direction: ltr;
+}
+
+/* IMAGE */
+.category-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* CONTENT */
+.category-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #144a33;
+    margin-bottom: 16px;
+}
+
+.category-content h2 span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+}
+
+.category-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+/* CTA */
+.category-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f6b4a;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: border-color 0.25s ease;
+}
+
+.category-link:hover {
+    border-color: #1f6b4a;
+}
+
+@media (max-width: 900px) {
+
+    .products-hero {
+        padding: 70px 20px 60px;
+    }
+
+    .products-hero h1 {
+        font-size: 36px;
+    }
+
+    .products-hero p {
+        font-size: 16px;
+    }
+
+    .product-category {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 60px 20px;
+    }
+
+    .category-image img {
+        height: 260px;
+    }
+
+    .category-content h2 {
+        font-size: 28px;
+    }
+}
