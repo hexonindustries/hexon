@@ -41,3 +41,133 @@
 .racks {
     background-image: url("/assets/racks-card.png");
 }
+
+/* KITCHEN HERO */
+.category-hero--kitchen {
+    background-image: url("/assets/kitchen-hero.png");
+}
+/* WHY HEXON CABINETS */
+.cabinet-why {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    text-align: center;
+}
+
+.cabinet-why h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #144a33;
+    margin-bottom: 16px;
+}
+
+.cabinet-why-intro {
+    font-size: 18px;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 60px;
+}
+
+.cabinet-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.cabinet-why-card {
+    padding: 32px;
+    border-radius: 14px;
+    background: #ffffff;
+    text-align: left;
+}
+
+.cabinet-why-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f6b4a;
+    margin-bottom: 10px;
+}
+
+.cabinet-why-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* QUALITY BANNER */
+.cabinet-quality {
+    background: #0a2f1f;
+    color: #ffffff;
+    padding: 100px 24px;
+}
+
+.cabinet-quality-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cabinet-quality h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.cabinet-quality p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.category-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+}
+
+.category-overview img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.category-features {
+    background: #ffffff;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.features-grid {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-item {
+    font-size: 16px;
+    color: #144a33;
+}
+/* CTA */
+.category-cta {
+    background: #f6f7f6;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 900px) {
+    .cabinet-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cabinet-why-grid {
+        grid-template-columns: 1fr;
+    }
+}
