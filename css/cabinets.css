@@ -1,3 +1,43 @@
 .category-hero--cabinets {
     background-image: url("/assets/cabinets-hero.png");
 }
+
+.kitchen {
+    background-image: url("/assets/kitchen-card.png");
+}
+
+.wardrobe {
+    background-image: url("/assets/wardrobe-card.png");
+}
+
+.tv {
+    background-image: url("/assets/tv-card.png");
+}
+
+.bathroom {
+    background-image: url("/assets/bathroom-card.png");
+}
+
+.dining {
+    background-image: url("/assets/dining-card.png");
+}
+
+.cupboard {
+    background-image: url("/assets/cupboard-card.png");
+}
+
+.bookcase {
+    background-image: url("/assets/bookcase-card.png");
+}
+
+.washing {
+    background-image: url("/assets/washing-card.png");
+}
+
+.living {
+    background-image: url("/assets/living-card.png");
+}
+
+.racks {
+    background-image: url("/assets/racks-card.png");
+}
