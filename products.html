@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<header class="site-header">
+  <header class="site-header">
     <nav class="nav">
         <div class="logo">
             <a href="index.html">
@@ -18,7 +18,62 @@
         </div>
         <ul class="nav-links">
             <li><a href="about.html">ABOUT</a></li>
-            <li><a href="products.html">PRODUCTS</a></li>
+            <li class="nav-item dropdown">
+                <a href="products.html" class="nav-link">PRODUCTS</a>
+            
+                <div class="dropdown-menu">
+                    <!-- CABINETS -->
+                    <div class="dropdown-column">
+                        <h4>Cabinets</h4>
+                        <ul>
+                            <li><a href="#">Kitchen</a></li>
+                            <li class="sub-group">
+                                <span>Wardrobe</span>
+                                <ul>
+                                    <li><a href="#">Closet</a></li>
+                                    <li><a href="#">Column Style Dressing Room</a></li>
+                                </ul>
+                            </li>
+            
+                            <li><a href="#">TV Cabinet</a></li>
+                            <li><a href="#">Bathroom Cabinet</a></li>
+                            <li><a href="#">Dining Cabinet</a></li>
+                            <li><a href="#">Cupboard</a></li>
+                            <li><a href="#">Bookcase</a></li>
+                            <li><a href="#">Washing Unit</a></li>
+                            <li><a href="#">Living Space</a></li>
+            
+                            <li class="sub-group">
+                                <span>Racks</span>
+                                <ul>
+                                    <li><a href="#">Wine Rack</a></li>
+                                    <li><a href="#">Storage Rack</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <!-- DOORS -->
+                    <div class="dropdown-column">
+                        <h4>Doors</h4>
+                        <ul>
+                            <li><a href="#">Kitchen Door</a></li>
+                            <li><a href="#">Wardrobe Door</a></li>
+                            <li><a href="#">40mm Door</a></li>
+                            <li><a href="#">Invisible Door</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- WALL PANELS -->
+                    <div class="dropdown-column">
+                        <h4>Wall Panels</h4>
+                        <ul>
+                            <li><a href="#">Residential</a></li>
+                            <li><a href="#">Commercial</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
@@ -42,7 +97,7 @@
     <!-- CABINETS -->
     <div class="product-category">
       <div class="category-image">
-        <img src="assets/products-cabinets.jpg" alt="Honeycomb Cabinets">
+        <img src="assets/cabinet.png" alt="Honeycomb Cabinets">
       </div>
       <div class="category-content">
         <h2>Cabinets</h2>
@@ -58,7 +113,7 @@
     <!-- DOORS -->
     <div class="product-category reverse">
       <div class="category-image">
-        <img src="assets/products-doors.jpg" alt="Honeycomb Doors">
+        <img src="assets/door.png" alt="Honeycomb Doors">
       </div>
       <div class="category-content">
         <h2>Doors</h2>
@@ -74,7 +129,7 @@
     <!-- WALL PANELS -->
     <div class="product-category">
       <div class="category-image">
-        <img src="assets/products-wall-panels.jpg" alt="Honeycomb Wall Panels">
+        <img src="assets/wall.png" alt="Honeycomb Wall Panels">
       </div>
       <div class="category-content">
         <h2>Wall Panels</h2>
@@ -97,7 +152,7 @@
   <!--MOBILE ONLY-->
   <section class="products-mobile">
     <div class="product-group">
-      <button class="group-title">Cabinets (18mm)</button>
+      <button class="group-title"></button>
       <div class="group-content">
         <a href="#">Kitchen</a>
         <a href="#">Closet</a>
