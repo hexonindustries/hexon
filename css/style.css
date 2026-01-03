@@ -683,9 +683,6 @@ section p{
     width: 48px;
 }
 @media (max-width: 768px) {
-    .card-overlay {
-        display: none;
-    }
     .application-card:hover {
         transform: none;
         box-shadow: none;
@@ -711,6 +708,6 @@ section p{
     }
 
     .application-card:hover .card-overlay {
-        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 }
