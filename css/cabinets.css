@@ -1,7 +1,9 @@
 .category-hero--cabinets {
     background-image: url("/assets/cabinets-hero.png");
 }
-
+.category-hero--cabinets-shared{
+    background-image: url("/assets/cabinets-shared-hero.png");
+}
 .kitchen {
     background-image: url("/assets/kitchen-card.png");
 }
