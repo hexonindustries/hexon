@@ -206,7 +206,7 @@
 /* hover lift */
 .category-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.45);
 }
 /* Content */
 .card-content {
@@ -259,7 +259,7 @@
     margin-left: calc(-50vw + 50%);
     padding: 120px 0 90px;
 
-    background-image: url("../assets/cabinets-hero.jpg");
+    background-image: url("../assets/cabinets-hero.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
