@@ -95,7 +95,8 @@ html, body {
     color: #1f6b4a;
 }
 
-/* SUB GROUPS (Closet, Racks) */
+
+/* SUB GROUPS (Closet, Racks) 
 .sub-group > span {
     display: block;
     font-size: 14px;
@@ -111,7 +112,7 @@ html, body {
 .sub-group ul li {
     margin-bottom: 6px;
 }
-
+*/
 @media (max-width: 900px) {
     .dropdown-menu {
         display: none;
