@@ -79,6 +79,21 @@
     padding-top: 40px;
 }
 
+.category-overview .overview-text {
+    width: 100%;
+}
+
+/* Right-align text ONLY for reversed overview blocks */
+.category-overview.reverse .overview-text {
+    text-align: right;
+}
+
+.category-overview.reverse .overview-text p {
+    margin-left: auto;
+    max-width: 520px;
+}
+
+
 .overview-number {
     position: absolute;
     top: -30px;
