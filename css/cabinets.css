@@ -66,9 +66,52 @@
     color: #144a33;
 }
 
+.overview-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.overview-divider {
+    height: 1px;
+    width: 80px;
+    background-color: rgba(31, 107, 74, 0.35);
+}
+
+
+.overview-number {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(31, 107, 74, 0.12); /* Hexon green, low opacity */
+    flex-shrink: 0;
+}
+
+.category-overview .overview-meta,
+.category-overview .overview-text {
+    grid-column: 1;
+}
+
+.category-overview.reverse .overview-meta,
+.category-overview.reverse .overview-text {
+    grid-column: 2;
+}
+
+
+
 .category-overview img {
     width: 100%;
     border-radius: 12px;
+}
+
+.category-overview.reverse .overview-image {
+    grid-column: 1;
+}
+
+
+.category-overview .overview-image {
+    grid-column: 2;
 }
 
 .category-overview.reverse {
@@ -89,6 +132,22 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 900px) {
+    .category-overview {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .overview-number {
+        font-size: 64px;
+    }
+
+    .overview-divider {
+        width: 48px;
+    }
+}
+
 
 
 /* WHY HEXON CABINETS */
