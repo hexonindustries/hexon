@@ -101,6 +101,7 @@
 .category-overview.reverse .overview-text p {
     text-align: right;
     text-align: justify;
+    text-justify: inter-word;
     /*margin-left: auto;
     max-width: 520px;*/
 }
