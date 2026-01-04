@@ -175,7 +175,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-/*
+
 const cards = document.querySelectorAll('.reveal-card');
 
 const cardObserver = new IntersectionObserver(entries => {
@@ -192,7 +192,7 @@ const cardObserver = new IntersectionObserver(entries => {
 });
 
 cards.forEach(card => cardObserver.observe(card));
-*/
+
 /*
 const cards = document.querySelectorAll('.reveal-card');
 const section = document.querySelector('.cabinet-why');
@@ -258,7 +258,7 @@ if (whySection && whyCards.length) {
 /* =========================
    CABINET WHY – STABLE REVEAL
 ========================= */
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector('.cabinet-why');
     const cards = document.querySelectorAll('.cabinet-why-card');
@@ -288,4 +288,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scroll listener
     window.addEventListener('scroll', revealCardsOnScroll);
-});
+});*/
