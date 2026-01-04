@@ -259,6 +259,16 @@
 .category-overviews {
     background: #ffffff;
 }
+.category-overviews > h2 {
+    max-width: 1200px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+
+    font-size: 40px;
+    font-weight: 700;
+    color: #144a33;
+    text-align: center;
+}
 
 .category-overview {
     display: grid;
