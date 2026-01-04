@@ -255,7 +255,7 @@
     background: #ffffff;
     text-align: left;
     position: relative;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(40px);
     transition:
         opacity 0.8s ease,

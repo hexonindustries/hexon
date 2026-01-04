@@ -265,28 +265,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!section || !cards.length) return;
 
-    let revealed = false;
+    let revealedCount = 0;
 
-    function revealCards() {
-        if (revealed) return;
+    function revealCardsOnScroll() {
+        const sectionRect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-        const sectionTop = section.getBoundingClientRect().top;
-        const triggerPoint = window.innerHeight * 0.85;
-
-        if (sectionTop < triggerPoint) {
-            revealed = true;
-
+        // Start when section enters viewport
+        if (sectionRect.top < windowHeight * 0.9) {
             cards.forEach((card, index) => {
-                setTimeout(() => {
+                if (index < revealedCount + 1 && !card.classList.contains('active')) {
                     card.classList.add('active');
-                }, index * 180);
+                }
             });
+
+            revealedCount++;
         }
     }
 
-    // Run once on load
-    revealCards();
+    // Initial check
+    revealCardsOnScroll();
 
-    // Run on scroll
-    window.addEventListener('scroll', revealCards);
+    // Scroll listener
+    window.addEventListener('scroll', revealCardsOnScroll);
 });
