@@ -226,7 +226,6 @@
     margin: 0 auto;
     padding: 100px 24px;
     text-align: center;
-    background: #0a2f1f;
 }
 
 .cabinet-why h2 {
@@ -255,12 +254,12 @@
     border-radius: 14px;
     background: #ffffff;
     text-align: left;
-    position: relative;
+
     opacity: 0;
     transform: translateY(40px);
     transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 .cabinet-why-card::before {
     content: "";
@@ -269,7 +268,7 @@
     background-image: var(--bg);
     background-size: cover;
     background-position: center;
-    opacity: 0.15;              /* subtle */
+    opacity: 0.12;              /* subtle */
     transform: scale(1.05);
     z-index: 0;
     transition-delay: calc(var(--delay) * 120ms);
@@ -288,6 +287,7 @@
 
 .cabinet-why-card:hover {
     transform: translateY(-4px);
+
 }
 
 .cabinet-why-card h3 {
@@ -302,18 +302,7 @@
     color: #555;
     line-height: 1.6;
 }
-/*
-.reveal-card {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-.reveal-card.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/
 /* QUALITY BANNER */
 .cabinet-quality {
     background: #0a2f1f;
@@ -366,8 +355,6 @@
 .category-cta h4{
     color: #1f6b4a;
 }
-
-
 
 
 @media (max-width: 900px) {
