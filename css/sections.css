@@ -591,10 +591,10 @@
     line-height: 1.15;
     white-space: nowrap;
 }
-/*
-.section-header--dark h2{
+
+.section-header--dark .section-title{
     color: #ffffff;
-}*/
+}
 .section-header--dark .section-subtitle{
     margin: 0 auto 40px;
     font-size: 18px;
