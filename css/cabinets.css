@@ -53,6 +53,8 @@
 
 .category-overviews {
     background: #ffffff;
+    scroll-snap-type: y mandatory;
+
 }
 
 .category-overview {
@@ -64,6 +66,9 @@
     max-width: 1200px;
     margin: 0 auto;
     color: #144a33;
+    scroll-snap-align: start;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 .overview-divider {
     position: absolute;
@@ -78,19 +83,25 @@
     position: relative;
     padding-top: 40px;
 }
-
+/*
 .category-overview .overview-text {
     width: 100%;
 }
-
+*/
 /* Right-align text ONLY for reversed overview blocks */
 .category-overview.reverse .overview-text {
     text-align: right;
 }
 
+.category-overview.reverse .overview-text h2 {
+    text-align: right;
+}
+
+
 .category-overview.reverse .overview-text p {
-    margin-left: auto;
-    max-width: 520px;
+    text-align: right;
+    /*margin-left: auto;
+    max-width: 520px;*/
 }
 
 
