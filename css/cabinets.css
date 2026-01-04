@@ -419,11 +419,13 @@
 /* Overview number reuse */
 .shade-card .overview-number {
     position: absolute;
-    top: 16px;
+    bottom: 14px;
     left: 16px;
     font-size: 42px;
     font-weight: 700;
     color: rgba(20,74,51,0.08);
+    line-height: 1;
+    pointer-events: none;
 }
 
 /* Arrows */
