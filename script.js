@@ -289,3 +289,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Scroll listener
     window.addEventListener('scroll', revealCardsOnScroll);
 });*/
+
+const shadeSlider = document.querySelector('.shade-slider');
+const prevShade = document.querySelector('.shade-arrow.prev');
+const nextShade = document.querySelector('.shade-arrow.next');
+
+if (shadeSlider && prevShade && nextShade) {
+    const scrollAmount = 300;
+
+    nextShade.addEventListener('click', () => {
+        shadeSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    prevShade.addEventListener('click', () => {
+        shadeSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+}
