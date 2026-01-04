@@ -545,6 +545,10 @@ section p{
 .section-header--dark h2{
     max-width: 1100px;
     color: #ffffff;
+    margin: 0 auto;
+    font-size: clamp(32px, 3vw, 44px);
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .section-header--dark .section-subtitle{
