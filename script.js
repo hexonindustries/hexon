@@ -168,9 +168,9 @@ window.addEventListener('scroll', () => {
         if (rect.top < viewportHeight && rect.bottom > 0) {
             const progress =
                 (viewportHeight - rect.top) / (viewportHeight + rect.height);
-                
+
             const direction = section.classList.contains('reverse') ? -1 : 1;   
-            const translateY = direction * (progress - 0.5) * 20; // max ~10px up/down
+            const translateY = direction * (progress - 0.5) * 13; // max ~10px up/down
             image.style.transform = `translateY(${translateY}px)`;
         }
     });
