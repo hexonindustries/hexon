@@ -175,3 +175,20 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+const cards = document.querySelectorAll('.reveal-card');
+
+const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const delay = entry.target.dataset.delay || 0;
+            entry.target.style.setProperty('--delay', delay);
+            entry.target.classList.add('active');
+            cardObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+cards.forEach(card => cardObserver.observe(card));
