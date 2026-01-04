@@ -48,6 +48,22 @@
 .category-hero--kitchen {
     background-image: url("/assets/kitchen-hero.png");
 }
+/* Category Overview*/
+.category-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    background-color: #ffffff;
+}
+
+.category-overview img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 /* WHY HEXON CABINETS */
 .cabinet-why {
     max-width: 1200px;
@@ -119,20 +135,6 @@
     font-size: 17px;
     line-height: 1.7;
     opacity: 0.9;
-}
-
-.category-overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 24px;
-}
-
-.category-overview img {
-    width: 100%;
-    border-radius: 8px;
 }
 
 .category-features {
