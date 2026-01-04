@@ -606,7 +606,12 @@ section p{
     font-weight: 500;
     color: #1f6b4a;
 }
-
+@media (max-width: 768px) {
+    .section-header--dark h2 {
+        white-space: normal; /* allow wrapping */
+        font-size: 28px;
+    }
+}
 @media (max-width: 768px) {
 
     .why-us {
@@ -627,6 +632,28 @@ section p{
         font-size: 15px;
     }
 }
+@media (max-width: 768px) {
+
+    .section-header {
+        margin-bottom: 40px;
+        padding: 0 16px; /* breathing room */
+    }
+
+    .section-title {
+        gap: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .section-header--spacious {
         padding-top: 48px;
