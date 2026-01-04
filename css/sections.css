@@ -262,7 +262,7 @@
 .category-overviews > h2 {
     max-width: 1200px;
     margin: 0 auto 64px;
-    padding: 0 24px;
+    padding: 20px 24px;
 
     font-size: 40px;
     font-weight: 700;
@@ -477,7 +477,7 @@
 
 .cabinet-why-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgb(246, 243, 243);
+    box-shadow: 0 18px 40px rgba(125, 122, 122, 0.445);
 }
 
 .cabinet-why-card h3 {
