@@ -53,7 +53,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
     padding: 100px 24px;
     background-color: #ffffff;
