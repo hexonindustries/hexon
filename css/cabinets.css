@@ -226,6 +226,7 @@
     margin: 0 auto;
     padding: 100px 24px;
     text-align: center;
+    background: #0a2f1f;
 }
 
 .cabinet-why h2 {
@@ -287,7 +288,6 @@
 
 .cabinet-why-card:hover {
     transform: translateY(-4px);
-    box-shadow: #ffffff;
 }
 
 .cabinet-why-card h3 {
