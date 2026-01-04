@@ -65,14 +65,6 @@
     margin: 0 auto;
     color: #144a33;
 }
-
-.overview-meta {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
 .overview-divider {
     position: absolute;
     top: 32px;
@@ -97,8 +89,7 @@
     color: rgba(31, 107, 74, 0.12);
     z-index: 0;
 }
-
-.category-overview .overview-meta,
+/*
 .category-overview .overview-text {
     grid-column: 1;
 }
@@ -106,7 +97,6 @@
     grid-column: 2;
 }
 
-.category-overview.reverse .overview-meta,
 .category-overview.reverse .overview-text {
     grid-column: 2;
 }
@@ -114,6 +104,21 @@
 .category-overview.reverse .overview-image {
     grid-column: 1;
 }
+*/
+
+.category-overview.reverse .overview-text {
+    order: 2;
+}
+
+.category-overview.reverse .overview-image {
+    order: 1;
+}
+
+.overview-image,
+.overview-text {
+    align-self: center;
+}
+
 
 .category-overview.reverse .overview-text {
     text-align: left;
