@@ -173,6 +173,8 @@
     gap: 32px;
     padding: 80px;
     border-radius: 16px;
+    justify-items: start;     /* default, but we make it explicit */
+    justify-content: start;   /* ensures grid starts from left */
 }
 
 .category-card {
