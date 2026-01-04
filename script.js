@@ -113,115 +113,69 @@ document.addEventListener("DOMContentLoaded", () => {
         endX = 0;
     });
 
-    document.querySelectorAll('.application-card').forEach(card => {
-        card.addEventListener('click', () => {
-            // Close other cards
-            document.querySelectorAll('.application-card').forEach(c => {
-                if (c !== card) c.classList.remove('active');
-            });
-    
-            // Toggle current card
-            card.classList.toggle('active');
-        });
-    });
-    
-    document.querySelectorAll('.group-title').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-            content.style.display =
-                content.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-    
-    const reveals = document.querySelectorAll(".reveal");
-    
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.25 }
-    );
-    
-    reveals.forEach(el => observer.observe(el));
-    
-    
-    const overviewSections = document.querySelectorAll('.category-overview');
-    
-    window.addEventListener('scroll', () => {
-        const viewportHeight = window.innerHeight;
-    
-        overviewSections.forEach(section => {
-            const image = section.querySelector('.overview-image img');
-            if (!image) return;
-    
-            const rect = section.getBoundingClientRect();
-    
-            // Only animate when section is visible
-            if (rect.top < viewportHeight && rect.bottom > 0) {
-                const progress =
-                    (viewportHeight - rect.top) / (viewportHeight + rect.height);
-    
-                const direction = section.classList.contains('reverse') ? -1 : 1;   
-                const translateY = direction * (progress - 0.5) * 13; // max ~10px up/down
-                image.style.transform = `translateY(${translateY}px)`;
-            }
-        });
-    });
-
-    /* =========================
-    CABINET WHY – STAGGERED REVEAL
-    ========================= */
-
-    const cards = document.querySelectorAll('.cabinet-why-card');
-    const section = document.querySelector('.cabinet-why');
-
-    if (!cards.length || !section) return;
-
-    let revealedCount = 0;
-
-    // MOBILE: simple stagger reveal
-    if (window.innerWidth < 768) {
-        cards.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add('active');
-            }, index * 200);
-        });
-    }
-
-    // DESKTOP: scroll-distance based reveal
-    else {
-        window.addEventListener('scroll', () => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const viewportHeight = window.innerHeight;
-
-            // Start when section enters viewport
-            const triggerPoint = viewportHeight * 0.7;
-
-            if (sectionTop < triggerPoint) {
-                const scrollProgress = triggerPoint - sectionTop;
-                const revealSpacing = 140; // px scroll per card
-
-                const cardsToReveal = Math.floor(scrollProgress / revealSpacing);
-
-                while (revealedCount <= cardsToReveal && revealedCount < cards.length) {
-                    cards[revealedCount].classList.add('active');
-                    revealedCount++;
-                }
-            }
-        });
-    }
-
-
     
 });
 
+document.querySelectorAll('.application-card').forEach(card => {
+    card.addEventListener('click', () => {
+        // Close other cards
+        document.querySelectorAll('.application-card').forEach(c => {
+            if (c !== card) c.classList.remove('active');
+        });
 
-/*
+        // Toggle current card
+        card.classList.toggle('active');
+    });
+});
+
+document.querySelectorAll('.group-title').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.style.display =
+            content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.25 }
+);
+
+reveals.forEach(el => observer.observe(el));
+
+
+const overviewSections = document.querySelectorAll('.category-overview');
+
+window.addEventListener('scroll', () => {
+    const viewportHeight = window.innerHeight;
+
+    overviewSections.forEach(section => {
+        const image = section.querySelector('.overview-image img');
+        if (!image) return;
+
+        const rect = section.getBoundingClientRect();
+
+        // Only animate when section is visible
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+            const progress =
+                (viewportHeight - rect.top) / (viewportHeight + rect.height);
+
+            const direction = section.classList.contains('reverse') ? -1 : 1;   
+            const translateY = direction * (progress - 0.5) * 13; // max ~10px up/down
+            image.style.transform = `translateY(${translateY}px)`;
+        }
+    });
+});
+
 const cards = document.querySelectorAll('.reveal-card');
 
 const cardObserver = new IntersectionObserver(entries => {
@@ -238,9 +192,9 @@ const cardObserver = new IntersectionObserver(entries => {
 });
 
 cards.forEach(card => cardObserver.observe(card));
-*/
+
 /*
-const cards = document.querySelectorAll('.cabinet-why-card');
+const cards = document.querySelectorAll('.reveal-card');
 const section = document.querySelector('.cabinet-why');
 if (window.innerWidth < 768) {
     cards.forEach((card, index) => {
@@ -274,4 +228,5 @@ if (window.innerWidth < 768) {
             }
         }
     });
-}*/
+}
+*/
