@@ -48,22 +48,48 @@
 .category-hero--kitchen {
     background-image: url("/assets/kitchen-hero.png");
 }
+
 /* Category Overview*/
+
+.category-overviews {
+    background: #ffffff;
+}
+
 .category-overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    /*max-width: 1200px;*/
-    margin: 0 auto;
+    align-items: center;
     padding: 100px 24px;
-    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
     color: #144a33;
 }
 
 .category-overview img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
 }
+
+.category-overview.reverse {
+    direction: rtl;
+}
+
+.category-overview.reverse > * {
+    direction: ltr;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* WHY HEXON CABINETS */
 .cabinet-why {
