@@ -259,33 +259,31 @@ if (whySection && whyCards.length) {
    CABINET WHY – STABLE REVEAL
 ========================= */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector('.cabinet-why');
-    const cards = document.querySelectorAll('.cabinet-why-card');
+const section = document.querySelector('.cabinet-why');
+const cards = document.querySelectorAll('.cabinet-why-card');
 
-    if (!section || !cards.length) return;
+if (!section || !cards.length) return;
 
-    let revealedCount = 0;
+let revealedCount = 0;
 
-    function revealCardsOnScroll() {
-        const sectionRect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+function revealCardsOnScroll() {
+    const sectionRect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-        // Start when section enters viewport
-        if (sectionRect.top < windowHeight * 0.9) {
-            cards.forEach((card, index) => {
-                if (index < revealedCount + 1 && !card.classList.contains('active')) {
-                    card.classList.add('active');
-                }
-            });
+    // Start when section enters viewport
+    if (sectionRect.top < windowHeight * 0.9) {
+        cards.forEach((card, index) => {
+            if (index < revealedCount + 1 && !card.classList.contains('active')) {
+                card.classList.add('active');
+            }
+        });
 
-            revealedCount++;
-        }
+        revealedCount++;
     }
+}
 
-    // Initial check
-    revealCardsOnScroll();
+// Initial check
+revealCardsOnScroll();
 
-    // Scroll listener
-    window.addEventListener('scroll', revealCardsOnScroll);
-});
+// Scroll listener
+window.addEventListener('scroll', revealCardsOnScroll);
