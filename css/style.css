@@ -541,10 +541,11 @@ section p{
 }
 
 .section-header h2 {
-    font-size: 42px;
+    font-size: 39px;
     font-weight: 700;
     margin-bottom: 16px;
     letter-spacing: 1px;
+    color: #144a33;
 }
 
 .section-header p {
