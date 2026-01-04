@@ -543,7 +543,7 @@ section p{
 }
 
 .section-header--dark h2{
-
+    max-width: 1100px;
     color: #ffffff;
 }
 
