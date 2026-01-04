@@ -193,28 +193,38 @@ const cardObserver = new IntersectionObserver(entries => {
 
 cards.forEach(card => cardObserver.observe(card));
 */
-const cards = document.querySelectorAll('.reveal-card');
+const cards = document.querySelectorAll('.cabinet-why-card');
 const section = document.querySelector('.cabinet-why');
+if (window.innerWidth < 768) {
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('active');
+        }, index * 180);
+    });
+} else {
+    // desktop scroll logic here
 
-let revealedCount = 0;
 
-window.addEventListener('scroll', () => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+    let revealedCount = 0;
 
-    // Start revealing when section is 60% into viewport
-    const triggerPoint = windowHeight * 0.6;
+    window.addEventListener('scroll', () => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-    if (sectionTop < triggerPoint) {
-        const progress = triggerPoint - sectionTop;
+        // Start revealing when section is 60% into viewport
+        const triggerPoint = windowHeight * 0.6;
 
-        const revealSpacing = 120; // px scroll per card (adjustable)
+        if (sectionTop < triggerPoint) {
+            const progress = triggerPoint - sectionTop;
 
-        const cardsToReveal = Math.floor(progress / revealSpacing);
+            const revealSpacing = 120; // px scroll per card (adjustable)
 
-        for (let i = revealedCount; i <= cardsToReveal && i < cards.length; i++) {
-            cards[i].classList.add('active');
-            revealedCount++;
+            const cardsToReveal = Math.floor(progress / revealSpacing);
+
+            for (let i = revealedCount; i <= cardsToReveal && i < cards.length; i++) {
+                cards[i].classList.add('active');
+                revealedCount++;
+            }
         }
-    }
-});
+    });
+}
