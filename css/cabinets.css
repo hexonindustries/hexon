@@ -397,9 +397,16 @@
 .shade-image {
     height: 180px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #eaeaea, #cfcfcf);
     margin-bottom: 18px;
+
+    background-image: var(--shade);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
 }
+
 
 /* Shade name */
 .shade-name {
