@@ -230,7 +230,7 @@ if (window.innerWidth < 768) {
     });
 }
 */
-
+/*
 const whySection = document.querySelector('.cabinet-why');
 const whyCards = document.querySelectorAll('.cabinet-why-card');
 
@@ -254,3 +254,39 @@ if (whySection && whyCards.length) {
         }
     });
 }
+*/
+/* =========================
+   CABINET WHY – STABLE REVEAL
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector('.cabinet-why');
+    const cards = document.querySelectorAll('.cabinet-why-card');
+
+    if (!section || !cards.length) return;
+
+    let revealed = false;
+
+    function revealCards() {
+        if (revealed) return;
+
+        const sectionTop = section.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.85;
+
+        if (sectionTop < triggerPoint) {
+            revealed = true;
+
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('active');
+                }, index * 180);
+            });
+        }
+    }
+
+    // Run once on load
+    revealCards();
+
+    // Run on scroll
+    window.addEventListener('scroll', revealCards);
+});
