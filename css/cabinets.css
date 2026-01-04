@@ -419,7 +419,7 @@
 /* Overview number reuse */
 .shade-card .overview-number {
     position: absolute;
-    bottom: 14px;
+    top: 40px;
     left: 16px;
     font-size: 42px;
     font-weight: 700;
