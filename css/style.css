@@ -533,25 +533,30 @@ section p{
 }
 */
 .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 0 24px;
+}
+.section-title {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
-
-.section-header h2 {
+.section-title h2 {
     font-size: 39px;
     font-weight: 700;
-    margin-bottom: 16px;
     letter-spacing: 1px;
     color: #144a33;
 }
 
-.section-header p {
+.section-subtitle {
     font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
     color: #4b5b6b;
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 /* Full-width graphic */
@@ -630,6 +635,14 @@ section p{
     width: 50px;
     height: 3px;
     background: #144a33;
+    transform: skewX(-30deg);
+    opacity: 0.9;
+}
+
+.decor-line-white {
+    width: 50px;
+    height: 3px;
+    background: #ffffff;
     transform: skewX(-30deg);
     opacity: 0.9;
 }
