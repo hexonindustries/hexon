@@ -285,6 +285,10 @@
     transform: translateY(0);
 }
 
+.cabinet-why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: #ffffff;
+}
 
 .cabinet-why-card h3 {
     font-size: 18px;
