@@ -151,3 +151,27 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => observer.observe(el));
+
+
+const overviewSections = document.querySelectorAll('.category-overview');
+
+window.addEventListener('scroll', () => {
+    const viewportHeight = window.innerHeight;
+
+    overviewSections.forEach(section => {
+        const image = section.querySelector('.overview-image img');
+        if (!image) return;
+
+        const rect = section.getBoundingClientRect();
+
+        // Only animate when section is visible
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+            const progress =
+                (viewportHeight - rect.top) / (viewportHeight + rect.height);
+                
+            const direction = section.classList.contains('reverse') ? -1 : 1;   
+            const translateY = direction * (progress - 0.5) * 20; // max ~10px up/down
+            image.style.transform = `translateY(${translateY}px)`;
+        }
+    });
+});

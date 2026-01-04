@@ -105,6 +105,21 @@
     border-radius: 12px;
 }
 
+/* PARALLAX IMAGE BASE */
+.overview-image {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.overview-image img {
+    width: 100%;
+    display: block;
+    transform: translateY(0);
+    transition: transform 0.2s linear;
+    will-change: transform;
+}
+
+
 .category-overview.reverse .overview-image {
     grid-column: 1;
 }
