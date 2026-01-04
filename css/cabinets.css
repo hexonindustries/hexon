@@ -100,12 +100,22 @@
 
 .category-overview.reverse .overview-text p {
     text-align: right;
-    text-align: justify;
-    text-justify: inter-word;
     /*margin-left: auto;
     max-width: 520px;*/
 }
-
+@media (min-width: 901px) {
+    
+    .category-overview .overview-text p {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+    .category-overview.reverse .overview-text p {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+}
 
 .overview-number {
     position: absolute;
