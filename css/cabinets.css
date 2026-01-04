@@ -49,12 +49,12 @@
     background-image: url("/assets/kitchen-hero.png");
 }
 
-/* Category Overview*/
 
+
+/* Category Overview */
+/*
 .category-overviews {
     background: #ffffff;
-    /*scroll-snap-type: y mandatory;*/
-
 }
 
 .category-overview {
@@ -66,9 +66,6 @@
     max-width: 1200px;
     margin: 0 auto;
     color: #144a33;
-    /*scroll-snap-align: start;
-    min-height: 100vh;
-    box-sizing: border-box;*/
 }
 .overview-divider {
     position: absolute;
@@ -83,12 +80,9 @@
     position: relative;
     padding-top: 40px;
 }
-/*
-.category-overview .overview-text {
-    width: 100%;
-}
-*/
+
 /* Right-align text ONLY for reversed overview blocks */
+/*
 .category-overview.reverse .overview-text {
     text-align: right;
 }
@@ -101,7 +95,7 @@
 .category-overview.reverse .overview-text p {
     text-align: right;
     /*margin-left: auto;
-    max-width: 520px;*/
+    max-width: 520px;
 }
 @media (min-width: 901px) {
     
@@ -127,22 +121,6 @@
     color: rgba(31, 107, 74, 0.12);
     z-index: 0;
 }
-/*
-.category-overview .overview-text {
-    grid-column: 1;
-}
-.category-overview .overview-image {
-    grid-column: 2;
-}
-
-.category-overview.reverse .overview-text {
-    grid-column: 2;
-}
-
-.category-overview.reverse .overview-image {
-    grid-column: 1;
-}
-*/
 
 .category-overview.reverse .overview-text {
     order: 2;
@@ -178,7 +156,7 @@
     border-radius: 12px;
 }
 
-/* PARALLAX IMAGE BASE */
+/* PARALLAX IMAGE BASE 
 .overview-image {
     overflow: hidden;
     border-radius: 12px;
@@ -220,7 +198,7 @@
 
 
 
-/* WHY HEXON CABINETS */
+/* WHY HEXON CABINETS 
 .cabinet-why {
     max-width: 1200px;
     margin: 0 auto;
@@ -268,7 +246,7 @@
     background-image: var(--bg);
     background-size: cover;
     background-position: center;
-    opacity: 0.2;              /* subtle */
+    opacity: 0.2;              /* subtle 
     transform: scale(1.05);
     z-index: 0;
     transition-delay: calc(var(--delay) * 120ms);
@@ -303,7 +281,7 @@
     line-height: 1.6;
 }
 
-/* QUALITY BANNER */
+/* QUALITY BANNER 
 .cabinet-quality {
     background: #0a2f1f;
     color: #ffffff;
@@ -346,7 +324,7 @@
     font-size: 16px;
     color: #144a33;
 }
-/* CTA */
+/* CTA 
 .category-cta {
     background: #f6f7f6;
     padding: 80px 24px;
@@ -374,3 +352,4 @@
         transform: none !important;
     }
 }
+*/
