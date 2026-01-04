@@ -607,7 +607,7 @@ section p{
 .application-header h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #1f6b4a;
+    color: #144a33;
     letter-spacing: 0.5px;
 }
 
@@ -615,7 +615,7 @@ section p{
 .decor-line {
     width: 50px;
     height: 3px;
-    background: #1f6b4a;
+    background: #144a33;
     transform: skewX(-30deg);
     opacity: 0.9;
 }
