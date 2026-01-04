@@ -175,7 +175,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
+/*
 const cards = document.querySelectorAll('.reveal-card');
 
 const cardObserver = new IntersectionObserver(entries => {
@@ -192,3 +192,29 @@ const cardObserver = new IntersectionObserver(entries => {
 });
 
 cards.forEach(card => cardObserver.observe(card));
+*/
+const cards = document.querySelectorAll('.reveal-card');
+const section = document.querySelector('.cabinet-why');
+
+let revealedCount = 0;
+
+window.addEventListener('scroll', () => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Start revealing when section is 60% into viewport
+    const triggerPoint = windowHeight * 0.6;
+
+    if (sectionTop < triggerPoint) {
+        const progress = triggerPoint - sectionTop;
+
+        const revealSpacing = 120; // px scroll per card (adjustable)
+
+        const cardsToReveal = Math.floor(progress / revealSpacing);
+
+        for (let i = revealedCount; i <= cardsToReveal && i < cards.length; i++) {
+            cards[i].classList.add('active');
+            revealedCount++;
+        }
+    }
+});
