@@ -193,7 +193,7 @@ const cardObserver = new IntersectionObserver(entries => {
 
 cards.forEach(card => cardObserver.observe(card));
 */
-const cards = document.querySelectorAll('.cabinet-why-card');
+const cards = document.querySelectorAll('.reveal-card');
 const section = document.querySelector('.cabinet-why');
 if (window.innerWidth < 768) {
     cards.forEach((card, index) => {

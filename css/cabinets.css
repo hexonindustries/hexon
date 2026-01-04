@@ -303,6 +303,17 @@
     line-height: 1.6;
 }
 
+.reveal-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* QUALITY BANNER */
 .cabinet-quality {
     background: #0a2f1f;
@@ -355,6 +366,8 @@
 .category-cta h4{
     color: #1f6b4a;
 }
+
+
 
 
 @media (max-width: 900px) {
