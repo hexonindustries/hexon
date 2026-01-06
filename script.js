@@ -344,14 +344,15 @@ shadeCards.forEach(card => {
         shadeCards.forEach(c => c.classList.remove('active'));
         card.classList.add('active');
 
-        const newImage = card.dataset.image;
+        const newImage = card.dataset.shade;
 
-        kitchenPreview.style.opacity = '0';
-
+        kitchenPreview.style.opacity = "0";
         setTimeout(() => {
-            kitchenPreview.src = newImage;
-            kitchenPreview.style.opacity = '1';
-        }, 220);
+            preview.src = `/assets/kitchen-${shade}.png`;
+            preview.style.opacity = "1";
+        }, 200);
+        shadeCards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
     });
 });
 
