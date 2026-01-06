@@ -555,15 +555,15 @@
     /*gap: 20px;*/
     align-items: center;
 
-
     width: 500px;
 }
 .shade-list{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
     max-height: 520px;
     overflow: hidden;
+    width: 500px;
 }
 
 .shade-arrow1 {
