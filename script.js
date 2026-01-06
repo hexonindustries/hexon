@@ -356,10 +356,10 @@ shadeCards.forEach(card => {
 });
 
 /* Vertical arrows */
-document.querySelector('.shade-arrow.up').onclick = () => {
+document.querySelector('.shade-arrow1.up').onclick = () => {
     shadeList.scrollBy({ top: -100, behavior: 'smooth' });
 };
 
-document.querySelector('.shade-arrow.down').onclick = () => {
+document.querySelector('.shade-arrow1.down').onclick = () => {
     shadeList.scrollBy({ top: 100, behavior: 'smooth' });
 };

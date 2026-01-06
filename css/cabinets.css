@@ -566,7 +566,7 @@
     overflow: hidden;
 }
 
-.shade-arrow {
+.shade-arrow1 {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -577,7 +577,7 @@
     margin: 10px 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-.shade-arrow:hover {
+.shade-arrow1:hover {
     background: #1f6b4a;
     color: #ffffff;
 }
@@ -606,6 +606,7 @@
 
 .shade-card1{
     min-height: 72px;
+    position: relative;
 }
 /*
 .shade-card1 {
