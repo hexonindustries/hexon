@@ -556,7 +556,7 @@
     align-items: center;
 
 
-    width: 280px;
+    width: 350px;
 }
 .shade-list{
     display: flex;
@@ -609,6 +609,15 @@
     min-height: 72px;
     position: relative;
 }
+
+.shade-card1:not(.active) .overview-number {
+    opacity: 0.35;
+}
+
+.shade-card1.active .overview-number {
+    opacity: 0.8;
+}
+
 /*
 .shade-card1 {
     position: relative;
