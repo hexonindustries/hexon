@@ -520,7 +520,7 @@
     padding: 0 24px;
 
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     gap: 64px;
     align-items: center;
 }
@@ -532,7 +532,7 @@
     overflow: hidden;
 
     box-shadow:
-        0 30px 60px rgba(0,0,0,0.08);
+        0 40px 60px rgba(0,0,0,0.12);
 }
 
 .kitchen-preview img {
