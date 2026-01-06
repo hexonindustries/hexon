@@ -311,7 +311,7 @@ if (shadeSlider && prevShade && nextShade) {
 
 
 
-
+/*
 const preview = document.getElementById("kitchenPreview");
 const shadeCards = document.querySelectorAll(".shade-card1");
 
@@ -331,3 +331,35 @@ shadeCards.forEach(card => {
         card.classList.add("active");
     });
 });
+*/
+
+const kitchenPreview = document.getElementById('kitchenPreview');
+const shadeCards = document.querySelectorAll('.shade-card1');
+const shadeList = document.getElementById('shadeList');
+
+shadeCards.forEach(card => {
+    card.addEventListener('click', () => {
+        if (card.classList.contains('active')) return;
+
+        shadeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+
+        const newImage = card.dataset.image;
+
+        kitchenPreview.style.opacity = '0';
+
+        setTimeout(() => {
+            kitchenPreview.src = newImage;
+            kitchenPreview.style.opacity = '1';
+        }, 220);
+    });
+});
+
+/* Vertical arrows */
+document.querySelector('.shade-arrow.up').onclick = () => {
+    shadeList.scrollBy({ top: -120, behavior: 'smooth' });
+};
+
+document.querySelector('.shade-arrow.down').onclick = () => {
+    shadeList.scrollBy({ top: 120, behavior: 'smooth' });
+};
