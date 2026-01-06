@@ -521,7 +521,7 @@
 
     display: grid;
     grid-template-columns: 1.8fr 1fr;
-    gap: 64px;
+    gap: 50px;
     align-items: center;
 }
 
