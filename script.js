@@ -305,3 +305,29 @@ if (shadeSlider && prevShade && nextShade) {
         shadeSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
 }
+
+
+
+
+
+
+
+const preview = document.getElementById("kitchenPreview");
+const shadeCards = document.querySelectorAll(".shade-card1");
+
+shadeCards.forEach(card => {
+    card.addEventListener("click", () => {
+        const shade = card.dataset.shade;
+
+        // Update image
+        preview.style.opacity = "0";
+        setTimeout(() => {
+            preview.src = `/assets/kitchen-${shade}.png`;
+            preview.style.opacity = "1";
+        }, 200);
+
+        // Active state
+        shadeCards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+    });
+});
