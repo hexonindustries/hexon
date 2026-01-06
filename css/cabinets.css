@@ -563,14 +563,14 @@
     gap: 15px;
     max-height: 520px;
     overflow: hidden;
-    width: 500px;
+    width: 350px;
 }
 
 .shade-arrow1 {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: none;
+    border: 2px #144a33;
     background: #ffffff;
     color: #144a33;
     cursor: pointer;
