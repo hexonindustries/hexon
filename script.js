@@ -344,23 +344,22 @@ shadeCards.forEach(card => {
         shadeCards.forEach(c => c.classList.remove('active'));
         card.classList.add('active');
 
-        const newImage = card.dataset.shade;
+        const shade = card.dataset.shade;
 
-        kitchenPreview.style.opacity = "0";
+        kitchenPreview.classList.add('fade-out');
+
         setTimeout(() => {
-            preview.src = `/assets/kitchen-${shade}.png`;
-            preview.style.opacity = "1";
-        }, 200);
-        shadeCards.forEach(c => c.classList.remove("active"));
-        card.classList.add("active");
+            kitchenPreview.src = `/assets/kitchen-${shade}.png`;
+            kitchenPreview.classList.remove('fade-out');
+        }, 250);
     });
 });
 
 /* Vertical arrows */
 document.querySelector('.shade-arrow.up').onclick = () => {
-    shadeList.scrollBy({ top: -120, behavior: 'smooth' });
+    shadeList.scrollBy({ top: -100, behavior: 'smooth' });
 };
 
 document.querySelector('.shade-arrow.down').onclick = () => {
-    shadeList.scrollBy({ top: 120, behavior: 'smooth' });
+    shadeList.scrollBy({ top: 100, behavior: 'smooth' });
 };
