@@ -441,7 +441,7 @@ function centerActiveShade(card) {
 }
 
 
-
+/*
 const zoneRows = document.querySelectorAll('.zone-row');
 
 const zoneObserver = new IntersectionObserver(
@@ -458,3 +458,4 @@ const zoneObserver = new IntersectionObserver(
 );
 
 zoneRows.forEach(row => zoneObserver.observe(row));
+*/
