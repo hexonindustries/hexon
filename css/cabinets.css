@@ -657,10 +657,10 @@
 
 /* Overview number bottom-left */
 .shade-card1 .overview-number {
-    position: absolute;
+    position: static;
     top: auto;
     bottom: 10px;
-    right: 12px;
+    left: 12px;
     font-size: 40px;
     font-weight: 700;
     color: rgba(31,107,74,0.18);
@@ -670,12 +670,8 @@
 /* SHADE SWATCH */
 .shade-swatch {
     width: 64px;
-
-
     height: 64px;
- 
     border-radius: 8px;
-
     background-size: cover;
     background-position: center;
 
