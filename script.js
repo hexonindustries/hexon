@@ -306,8 +306,32 @@ if (shadeSlider && prevShade && nextShade) {
     });
 }
 
+//Mobile shade vertical swipe instead of list
+let startY = 0;
+let endY = 0;
+shadeList.addEventListener("touchstart", e => {
+    startY = e.touches[0].clientY;
+});
 
+shadeList.addEventListener("touchmove", e => {
+    endY = e.touches[0].clientY;
+});
 
+shadeList.addEventListener("touchend", () => {
+    if (!startY || !endY) return;
+
+    const diff = startY - endY;
+
+    if (Math.abs(diff) > 40) {
+        shadeList.scrollBy({
+            top: diff > 0 ? 120 : -120,
+            behavior: "smooth"
+        });
+    }
+
+    startY = 0;
+    endY = 0;
+});
 
 
 
