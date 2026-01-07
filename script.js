@@ -332,6 +332,21 @@ shadeCards.forEach(card => {
     });
 });
 */
+const kitchenImages = [
+    "white",
+    "gray",
+    "champagne",
+    "light-wood",
+    "walnut",
+    "charcoal",
+    "cappuccino",
+    "pearl-white"
+];
+kitchenImages.forEach(shade =>{
+    const img = new Image();
+    img.src = `/assets/kitchen-${shade}.png`;
+
+});
 
 const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
