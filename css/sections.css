@@ -884,12 +884,17 @@
     border-radius: 14px;
     box-shadow: 0 22px 44px rgba(0,0,0,0.35);
     display: block;
+    transform: translateY(8px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .zone-row.active .zone-dot {
     box-shadow: 0 0 0 6px rgba(255,255,255,0.25);
 }
 
+.zone-row.active .zone-image img {
+    transform: translateY(0);
+}
 
 @media (max-width: 900px) {
 

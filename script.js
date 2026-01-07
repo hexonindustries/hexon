@@ -413,24 +413,27 @@ function centerActiveShade(card) {
 }
 
 
-/*
-const zoneRows = document.querySelectorAll('.zone-row');
 
-const zoneObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    },
-    {
-        threshold: 0.3
-    }
-);
+document.addEventListener('DOMContentLoaded', () => {
+    const zoneRows = document.querySelectorAll('.zone-row');
 
-zoneRows.forEach(row => zoneObserver.observe(row));
-*/
+    const zoneObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transitionDelay = '0.1s';
+                    entry.target.classList.add('active');
+                }
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    zoneRows.forEach(row => zoneObserver.observe(row));
+});
+
 
 
 
