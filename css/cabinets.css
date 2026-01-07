@@ -667,7 +667,7 @@
 
 /* Animate on active */
 .shade-card1.active .overview-number {
-    transform: scale(1.15);
+    transform: scale(1.2);
     opacity: 1.5;
 }
 
