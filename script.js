@@ -360,13 +360,25 @@ shadeCards.forEach(card => {
         card.classList.add('active');
 
         const shade = card.dataset.shade;
-
+        /*
         kitchenPreview.classList.add('fade-out');
 
         setTimeout(() => {
             kitchenPreview.src = `/assets/kitchen-${shade}.png`;
             kitchenPreview.classList.remove('fade-out');
         }, 250);
+        */
+
+        const newSrc = `/assets/kitchen-${shade}.png`;
+        kitchenPreview.classList.add("fade-out");
+        setTimeout(() => {
+            kitchenPreview.src = newSrc;
+            kitchenPreview.onload = () =>{
+                kitchenPreview.classList.remove('fade-out');
+            }
+            
+        }, 200);
+
     });
 });
 
