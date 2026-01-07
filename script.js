@@ -436,34 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/*
-//Mobile shade vertical swipe instead of list
-let startY = 0;
-let endY = 0;
-shadeList.addEventListener("touchstart", e => {
-    startY = e.touches[0].clientY;
-});
-
-shadeList.addEventListener("touchmove", e => {
-    endY = e.touches[0].clientY;
-});
-
-shadeList.addEventListener("touchend", () => {
-    if (!startY || !endY) return;
-
-    const diff = startY - endY;
-
-    if (Math.abs(diff) > 40) {
-        shadeList.scrollBy({
-            top: diff > 0 ? 120 : -120,
-            behavior: "smooth"
-        });
-    }
-
-    startY = 0;
-    endY = 0;
-});
-*/
+/* MOBILE VISUALIZER SLIDER */
 const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
 if (!isMobile) {
@@ -475,3 +448,14 @@ if (!isMobile) {
         shadeList.scrollBy({ top: 120, behavior: 'smooth' });
     });
 }
+/* SWIPE HINT */
+const swipeHint = document.getElementById("swipeHint");
+
+function hideSwipeHint() {
+    if (!swipeHint) return;
+    swipeHint.style.opacity = "0";
+    setTimeout(() => swipeHint.remove(), 300);
+}
+
+shadeList.addEventListener("scroll", hideSwipeHint, { once: true });
+shadeList.addEventListener("touchstart", hideSwipeHint, { once: true });
