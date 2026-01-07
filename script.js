@@ -448,7 +448,7 @@ if (!isMobile) {
         shadeList.scrollBy({ top: 120, behavior: 'smooth' });
     });
 }
-/* SWIPE HINT */
+/* SWIPE HINT 
 const swipeHint = document.getElementById("swipeHint");
 
 function hideSwipeHint() {
@@ -459,3 +459,4 @@ function hideSwipeHint() {
 
 shadeList.addEventListener("scroll", hideSwipeHint, { once: true });
 shadeList.addEventListener("touchstart", hideSwipeHint, { once: true });
+*/
