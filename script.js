@@ -364,6 +364,7 @@ shadeCards.forEach(card => {
 
         shadeCards.forEach(c => c.classList.remove('active'));
         card.classList.add('active');
+        centerActiveShade(card);
 
         const shade = card.dataset.shade;
         /*
@@ -396,3 +397,21 @@ document.querySelector('.shade-arrow1.up').onclick = () => {
 document.querySelector('.shade-arrow1.down').onclick = () => {
     shadeList.scrollBy({ top: 100, behavior: 'smooth' });
 };
+
+
+
+function centerActiveShade(card) {
+    const list = document.getElementById("shadeList");
+    const listRect = list.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+
+    const offset = 
+        cardRect.top -
+        listRect.top -
+        list.clientHeight / 2 +
+        card.clientHeight / 2;
+    list.scrollBy({
+        top: offset,
+        behavior: "smooth"
+    });
+}
