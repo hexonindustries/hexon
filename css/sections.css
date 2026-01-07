@@ -699,14 +699,14 @@
 /* =========================
    ZONE NARRATIVE (DARK) FOR CABINETS
 ========================= */
-
+/*
 .section--dark {
     background: #0a2f1f;
     color: #ffffff;
     padding: 120px 0;
 }
 
-/* SNAP SCROLL CONTAINER */
+/* SNAP SCROLL CONTAINER 
 .zone-scroll {
     max-width: 1200px;
     margin: 0 auto;
@@ -719,7 +719,7 @@
     scroll-snap-type: y mandatory;
 }
 
-/* EACH ZONE */
+/* EACH ZONE 
 .zone-item {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -730,13 +730,13 @@
     scroll-snap-align: start;
 }
 
-/* LEFT SIDE (LINE + NODE + TEXT) */
+/* LEFT SIDE (LINE + NODE + TEXT) 
 .zone-left {
     position: relative;
     padding-left: 40px;
 }
 
-/* VERTICAL LINE */
+/* VERTICAL LINE 
 .zone-left::before {
     content: "";
     position: absolute;
@@ -747,7 +747,7 @@
     background: rgba(255,255,255,0.15);
 }
 
-/* NODE */
+/* NODE 
 .zone-node {
     position: absolute;
     left: 0;
@@ -758,7 +758,7 @@
     background: #ffffff;
 }
 
-/* TEXT */
+/* TEXT 
 .zone-text h3 {
     font-size: 26px;
     margin-bottom: 12px;
@@ -772,7 +772,7 @@
     max-width: 420px;
 }
 
-/* IMAGE */
+/* IMAGE 
 .zone-image img {
     width: 100%;
     border-radius: 16px;
@@ -794,5 +794,107 @@
 
     .zone-text h3 {
         font-size: 22px;
+    }
+}*/
+
+/* =========================
+   ZONE NARRATIVE – GOLD
+========================= */
+
+.zone-narrative--gold {
+    background: linear-gradient(
+        180deg,
+        #c9a14a,
+        #b8933f
+    );
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+/* TIMELINE WRAPPER */
+.zone-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 56px; /* compact */
+}
+
+/* EACH ROW */
+.zone-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.zone-row.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MARKER COLUMN */
+.zone-marker {
+    position: relative;
+}
+
+/* VERTICAL LINE */
+.zone-marker::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    bottom: -60px;
+    left: 50%;
+    width: 2px;
+    background: rgba(255,255,255,0.35);
+    transform: translateX(-50%);
+}
+
+/* DOT */
+.zone-dot {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: block;
+}
+
+/* CONTENT */
+.zone-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.zone-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 420px;
+}
+
+/* IMAGE */
+.zone-image img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 22px 44px rgba(0,0,0,0.35);
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+
+    .zone-row {
+        grid-template-columns: 24px 1fr;
+        gap: 20px;
+    }
+
+    .zone-image {
+        grid-column: 2;
     }
 }

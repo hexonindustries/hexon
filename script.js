@@ -439,3 +439,6 @@ function centerActiveShade(card) {
         behavior: "smooth"
     });
 }
+
+
+
