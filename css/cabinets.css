@@ -747,13 +747,12 @@
     display: none;
     margin-top: 12px;
     font-size: 13px;
-    color: #6b7f75;
     align-items: center;
     justify-content: center;
     gap: 6px;
     opacity: 0.85;
 }
-
+/*
 .swipe-hint .swipe-arrow {
     animation: swipeHint 2.5s ease-in-out infinite;
 }
@@ -762,7 +761,7 @@
     0%   { transform: translateX(0); opacity: 0.4; }
     50%  { transform: translateX(8px); opacity: 1; }
     100% { transform: translateX(0); opacity: 0.4; }
-}
+}*/
 
 /* Only on mobile */
 @media (max-width: 900px) {
@@ -773,6 +772,7 @@
         justify-content: flex-start;
         font-size: 12px;
         opacity: 0.7;
+        color: #144a33;
     }
 /*
     .shade-list {
