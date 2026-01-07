@@ -541,6 +541,7 @@
     display: block;
     /*transition: opacity 0.4s ease*/
     transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
 }
 /*NEW*/
 .kitchen-preview img.fade-out {
