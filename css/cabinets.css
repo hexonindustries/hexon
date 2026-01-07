@@ -840,10 +840,10 @@
         opacity: 0.35;
     }
 
-    .shade-list::after {
+  /*  .shade-list::after {
         content: "";
-        flex: 0 0 16px; /* subtle end spacing */
-    }
+        flex: 0 0 16px; /* subtle end spacing 
+    }*/
 }
 /* Add a soft fade mask on left/right edges to hint scrollability */
 @media (max-width: 900px) {
