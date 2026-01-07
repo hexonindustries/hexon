@@ -458,7 +458,7 @@
     background-image: var(--bg);
     background-size: cover;
     background-position: center;
-    opacity: 0.36;              /* subtle */
+    opacity: 0.2;              /* subtle */
     transform: scale(0.95);
     z-index: 0;
     transition-delay: calc(var(--delay) * 120ms);
