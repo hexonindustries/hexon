@@ -25,7 +25,7 @@
 }
 
 .cupboard {
-    background-image: url("/assets/cupboard-card.png");
+    background-image: url("/assets/office-card.png");
 }
 
 .bookcase {
@@ -716,10 +716,6 @@
         padding-bottom: 8px;
     }
 
-    .shade-card1 {
-        min-width: 180px;
-        flex-shrink: 0;
-    }
     
 
     .kitchen-preview {
