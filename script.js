@@ -348,6 +348,12 @@ kitchenImages.forEach(shade =>{
 
 });
 
+kitchenImages.forEach(shade =>{
+    const img1 = new Image();
+    img1.src = `/assets/${shade}.png`;
+
+});
+
 const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
