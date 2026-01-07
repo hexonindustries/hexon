@@ -827,7 +827,9 @@
     .shade-arrow1 {
         display: none;
     }
-    .overview-number{
+    
+
+    .shade-card1 .overview-number{
         position: static;
         font-size: 28px;
         margin-bottom: 4px;
