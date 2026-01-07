@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+/*
 //Mobile shade vertical swipe instead of list
 let startY = 0;
 let endY = 0;
@@ -463,4 +463,15 @@ shadeList.addEventListener("touchend", () => {
     startY = 0;
     endY = 0;
 });
+*/
+const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
+if (!isMobile) {
+    document.querySelector('.shade-arrow1.up')?.addEventListener('click', () => {
+        shadeList.scrollBy({ top: -120, behavior: 'smooth' });
+    });
+
+    document.querySelector('.shade-arrow1.down')?.addEventListener('click', () => {
+        shadeList.scrollBy({ top: 120, behavior: 'smooth' });
+    });
+}
