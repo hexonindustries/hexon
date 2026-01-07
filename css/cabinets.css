@@ -755,7 +755,7 @@
 }
 
 .swipe-hint .swipe-arrow {
-    animation: swipeHint 1.6s ease-in-out infinite;
+    animation: swipeHint 2.5s ease-in-out infinite;
 }
 
 @keyframes swipeHint {
@@ -794,7 +794,9 @@
     .shade-list {
         flex-direction: row;
         gap: 14px;
-        padding: 12px 8px;
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
         /*max-height: none;*/
         overflow-x: auto;
         overflow-y: hidden;
@@ -804,8 +806,8 @@
     }
 
     .shade-card1 {
-        /*min-width: 220px;
-        flex-shrink: 0;*/
+        /*min-width: 220px;*/
+        flex-shrink: 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
