@@ -611,13 +611,7 @@
     position: relative;
 }
 
-.shade-card1:not(.active) .overview-number {
-    opacity: 0.6;
-}
 
-.shade-card1.active .overview-number {
-    opacity: 1.5;
-}
 
 /*
 .shade-card1 {
@@ -674,14 +668,15 @@
 /* Animate on active */
 .shade-card1.active .overview-number {
     transform: scale(1.15);
-    opacity: 0.9;
+    opacity: 1.5;
 }
 
 /* Reset for inactive */
 .shade-card1:not(.active) .overview-number {
     transform: scale(1);
-    opacity: 0.35;
+    opacity: 0.6;
 }
+
 
 /* SHADE SWATCH */
 .shade-swatch {
