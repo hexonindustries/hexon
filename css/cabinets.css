@@ -797,7 +797,7 @@
         gap: 14px;
         padding-top: 24px;
         padding-left: 16px;
-        padding-right: auto;
+        padding-right: 0;
         /*max-height: none;*/
         overflow-x: auto;
         overflow-y: hidden;
@@ -865,4 +865,27 @@
     }
 }
 
+@media (max-width: 900px) {
+    .shade-selector {
+        position: relative;
+    }
+
+    .shade-selector::before,
+    .shade-selector::after {
+        content: "";
+        position: absolute;
+        left: -16px;
+        right: -16px;
+        height: 1px;
+        background: rgba(20, 74, 51, 0.15);
+    }
+
+    .shade-selector::before {
+        top: 0;
+    }
+
+    .shade-selector::after {
+        bottom: 0;
+    }
+}
 
