@@ -132,7 +132,7 @@
         top: auto;      /* KEEP THIS */
         bottom: 12px;
         left: 12px;
-
+        position: static;
         font-size: 28px;
     }
 }
