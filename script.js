@@ -318,13 +318,13 @@ const kitchenImages = [
 ];
 kitchenImages.forEach(shade =>{
     const img = new Image();
-    img.src = `/assets/kitchen/kitchen-${shade}.webp`;
+    img.src = `/assets/kitchen/kitchen-${shade}.png`;
 
 });
 
 kitchenImages.forEach(shade =>{
     const img1 = new Image();
-    img1.src = `/assets/shades/${shade}.webp`;
+    img1.src = `/assets/shades/${shade}.png`;
 
 });
 
@@ -341,7 +341,7 @@ shadeCards.forEach(card => {
         centerActiveShade(card);
 
         const shade = card.dataset.shade;
-        const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
+        const newSrc = `/assets/kitchen/kitchen-${shade}.png`;
         kitchenPreview.classList.add("fade-out");
         setTimeout(() => {
             kitchenPreview.src = newSrc;
