@@ -306,28 +306,6 @@ if (shadeSlider && prevShade && nextShade) {
     });
 }
 
-
-/*
-const preview = document.getElementById("kitchenPreview");
-const shadeCards = document.querySelectorAll(".shade-card1");
-
-shadeCards.forEach(card => {
-    card.addEventListener("click", () => {
-        const shade = card.dataset.shade;
-
-        // Update image
-        preview.style.opacity = "0";
-        setTimeout(() => {
-            preview.src = `/assets/kitchen-${shade}.png`;
-            preview.style.opacity = "1";
-        }, 200);
-
-        // Active state
-        shadeCards.forEach(c => c.classList.remove("active"));
-        card.classList.add("active");
-    });
-});
-*/
 const kitchenImages = [
     "white",
     "gray",
@@ -340,13 +318,13 @@ const kitchenImages = [
 ];
 kitchenImages.forEach(shade =>{
     const img = new Image();
-    img.src = `/assets/kitchen-${shade}.png`;
+    img.src = `/assets/kitchen/kitchen-${shade}.webp`;
 
 });
 
 kitchenImages.forEach(shade =>{
     const img1 = new Image();
-    img1.src = `/assets/${shade}.png`;
+    img1.src = `/assets/shades/${shade}.webp`;
 
 });
 
@@ -363,16 +341,7 @@ shadeCards.forEach(card => {
         centerActiveShade(card);
 
         const shade = card.dataset.shade;
-        /*
-        kitchenPreview.classList.add('fade-out');
-
-        setTimeout(() => {
-            kitchenPreview.src = `/assets/kitchen-${shade}.png`;
-            kitchenPreview.classList.remove('fade-out');
-        }, 250);
-        */
-
-        const newSrc = `/assets/kitchen-${shade}.png`;
+        const newSrc = `/assets/kitchen-${shade}.webp`;
         kitchenPreview.classList.add("fade-out");
         setTimeout(() => {
             kitchenPreview.src = newSrc;

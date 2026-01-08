@@ -1,52 +1,52 @@
 .category-hero--cabinets {
-    background-image: url("/assets/cabinets-hero.png");
+    background-image: url("/assets/cabinet/cabinets-hero.webp");
 }
 .category-hero--cabinets-shared{
-    background-image: url("/assets/cabinet-shared-hero.png");
+    background-image: url("/assets/cabinet/cabinet-shared-hero.webp");
 }
 .kitchen {
-    background-image: url("/assets/kitchen-card.png");
+    background-image: url("/assets/cabinet/kitchen-card.webp");
 }
 
 .wardrobe {
-    background-image: url("/assets/wardrobe-card.png");
+    background-image: url("/assets/cabinet/wardrobe-card.webp");
 }
 
 .tv {
-    background-image: url("/assets/tv-card.png");
+    background-image: url("/assets/cabinet/tv-card.webp");
 }
 
 .bathroom {
-    background-image: url("/assets/bathroom-card.png");
+    background-image: url("/assets/cabinet/bathroom-card.webp");
 }
 
 .dining {
-    background-image: url("/assets/dining-card.png");
+    background-image: url("/assets/cabinet/dining-card.webp");
 }
 
-.cupboard {
-    background-image: url("/assets/office-card.png");
+.office {
+    background-image: url("/assets/cabinet/office-card.webp");
 }
 
 .bookcase {
-    background-image: url("/assets/bookcase-card.png");
+    background-image: url("/assets/cabinet/bookcase-card.webp");
 }
 
 .washing {
-    background-image: url("/assets/washing-card.png");
+    background-image: url("/assets/cabinet/washing-card.webp");
 }
 
 .living {
-    background-image: url("/assets/living-card.png");
+    background-image: url("/assets/cabinet/living-card.webp");
 }
 
 .racks {
-    background-image: url("/assets/racks-card.png");
+    background-image: url("/assets/cabinet/racks-card.webp");
 }
 
 /* KITCHEN HERO */
 .category-hero--kitchen {
-    background-image: url("/assets/kitchen-hero.png");
+    background-image: url("/assets/cabinet/kitchen-hero.webp");
 }
 /* SHADE SLIDER SECTION */
 .shade-slider-section {
@@ -289,7 +289,7 @@
     top: auto;
     bottom: 10px;
     left: 12px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     color: rgba(31,107,74,0.18);
     pointer-events: none;
@@ -482,7 +482,9 @@
         left: -16px;
         right: -16px;
         height: 3px;
-        background: rgba(20, 74, 51, 0.15);
+        /*
+        background: rgba(20, 74, 51, 0.15);*/
+        background: #144a33;
     }
 
     .shade-selector::before {
