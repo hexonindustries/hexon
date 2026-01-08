@@ -1,5 +1,5 @@
 .category-hero--cabinets {
-    background-image: url("/assets/cabinet/cabinets-hero.webp");
+    background-image: url("/assets/hero/cabinets-hero.webp");
 }
 .category-hero--cabinets-shared{
     background-image: url("/assets/cabinet/cabinet-shared-hero.webp");
@@ -46,7 +46,7 @@
 
 /* KITCHEN HERO */
 .category-hero--kitchen {
-    background-image: url("/assets/cabinet/kitchen-hero.webp");
+    background-image: url("/assets/hero/kitchen-hero.webp");
 }
 /* SHADE SLIDER SECTION */
 .shade-slider-section {
