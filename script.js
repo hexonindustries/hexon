@@ -341,7 +341,7 @@ shadeCards.forEach(card => {
         centerActiveShade(card);
 
         const shade = card.dataset.shade;
-        const newSrc = `/assets/kitchen-${shade}.webp`;
+        const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
         kitchenPreview.classList.add("fade-out");
         setTimeout(() => {
             kitchenPreview.src = newSrc;
