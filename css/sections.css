@@ -866,8 +866,13 @@
 
 /* CONTENT */
 .zone-content h3 {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.zone-content h4 {
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -905,6 +910,17 @@
 
     .zone-image {
         grid-column: 2;
+    }
+
+    .zone-content h3 {
+        font-size: 20px;
+    }
+    .zone-content h4 {
+        font-size: 15px;
+    }
+    
+    .zone-content p {
+        font-size: 12px;
     }
 }
 
