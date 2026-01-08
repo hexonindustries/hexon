@@ -48,318 +48,11 @@
 .category-hero--kitchen {
     background-image: url("/assets/kitchen-hero.png");
 }
-
-
-
-/* Category Overview */
-/*
-.category-overviews {
-    background: #ffffff;
-}
-
-.category-overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    padding: 35px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #144a33;
-}
-.overview-divider {
-    position: absolute;
-    top: 32px;
-    left: 110px;
-    width: 80px;
-    height: 1px;
-    background-color: rgba(31, 107, 74, 0.35);
-}
-
-.overview-text {
-    position: relative;
-    padding-top: 40px;
-}
-
-/* Right-align text ONLY for reversed overview blocks */
-/*
-.category-overview.reverse .overview-text {
-    text-align: right;
-}
-
-.category-overview.reverse .overview-text h2 {
-    text-align: right;
-}
-
-
-.category-overview.reverse .overview-text p {
-    text-align: right;
-    /*margin-left: auto;
-    max-width: 520px;
-}
-@media (min-width: 901px) {
-    
-    .category-overview .overview-text p {
-        text-align: justify;
-        text-justify: inter-word;
-        hyphens: auto;
-    }
-    .category-overview.reverse .overview-text p {
-        text-align: justify;
-        text-justify: inter-word;
-        hyphens: auto;
-    }
-}
-
-.overview-number {
-    position: absolute;
-    top: -30px;
-    left: -20px;
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 1;
-    color: rgba(31, 107, 74, 0.12);
-    z-index: 0;
-}
-
-.category-overview.reverse .overview-text {
-    order: 2;
-}
-
-.category-overview.reverse .overview-image {
-    order: 1;
-}
-
-.overview-image,
-.overview-text {
-    align-self: center;
-}
-
-
-.category-overview.reverse .overview-text {
-    text-align: left;
-}
-
-.category-overview.reverse .overview-number {
-    left: auto;
-    right: 0;
-}
-
-.category-overview.reverse .overview-divider {
-    left: auto;
-    right: 110px;
-}
-
-
-.category-overview img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* PARALLAX IMAGE BASE 
-.overview-image {
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.overview-image img {
-    width: 100%;
-    display: block;
-    transform: translateY(0);
-    transition: transform 0.2s linear;
-    will-change: transform;
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (max-width: 900px) {
-    .category-overview {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .overview-number {
-        font-size: 64px;
-    }
-
-    .overview-divider {
-        width: 48px;
-    }
-}
-
-
-
-/* WHY HEXON CABINETS 
-.cabinet-why {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 24px;
-    text-align: center;
-}
-
-.cabinet-why h2 {
-    font-size: 42px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 16px;
-}
-
-.cabinet-why-intro {
-    font-size: 18px;
-    color: #ffffff;
-    opacity: 0.7;
-    max-width: 720px;
-    margin: 0 auto 60px;
-}
-
-.cabinet-why-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-}
-
-.cabinet-why-card {
-    padding: 32px;
-    border-radius: 14px;
-    background: #ffffff;
-    text-align: left;
-    position: relative;
-    opacity: 0;
-    transform: translateY(40px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-.cabinet-why-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: var(--bg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;              /* subtle 
-    transform: scale(1.05);
-    z-index: 0;
-    transition-delay: calc(var(--delay) * 120ms);
-
-    
-    
-}
-.cabinet-why-card > * {
-    position: relative;
-    z-index: 1;
-}
-.cabinet-why-card.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.cabinet-why-card:hover {
-    transform: translateY(-4px);
-
-}
-
-.cabinet-why-card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1f6b4a;
-    margin-bottom: 10px;
-}
-
-.cabinet-why-card p {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* QUALITY BANNER 
-.cabinet-quality {
-    background: #0a2f1f;
-    color: #ffffff;
-    padding: 100px 24px;
-}
-
-.cabinet-quality-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.cabinet-quality h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 18px;
-}
-
-.cabinet-quality p {
-    font-size: 17px;
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
-.category-features {
-    background: #ffffff;
-    padding: 80px 24px;
-    text-align: center;
-}
-
-.features-grid {
-    max-width: 1000px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.feature-item {
-    font-size: 16px;
-    color: #144a33;
-}
-/* CTA 
-.category-cta {
-    background: #f6f7f6;
-    padding: 80px 24px;
-    text-align: center;
-}
-.category-cta h4{
-    color: #1f6b4a;
-}
-
-
-@media (max-width: 900px) {
-    .cabinet-why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cabinet-why-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 900px) {
-    .overview-image img {
-        transform: none !important;
-    }
-}
-*/
-
 /* SHADE SLIDER SECTION */
 .shade-slider-section {
     background: #ffffff;
     padding: 90px 0 110px;
 }
-
 /* Slider layout */
 .shade-slider-wrapper {
     position: relative;
@@ -367,14 +60,12 @@
     margin: 0 auto;
     padding: 0 60px;
 }
-
 .shade-slider {
     display: flex;
     gap: 32px;
     overflow: hidden;
     scroll-behavior: smooth;
 }
-
 /* Individual card */
 .shade-card {
     min-width: 260px;
@@ -391,7 +82,6 @@
         inset 0 0 0 1px rgba(255,255,255,0.6);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
 .shade-card:hover {
     transform: translateY(-6px);
     /*box-shadow: 0 30px 70px rgba(0,0,0,0.12);*/
@@ -399,7 +89,6 @@
         0 26px 60px rgba(0,0,0,0.12),
         inset 0 0 0 1px rgba(255,255,255,0.6);
 }
-
 /* Shade image placeholder */
 .shade-image {
     height: 180px;
@@ -416,8 +105,6 @@
         inset 0 0 0 1px rgba(0,0,0,0.08),
         0 8px 20px rgba(0,0,0,0.08);
 }
-
-
 /* Shade name */
 .shade-name {
     font-size: 15px;
@@ -425,7 +112,6 @@
     color: #144a33;
     letter-spacing: 0.3px;
 }
-
 /* Overview number reuse */
 .shade-card .overview-number {
     position: absolute;
@@ -441,7 +127,6 @@
         0 1px 0 rgba(255,255,255,0.6),
         0 2px 6px rgba(0,0,0,0.08);
 }
-
 @media (max-width: 768px) {
     .shade-card .overview-number {
         top: auto;      /* KEEP THIS */
@@ -451,8 +136,6 @@
         font-size: 28px;
     }
 }
-
-
 /* Arrows */
 .shade-arrow {
     position: absolute;
@@ -474,7 +157,6 @@
 
     transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .shade-arrow:hover {
     background: #1f6b4a;
     transform: translateY(-50%) scale(1.05);
@@ -487,8 +169,6 @@
 .shade-arrow.next {
     right: 0;
 }
-
-/* Mobile */
 @media (max-width: 768px) {
     .shade-slider-wrapper {
         padding: 0 24px;
@@ -502,18 +182,11 @@
         display: none;
     }
 }
-
-
-/* shade visualizer*/
-/* =========================
-   SHADE VISUALIZER
-========================= */
-
+/*SHADE VISUALIZER======================= */
 .shade-visualizer {
     background: #ffffff;
     padding: 100px 0;
 }
-
 .shade-visualizer-inner {
     max-width: 1400px;
     margin: 0 auto;
@@ -524,7 +197,6 @@
     gap: 50px;
     align-items: center;
 }
-
 /* KITCHEN PREVIEW */
 .kitchen-preview {
     position: relative;
@@ -534,7 +206,6 @@
     box-shadow:
         0 40px 60px rgba(0,0,0,0.12);
 }
-
 .kitchen-preview img {
     width: 100%;
     height: auto;
@@ -543,12 +214,10 @@
     transition: opacity 0.4s ease, transform 0.4s;
     will-change: opacity, transform;
 }
-/*NEW*/
 .kitchen-preview img.fade-out {
     opacity: 0;
     transform: scale(1.01);
 }
-
 /* SHADE SELECTOR */
 .shade-selector {
     display: flex;
@@ -566,7 +235,6 @@
     overflow: hidden;
     width: 320px;
 }
-
 .shade-arrow1 {
     width: 36px;
     height: 36px;
@@ -582,74 +250,39 @@
     background: #1f6b4a;
     color: #ffffff;
 }
-
 /* SHADE CARD */
 .shade-card1 {
     display: flex;
     align-items: center;
     gap: 16px;
     width: 100%;
-
     background: #ffffff;
     border-radius: 12px;
     padding: 14px 20px;
-
     cursor: pointer;
     border: none;
-
     box-shadow:
         inset 0 0 0 1px rgba(0,0,0,0.08),
         0 8px 20px rgba(0,0,0,0.06);
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
 }
-
 .shade-card1{
     min-height: 72px;
     position: relative;
 }
-
-
-
-/*
-.shade-card1 {
-    position: relative;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 16px 16px 16px 56px;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-
-    box-shadow:
-        0 14px 30px rgba(0,0,0,0.08),
-        inset 0 0 0 1px rgba(0,0,0,0.08);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-*/
-
 .shade-card1:hover {
     transform: translateY(-4px);
     box-shadow:
         inset 0 0 0 1px rgba(0,0,0,0.12),
         0 14px 32px rgba(0,0,0,0.10);
 }
-/*
-.shade-card1.active {
-    box-shadow:
-        inset 0 0 0 2px #1f6b4a,
-        0 18px 40px rgba(0,0,0,0.12);
-}*/
-
 .shade-card1.active {
     box-shadow:
         0 22px 44px rgba(31,107,74,0.25),
         inset 0 0 0 2px #1f6b4a;
 }
-
 /* Overview number bottom-left */
 .shade-card1 .overview-number {
     position: static;
@@ -660,24 +293,18 @@
     font-weight: 700;
     color: rgba(31,107,74,0.18);
     pointer-events: none;
-
-
     transition: transform 0.35s ease, opacity 0.35s ease;
 }
-
 /* Animate on active */
 .shade-card1.active .overview-number {
     transform: scale(1.2);
     opacity: 1.5;
 }
-
 /* Reset for inactive */
 .shade-card1:not(.active) .overview-number {
     transform: scale(1);
     opacity: 0.6;
 }
-
-
 /* SHADE SWATCH */
 .shade-swatch {
     width: 64px;
@@ -685,19 +312,16 @@
     border-radius: 8px;
     background-size: cover;
     background-position: center;
-
     box-shadow:
         inset 0 0 0 1px rgba(255,255,255,0.6),
         0 6px 14px rgba(0,0,0,0.12);
 }
-
 /* SHADE NAME */
 .shade-name {
     font-size: 15px;
     font-weight: 600;
     color: #144a33;
 }
-
 /* MOBILE */
 @media (max-width: 900px) {
     .shade-visualizer{
@@ -709,15 +333,11 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
     .shade-selector {
         flex-direction: row;
         overflow-x: auto;
         padding-bottom: 8px;
     }
-
-    
-
     .kitchen-preview {
         max-width: 100%;
         border-radius: 14px;
@@ -730,14 +350,9 @@
         object-fit: contain;
     }
 }
-
-
 .shade-list::-webkit-scrollbar {
     display: none;
 }
-
-
-
 /* Swipe hint  MOBILE */
 .swipe-hint {
     display: none;
@@ -758,7 +373,6 @@
     50%  { transform: translateX(8px); opacity: 1; }
     100% { transform: translateX(0); opacity: 0.4; }
 }*/
-
 /* Only on mobile */
 @media (max-width: 900px) {
     .swipe-hint {
@@ -827,12 +441,9 @@
         text-align: center;
     }
     /*list becomes swipe-first on mobile.*/
-    /* Hide arrows on mobile */
     .shade-arrow1 {
         display: none;
     }
-    
-
     .shade-card1 .overview-number{
         position: static;
         font-size: 28px;
@@ -840,10 +451,10 @@
         opacity: 0.35;
     }
 
-  /*  .shade-list::after {
+    .shade-list::after {
         content: "";
-        flex: 0 0 16px; /* subtle end spacing 
-    }*/
+        flex: 0 0 16px; /* subtle end spacing */
+    }
 }
 /* Add a soft fade mask on left/right edges to hint scrollability */
 @media (max-width: 900px) {
