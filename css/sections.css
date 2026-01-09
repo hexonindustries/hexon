@@ -7,6 +7,7 @@
     border: none;
     cursor: pointer;
     position: relative;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -83,7 +84,7 @@
         display: block;
     }
 
-    .main-nav {
+    .nav-links {
         display: none;
     }
 }
