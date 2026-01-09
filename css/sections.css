@@ -665,7 +665,7 @@
     }
     .section-header--spacious {
         padding-top: 48px;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
 }
 
