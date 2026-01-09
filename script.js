@@ -429,3 +429,25 @@ function hideSwipeHint() {
 shadeList.addEventListener("scroll", hideSwipeHint, { once: true });
 shadeList.addEventListener("touchstart", hideSwipeHint, { once: true });
 */
+
+
+
+/*MOBILE MENU*/
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+
+    document.body.style.overflow =
+        mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
