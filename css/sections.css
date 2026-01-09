@@ -8,6 +8,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1001;
+    transform: translateY(-50%);
 }
 
 .hamburger span {
@@ -86,6 +87,12 @@
 
     .nav-links {
         display: none;
+    }
+}
+@media (max-width: 900px) {
+    .dropdown-menu {
+        display: none !important;
+        pointer-events: none !important;
     }
 }
 
