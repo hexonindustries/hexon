@@ -1,4 +1,4 @@
-/* HAMBURGER */
+/* HAMBURGER 
 .hamburger {
     display: none;
     width: 32px;
@@ -97,7 +97,7 @@
         pointer-events: none !important;
     }
 }
-
+*/
 
 .category-overviews {
     background: #ffffff;

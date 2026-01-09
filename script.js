@@ -431,7 +431,7 @@ shadeList.addEventListener("touchstart", hideSwipeHint, { once: true });
 */
 
 
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -455,3 +455,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+*/
