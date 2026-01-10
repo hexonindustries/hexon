@@ -34,7 +34,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
-    z-index: 9999;
+    z-index: 999999;
 }
 
 .mobile-menu.active {
