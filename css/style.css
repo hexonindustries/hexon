@@ -856,7 +856,6 @@ section p{
     line-height: 1.65;
     max-width: 300px;
     justify-content: center;
-    text-align: justify;
     text-justify: inter-word;
 
 }
