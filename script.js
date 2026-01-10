@@ -462,5 +462,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".mobile-nav a").forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
-  });
+});
   
