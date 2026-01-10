@@ -96,6 +96,10 @@
         display: none !important;
         pointer-events: none !important;
     }
+    .dropdown-menu,
+    .nav-item.dropdown {
+        pointer-events: none !important;
+    }
 }
 .hamburger {
     position: fixed !important;
