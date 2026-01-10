@@ -851,9 +851,11 @@ section p{
 }
 
 .card-overlay p {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 100;
     line-height: 1.65;
+    max-width: 300px;
+
 }
 
 /* SHOW ON HOVER */
