@@ -742,7 +742,7 @@ section p{
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 
 
-    padding-bottom: 40px; /*made by me*/
+    padding-bottom: 17px; /*made by me*/
 }
 
 .application-card img {
@@ -851,7 +851,8 @@ section p{
 }
 
 .card-overlay p {
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 300;
     line-height: 1.65;
 }
 
