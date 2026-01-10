@@ -47,9 +47,9 @@
     top: 0;
     right: 0;
     height: 100%;
-
     
-    width: min(84vw, 340px);     /* mobile drawer width */
+    
+    width: min(25vw, 260px);     /* mobile drawer width */
     max-width: 360px;
 
     background: rgba(255,255,255,0.96);
