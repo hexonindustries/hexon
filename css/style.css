@@ -842,7 +842,7 @@ section p{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: left;
 
     opacity: 0;
