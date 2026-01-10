@@ -842,7 +842,7 @@ section p{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
 
     opacity: 0;
@@ -857,6 +857,7 @@ section p{
     max-width: 300px;
     justify-content: center;
     text-align: justify;
+    text-justify: inter-word;
 
 }
 
