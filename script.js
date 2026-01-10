@@ -417,21 +417,9 @@ if (!isMobile) {
         shadeList.scrollBy({ top: 120, behavior: 'smooth' });
     });
 }
-/* SWIPE HINT 
-const swipeHint = document.getElementById("swipeHint");
-
-function hideSwipeHint() {
-    if (!swipeHint) return;
-    swipeHint.style.opacity = "0";
-    setTimeout(() => swipeHint.remove(), 300);
-}
-
-shadeList.addEventListener("scroll", hideSwipeHint, { once: true });
-shadeList.addEventListener("touchstart", hideSwipeHint, { once: true });
-*/
 
 
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -455,4 +443,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-*/
