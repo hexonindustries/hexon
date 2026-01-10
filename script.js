@@ -418,7 +418,7 @@ if (!isMobile) {
 }
 
 
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -441,6 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+*/
     /*
     const closeBtn= document.querySelector(".mobile-close");
     if (closeBtn) {
@@ -450,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "";
         });
     }
-    /*
+    
     // tap outside nav closes menu
     mobileMenu.addEventListener("click", (e) => {
         if (e.target === mobileMenu) {
