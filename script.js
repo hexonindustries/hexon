@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow = '';
         });
     });
-
+    /*
     const closeBtn= document.querySelector(".mobile-close");
     if (closeBtn) {
         closeBtn.addEventListener("click", () => {
