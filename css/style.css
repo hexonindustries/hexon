@@ -740,6 +740,9 @@ section p{
     background: #ffffff;
     border-radius: 6px;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+
+    padding-bottom: 40px; /*made by me*/
 }
 
 .application-card img {
