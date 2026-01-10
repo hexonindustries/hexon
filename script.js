@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "";
         });
     }
-    
+    /*
     // tap outside nav closes menu
     mobileMenu.addEventListener("click", (e) => {
         if (e.target === mobileMenu) {
@@ -458,6 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "";
         }
     });
+    */
 });
 
   
