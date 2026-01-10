@@ -46,7 +46,7 @@
 
 /* RIGHT DRAWER */
 .mobile-drawer {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     height: 100%;
@@ -150,9 +150,6 @@
 
 .hamburger.active span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
-}
-.hamburger.active span:nth-child(4) {
-    opacity: 0;
 }
 /*
 .mobile-close {
