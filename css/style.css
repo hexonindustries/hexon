@@ -855,6 +855,8 @@ section p{
     font-weight: 100;
     line-height: 1.65;
     max-width: 300px;
+    justify-content: center;
+    align-content: center;
 
 }
 
