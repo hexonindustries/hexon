@@ -379,8 +379,11 @@
     .swipe-hint {
         display: flex;
         margin-top: 4px;
-        padding-left: 16px;
-        justify-content: flex-start;
+        /*padding-left: 16px;*/
+        /*justify-content: flex-start;*/
+        justify-content: center;
+        align-items: center;
+        
         font-size: 12px;
         opacity: 0.7;
         color: #144a33;
