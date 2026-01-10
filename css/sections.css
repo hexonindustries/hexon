@@ -9,7 +9,7 @@
     position: absolute;
     right: 24px;
     top: 50%;
-    z-index: 1000000;
+    z-index: 10000000;
     transform: translateY(-50%);
 }
 
@@ -28,8 +28,8 @@
 .mobile-menu {
     position: fixed;
     inset: 0;
-    background: rgba(10, 10, 10, 0.35);
-    /*background: rgba(255,255,255,0.96);*/
+    /*background: rgba(10, 10, 10, 0.35);*/
+    background: rgba(255,255,255,0.96);
     /*-webkit-backdrop-filter: blur(6px);*/
     backdrop-filter: blur(6px);
     pointer-events: none;
