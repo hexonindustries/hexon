@@ -41,7 +41,7 @@
     pointer-events: auto;
 }
 
-/* RIGHT DRAWER 
+/*RIGHT DRAWER */
 .mobile-drawer {
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@
     height: 100%;
 
     
-    width: min(84vw, 340px);     /* mobile drawer width 
+    width: min(84vw, 340px);     /* mobile drawer width */
     max-width: 360px;
 
     background: rgba(255,255,255,0.96);
@@ -62,14 +62,14 @@
 
     display: flex;
     flex-direction: column;
-    padding: 88px 22px 26px; /* top padding leaves space for close 
+    padding: 88px 22px 26px; /* top padding leaves space for close */
 }
 
 .mobile-menu.active .mobile-drawer {
     transform: translateX(0);
 }
-*/
-/* Close button 
+
+/*Close button */
 .mobile-close {
     position: absolute;
     top: 18px;
@@ -89,7 +89,7 @@
     display: grid;
     place-items: center;
 }
-*/
+
 .mobile-nav {
     height: 100%;
     display: flex;
