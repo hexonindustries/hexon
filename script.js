@@ -1,23 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (!hamburger || !mobileMenu) return;
-
-    hamburger.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        mobileMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-
-        const isOpen = mobileMenu.classList.contains("active");
-        hamburger.setAttribute("aria-expanded", String(isOpen));
-        document.body.style.overflow = isOpen ? "hidden" : "";
-    });
-
-
-
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
 
@@ -437,66 +418,49 @@ if (!isMobile) {
 }
 
 
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const closeBtn = document.querySelector(".mobile-close");
+  
     if (!hamburger || !mobileMenu) return;
-
-    hamburger.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('active');
-        hamburger.classList.toggle('active', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        });
-    });
-});
-*/
-/*
-(function () {
-    function initHamburger() {
-      const hamburger = document.querySelector(".hamburger");
-      const mobileMenu = document.querySelector(".mobile-menu");
   
-      if (!hamburger || !mobileMenu) return;
-  
-      hamburger.onclick = function (e) {
-        e.preventDefault();
-  
-        mobileMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-  
-        const isOpen = mobileMenu.classList.contains("active");
-        hamburger.setAttribute("aria-expanded", String(isOpen));
-        document.body.style.overflow = isOpen ? "hidden" : "";
-      };
-  
-      // close when clicking a menu link
-      mobileMenu.querySelectorAll("a").forEach((a) => {
-        a.onclick = () => {
-          mobileMenu.classList.remove("active");
-          hamburger.classList.remove("active");
-          hamburger.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        };
-      });
+    function openMenu() {
+      mobileMenu.classList.add("active");
+      hamburger.classList.add("active");
+      hamburger.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
     }
   
-    // run even if DOMContentLoaded already passed
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initHamburger);
-    } else {
-      initHamburger();
+    function closeMenu() {
+      mobileMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
     }
-  })();
   
-*/
+    hamburger.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("active");
+      isOpen ? closeMenu() : openMenu();
+    });
+  
+    // Close button
+    closeBtn?.addEventListener("click", closeMenu);
+  
+    // Tap outside drawer closes menu
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) closeMenu();
+    });
+  
+    // ESC closes
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+  
+    // Clicking links closes
+    document.querySelectorAll(".mobile-nav a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  });
+  
