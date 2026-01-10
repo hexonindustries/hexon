@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (!hamburger || !mobileMenu) return;
+
+    hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        mobileMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+
+        const isOpen = mobileMenu.classList.contains("active");
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+
+
 
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
@@ -443,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 */
-
+/*
 (function () {
     function initHamburger() {
       const hamburger = document.querySelector(".hamburger");
@@ -481,3 +499,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
   
+*/
