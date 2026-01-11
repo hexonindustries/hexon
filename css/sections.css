@@ -129,6 +129,7 @@
     /*color: rgba(20,74,51,0.55);*/
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 .mobile-header::after {
     content: "";
