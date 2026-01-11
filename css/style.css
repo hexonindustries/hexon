@@ -32,7 +32,8 @@ html, body {
 }
 .dropdown-menu--about {
     min-width: 220px;
-    padding: 14px 16px;
+    width: max-content;
+    padding: 16px 18px;
     display: block;              /* not grid */
     left: 0;                     /* align with ABOUT */
     transform: translateX(0);    /* remove centering */
