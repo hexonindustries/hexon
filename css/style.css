@@ -30,7 +30,35 @@ html, body {
 .nav-item {
     position: relative;
 }
+.dropdown-menu--about {
+    min-width: 220px;
+    padding: 14px 16px;
+    display: block;              /* not grid */
+    left: 0;                     /* align with ABOUT */
+    transform: translateX(0);    /* remove centering */
+}
+.dropdown-menu--simple ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.dropdown-menu--simple li {
+    margin: 0;
+}
 
+.dropdown-menu--about a {
+    display: block;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f6b4a;
+}
+
+.dropdown-menu--simple a:hover {
+    background: rgba(31,107,74,0.06);
+}
 .dropdown-menu {
     position: absolute;
     top: 100%;
