@@ -117,6 +117,8 @@
 .mobile-header {
     margin-top: 10px;
     margin-bottom: 18px;
+    align-items: center;
+    text-align: center;
 }
 
 .mobile-title {
