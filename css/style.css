@@ -98,6 +98,31 @@ html, body {
     margin-bottom: 16px;
 }
 
+.dropdown-column h4 a {
+    color: #1f6b4a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.dropdown-column h4 a:hover {
+    text-decoration: underline;
+}
+.dropdown-column h4 a::after {
+    content: "→";
+    font-size: 14px;
+    opacity: 0.6;
+    transform: translateX(-2px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+  
+.dropdown-column h4 a:hover::after {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
 .dropdown-column h4 span {
     font-weight: 500;
     font-size: 13px;
