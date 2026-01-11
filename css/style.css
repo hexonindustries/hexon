@@ -148,6 +148,10 @@ html, body {
     color: #1f6b4a;
 }
 
+.dropdown-column a:hover::after {
+    transform: translateX(2px);
+}
+
 
 /* SUB GROUPS (Closet, Racks) 
 .sub-group > span {
