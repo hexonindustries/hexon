@@ -113,7 +113,7 @@ html, body {
 .dropdown-column h4 a::after {
     content: "→";
     font-size: 14px;
-    opacity: 0.6;
+    opacity: 0;
     transform: translateX(-2px);
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
