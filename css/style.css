@@ -87,7 +87,7 @@ html, body {
 }
 
 
-.dropdown-menu--about a:hover {
+.dropdown-menu--about a:hover::after {
     /*background: rgba(31,107,74,0.06);*/
     content: "→";
     font-size: 14px;
