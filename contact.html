@@ -9,6 +9,11 @@
 <body>
 
   <header class="site-header">
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="nav">
         <div class="logo">
             <a href="index.html">
@@ -77,6 +82,20 @@
         </ul>
     </nav>
 </header>
+<div class="mobile-menu" id ="mobile-menu">
+  <div class="mobile-drawer">
+      <button class="mobile-close" aria-label="Close menu">✕</button>
+      <div class="mobile-header">
+          <span class="mobile-title">MENU</span>
+      </div>
+      <nav class="mobile-nav">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="products.html">PRODUCTS</a>
+          <a href="contact.html">CONTACT US</a>
+      </nav>
+  </div>
+</div>
 
 <main class="container">
   <h1>Contact Us</h1>
@@ -88,6 +107,7 @@
 <footer class="site-footer">
   <p>© Hexon Industries LLP</p>
 </footer>
-
+<script src="script.js"></script>
+<script src="hamburger.js"></script>
 </body>
 </html>
