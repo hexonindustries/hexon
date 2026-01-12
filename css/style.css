@@ -123,7 +123,7 @@ html, body {
 .dropdown-column h4 a {
     color: #1f6b4a;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     display: inline-flex;
     align-items: center;
@@ -168,6 +168,7 @@ html, body {
 
 .dropdown-column a:hover {
     color: #1f6b4a;
+    font-weight: 400;
 }
 
 .dropdown-column a:hover::after {
