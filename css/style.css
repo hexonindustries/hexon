@@ -69,13 +69,14 @@ html, body {
 }
 
 .dropdown-menu--about a {
-    display: block;
+    display: inline-flex;
     padding: 10px 10px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
     color: #1f6b4a;
     text-decoration: none;
+    gap: 6px;
     
 }
 
