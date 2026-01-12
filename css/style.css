@@ -77,9 +77,23 @@ html, body {
     color: #1f6b4a;
     text-decoration: none;
 }
+.dropdown-menu--about a:hover {
+    text-decoration: underline;
+}
+  
+.dropdown-menu--about a:hover::after {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
 
 .dropdown-menu--about a:hover {
-    background: rgba(31,107,74,0.06);
+    /*background: rgba(31,107,74,0.06);*/
+    content: "→";
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(-2px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .dropdown-menu {
     position: absolute;
@@ -168,6 +182,8 @@ html, body {
 
 .dropdown-column a:hover {
     color: #1f6b4a;
+    
+    
     font-weight: 400;
 }
 
