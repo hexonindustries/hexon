@@ -168,6 +168,7 @@ html, body {
 
 .dropdown-column a:hover {
     color: #1f6b4a;
+    font-weight: 500;
 }
 
 .dropdown-column a:hover::after {
@@ -219,7 +220,7 @@ html, body {
   
 .nav-links a:hover {
     color: #144a33;
-    font-weight: 800;
+    /*font-weight: 800;*/
 }
   
 body {
