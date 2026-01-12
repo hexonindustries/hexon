@@ -73,15 +73,17 @@ html, body {
     padding: 10px 10px;
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: #1f6b4a;
     text-decoration: none;
     gap: 6px;
     
 }
+/*
 .nav-item.dropdown--about .dropdown-menu--about a {
     font-weight: 700;
 }
+*/
 .dropdown-menu--about a:hover {
     /*background: rgba(31,107,74,0.06);*/
     text-decoration: underline;
