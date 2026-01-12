@@ -219,6 +219,7 @@ html, body {
   
 .nav-links a:hover {
     color: #144a33;
+    font-weight: 800;
 }
   
 body {
