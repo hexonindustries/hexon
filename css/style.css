@@ -30,7 +30,7 @@ html, body {
 .nav-item {
     position: relative;
 }
-.nav-item .dropdown .dropdown--about{
+.nav-item .dropdown--about{
     min-width: 220px !important;
     width: max-content;
     padding: 16px 18px !important;
