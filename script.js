@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let interval;
     const delay = 5000;
 
+    const slideImages = [
+        "assets/index/slide1.webp",
+        "assets/index/slide2.webp",
+        
+    ];
+    
+    slideImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
+
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove("active"));
         dots.forEach(dot => dot.classList.remove("active"));
@@ -41,10 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".hero-slider");
     slider.addEventListener("mouseenter", stopSlideshow);
     slider.addEventListener("mouseleave", startSlideshow);
-    window.addEventListener("load", () => {
+    /*window.addEventListener("load", () => {
         showSlide(0);
         startSlideshow();
-    })
+    })*/
+    showSlide(0); /*added later*/
+    startSlideshow();
     // INIT PROPERLY
 
     const prevBtn = document.querySelector(".slider-arrow.prev");
