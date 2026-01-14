@@ -13,7 +13,13 @@
 <body>
 
 <header class="site-header">
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav class="nav">
+        
         <div class="logo">
             <a href="../../index.html">
                 <img src="../../assets/hexon-logo.png" alt="Hexon Industries Logo">
@@ -21,7 +27,16 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="../../about.html">ABOUT</a></li>
+            <li class="nav-item dropdown--about">
+                <a href="about.html" class="nav-link">ABOUT US</a>
+                <div class="dropdown-menu--about">
+                    <ul>
+                        <li><a href="">Our Story</a></li>
+                        <li><a href="#">Production Line</a></li>
+                        <li><a href="#">Product Description</a></li>
+                    </ul>
+                </div>
+            </li>
             <li class="nav-item dropdown">
                 <a href="../../products.html" class="nav-link">PRODUCTS</a>
               
@@ -68,6 +83,20 @@
         </ul>
     </nav>
 </header>
+<div class="mobile-menu" id ="mobile-menu">
+    <div class="mobile-drawer">
+        <button class="mobile-close" aria-label="Close menu">✕</button>
+        <div class="mobile-header">
+            <span class="mobile-title">MENU</span>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </div>
+</div>
 
 <main>
 
@@ -483,5 +512,6 @@
 </footer>
 
 <script src="../../script.js"></script>
+<script src="../../hamburger.js"></script>
 </body>
 </html>
