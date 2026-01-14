@@ -1024,5 +1024,13 @@
     .zone-content p {
         font-size: 12px;
     }
+    .zone-narrative--gold {
+        padding: 70px 18px;   /* <-- KEY FIX */
+    }
+    
+    .zone-timeline {
+        padding: 0;          /* optional, keeps it clean */
+    }
+    
 }
 
