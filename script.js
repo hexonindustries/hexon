@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".hero-slider");
     slider.addEventListener("mouseenter", stopSlideshow);
     slider.addEventListener("mouseleave", startSlideshow);
-    /*window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
         showSlide(0);
         startSlideshow();
-    })*/
-    showSlide(0); /*added later*/
-    startSlideshow();
+    })
+    /*showSlide(0); /*added later
+    startSlideshow();*/
     // INIT PROPERLY
 
     const prevBtn = document.querySelector(".slider-arrow.prev");
