@@ -800,15 +800,15 @@
     color: #ffffff;
 }
 
-
+/*
 .section-header--dark h2{
     max-width: 1100px;
     color: #ffffff;
     margin: 0 auto 10px;
     font-size: clamp(32px, 3vw, 44px);
     line-height: 1.15;
-    /*white-space: nowrap;*/
-}
+    /*white-space: nowrap;
+}*/
 
 .section-header--dark .section-title h2{ 
     color: #ffffff;
