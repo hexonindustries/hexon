@@ -215,6 +215,7 @@
 
 .category-overviews {
     background: #ffffff;
+    padding: 100px 0;
 }
 
 .category-overview {
@@ -632,13 +633,6 @@
     padding: 100px 24px;
     text-align: center;
 }
-/*
-.cabinet-why h2 {
-    font-size: 42px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 16px;
-}*/
 
 .cabinet-why-intro {
     font-size: 18px;
