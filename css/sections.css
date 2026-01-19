@@ -1060,7 +1060,7 @@
 .products-hero-inner h1 {
     font-size: 48px;
     font-weight: 700;
-    /*color: #1f6b4a;*/
+    color: #ffffff;
     margin-bottom: 16px;
     text-align: center;
     justify-items: center;
@@ -1072,6 +1072,7 @@
     font-size: 18px;
     line-height: 1.6;
     opacity: 0.9;
+    color: #cbcbcb;
 }
 
 
