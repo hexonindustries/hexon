@@ -1,8 +1,9 @@
 .category-hero--cabinets {
     background-image: url("/assets/hero/cabinets-hero.webp");
 }
-.category-hero--products{
-    background-image: url("/assets/cabinet/cabinet-shared-hero.webp");
+
+.category-hero--kitchen{
+    background-image: url("/assets/hero/kitchen-hero.webp");
 }
 .kitchen {
     background-image: url("/assets/cabinet/kitchen-card.webp");
