@@ -1028,3 +1028,49 @@
     
 }
 
+/* FULL-WIDTH CATEGORY HERO */
+.products-hero {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 120px 0 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.products-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+.products-hero-inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    color: #ffffff;
+}
+
+.products-hero-inner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    /*color: #1f6b4a;*/
+    margin-bottom: 16px;
+    text-align: center;
+    justify-items: center;
+
+}
+
+.products-hero-inner p {
+    max-width: 720px;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
