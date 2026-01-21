@@ -11,60 +11,89 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav">
-    <div class="logo">
-        <a href="../index.html">
-            <img src="../assets/logo.png" alt="Hexon Industries Logo" />
-        </a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="about.html">ABOUT</a></li>
-        <li class="nav-item dropdown">
-            <a href="../products.html" class="nav-link">PRODUCTS</a>
-          
-            <div class="dropdown-menu">
-                  <!-- CABINETS -->
-                  <div class="dropdown-column">
-                    <h4><a href="/products/cabinets.html">Cabinets</a></h4>
-                    <ul>
-                        <li><a href="cabinets/kitchen.html">Kitchen</a></li>
-                        <li><a href="cabinets/wardrobe.html">Wardrobe</a></li>
-                        <li><a href="#">TV Cabinet</a></li>
-                        <li><a href="#">Bathroom Cabinet</a></li>
-                        <li><a href="#">Dining Cabinet</a></li>
-                        <li><a href="#">Cupboard</a></li>
-                        <li><a href="#">Bookcase</a></li>
-                        <li><a href="#">Washing Unit</a></li>
-                        <li><a href="#">Living Space</a></li>
-                        <li><a href="#">Storage Rack</a></li>
-                    </ul>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="nav">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="Hexon Industries Logo" />
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="nav-item dropdown">
+                <a href="../products.html" class="nav-link">PRODUCTS</a>
+            
+                <div class="dropdown-menu">
+                    <!-- CABINETS -->
+                    <div class="dropdown-column">
+                        <h4><a href="/products/cabinets.html">Cabinets</a></h4>
+                        <ul>
+                            <li><a href="cabinets/kitchen.html">Kitchen</a></li>
+                            <li><a href="cabinets/wardrobe.html">Wardrobe</a></li>
+                            <li><a href="#">TV Cabinet</a></li>
+                            <li><a href="#">Bathroom Cabinet</a></li>
+                            <li><a href="#">Dining Cabinet</a></li>
+                            <li><a href="#">Cupboard</a></li>
+                            <li><a href="#">Bookcase</a></li>
+                            <li><a href="#">Washing Unit</a></li>
+                            <li><a href="#">Living Space</a></li>
+                            <li><a href="#">Storage Rack</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- DOORS -->
+                    <div class="dropdown-column">
+                        <h4><a href="/products/doors.html">Doors</a></h4>
+                        <ul>
+                            <li><a href="#">Kitchen Door</a></li>
+                            <li><a href="#">Wardrobe Door</a></li>
+                            <li><a href="#">40mm Door</a></li>
+                            <li><a href="#">Invisible Door</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- WALL PANELS -->
+                    <div class="dropdown-column">
+                        <h4><a href="/products/walls.html">Wall Panels</a></h4>
+                        <ul>
+                            <li><a href="#">Residential</a></li>
+                            <li><a href="#">Commercial</a></li>
+                        </ul>
+                    </div>
                 </div>
-          
-                  <!-- DOORS -->
-                <div class="dropdown-column">
-                    <h4><a href="/products/doors.html">Doors</a></h4>
-                    <ul>
-                        <li><a href="#">Kitchen Door</a></li>
-                        <li><a href="#">Wardrobe Door</a></li>
-                        <li><a href="#">40mm Door</a></li>
-                        <li><a href="#">Invisible Door</a></li>
-                    </ul>
-                </div>
-          
-                  <!-- WALL PANELS -->
-                <div class="dropdown-column">
-                    <h4><a href="/products/walls.html">Wall Panels</a></h4>
-                    <ul>
-                        <li><a href="#">Residential</a></li>
-                        <li><a href="#">Commercial</a></li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li><a href="../contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
+            </li>
+            <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
 </header>
+<div class="breadcrumb-wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="sep">></span>
+        <a href="/products.html">Products</a>
+        <span class="sep">></span>
+        <span class="current">Cabinets</span>
+    </nav>
+</div>
+<div class="mobile-menu" id ="mobile-menu">
+    <div class="mobile-drawer">
+        <button class="mobile-close" aria-label="Close menu">✕</button>
+        <div class="mobile-header">
+            <span class="mobile-title">MENU</span>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </div>
+</div>
 
 <main>
     <!-- CABINETS HERO -->

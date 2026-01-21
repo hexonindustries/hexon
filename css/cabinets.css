@@ -501,3 +501,107 @@
     }
 }
 
+/* =========================
+   WARDROBE: SPLIT CATEGORY OVERVIEWS
+========================= */
+
+.wardrobe-split{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  
+    display: flex;
+    gap: 0;
+    border-radius: 18px;
+    overflow: hidden;
+  
+    box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+    background: #fff;
+}
+  
+  /* Each half */
+.wardrobe-side{
+    flex: 1;
+    min-width: 0;
+    transition: flex 0.55s cubic-bezier(.2,.9,.2,1);
+    padding: 36px 26px 44px;
+    overflow: hidden;
+    position: relative;
+}
+  
+  /* Premium subtle separator */
+.wardrobe-side + .wardrobe-side{
+    border-left: 1px solid rgba(20,74,51,0.10);
+}
+  
+/* Labels */
+.wardrobe-side-header{
+    text-align: left;
+    margin-bottom: 18px;
+    padding: 0 8px;
+}
+  
+.wardrobe-side-header h3{
+    font-size: 20px;
+    font-weight: 800;
+    color: #144a33;
+    margin: 0 0 6px;
+}
+  
+.wardrobe-side-header p{
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.75;
+    color: #144a33;
+}
+  
+/* Hover expand (85% takeover feel) */
+.wardrobe-split:hover .wardrobe-side{
+    flex: 0.42;
+    filter: saturate(0.92);
+    opacity: 0.92;
+}
+  
+.wardrobe-split:hover .wardrobe-side:hover{
+    flex: 2.6; /* ~85% */
+    filter: saturate(1);
+    opacity: 1;
+}
+  
+  /* Make inner content compact for split */
+.wardrobe-side .category-overview{
+    grid-template-columns: 1.1fr 1fr;
+    gap: 22px;
+    align-items: center;
+    margin: 22px 0;
+}
+  
+.wardrobe-side .overview-text h2{
+    font-size: 22px; /* tighter */
+}
+  
+/* Smaller images so 3 blocks fit nicely */
+.wardrobe-side .overview-image img{
+    border-radius: 14px;
+}
+  
+/* MOBILE: stack */
+@media (max-width: 900px){
+    .wardrobe-split{
+      flex-direction: column;
+      border-radius: 16px;
+    }
+  
+    .wardrobe-side + .wardrobe-side{
+      border-left: none;
+      border-top: 1px solid rgba(20,74,51,0.10);
+    }
+  
+    .wardrobe-split:hover .wardrobe-side,
+    .wardrobe-split:hover .wardrobe-side:hover{
+      flex: 1;
+      opacity: 1;
+      filter: none;
+    }
+}
+  
