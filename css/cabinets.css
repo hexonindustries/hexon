@@ -555,7 +555,10 @@
     font-size: 14px;
     opacity: 0.75;
     color: #144a33;
-    position: relative;
+}
+.wardrobe-side--closet .wardrobe-side-header{
+    text-align: right;
+    position: inherit;
 }
   
 /* Hover expand (85% takeover feel) */
