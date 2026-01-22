@@ -517,6 +517,8 @@
   
     box-shadow: 0 30px 80px rgba(0,0,0,0.06);
     background: #fff;
+
+    position: relative; /*added later*/
 }
   
   /* Each half */
@@ -605,3 +607,80 @@
     }
 }
   
+/* CENTER MICRO HINT */
+.wardrobe-split{
+  position: relative;
+}
+
+.wardrobe-split-hint{
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  transform: translateX(-50%);
+  z-index: 5;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: rgba(20,74,51,0.75);
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(20,74,51,0.12);
+  border-radius: 999px;
+  padding: 10px 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* subtle arrow animation */
+.wardrobe-split-hint span{
+  display: inline-block;
+  transform: translateX(0);
+  opacity: 0.85;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.wardrobe-split:hover .wardrobe-split-hint{
+  opacity: 0;
+  transform: translateX(-50%) translateY(-6px);
+  pointer-events: none;
+}
+
+.wardrobe-split:hover .wardrobe-split-hint span{
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* Premium compare effect: blur + dim non-hover side */
+.wardrobe-split:hover .wardrobe-side{
+  opacity: 0.55;
+  filter: blur(1.5px) saturate(0.85);
+  transform: scale(0.995);
+}
+
+.wardrobe-split:hover .wardrobe-side:hover{
+  opacity: 1;
+  filter: blur(0) saturate(1);
+  transform: scale(1);
+}
+
+/* smooth transitions */
+.wardrobe-side{
+  transition:
+    flex 0.55s cubic-bezier(.2,.9,.2,1),
+    opacity 0.45s ease,
+    filter 0.45s ease,
+    transform 0.45s ease;
+}
+.wardrobe-side--closet .wardrobe-side-header{
+    text-align: right;
+}
