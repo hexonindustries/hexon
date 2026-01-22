@@ -555,6 +555,7 @@
     font-size: 14px;
     opacity: 0.75;
     color: #144a33;
+    position: absolute;
 }
   
 /* Hover expand (85% takeover feel) */
