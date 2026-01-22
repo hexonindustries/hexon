@@ -688,3 +688,7 @@
 .wardrobe-side--closet .wardrobe-side-header{
     text-align: right;
 }
+.wardrobe-side--closet .wardrobe-side-header p{
+    text-align: right;
+    position: absolute;
+}
