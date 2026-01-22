@@ -538,26 +538,35 @@
     z-index: 2;
 }*/
 /* GOLD ACCENT TAG */
-.wardrobe-accent-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    background: linear-gradient(180deg, #c9a14a, #b8933f);
-    color: #fff;
+.wardrobe-accent-tag{
+    display: inline-block;
+    font-size: 12px;
     font-weight: 900;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 11px;
+    color: #b8933f; /* gold but subtle */
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    position: relative;
+}
 
-    padding: 10px 14px;
+/* underline */
+.wardrobe-accent-tag::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 64px;
+    height: 3px;
     border-radius: 999px;
-    box-shadow: 0 12px 26px rgba(0,0,0,0.16);
-
-    margin-bottom: 18px;
+    background: linear-gradient(90deg, #c9a14a, rgba(200,160,70,0.15));
+}
+.wardrobe-side--closet .wardrobe-accent-tag::after{
+    left: auto;
+    right: 0;
 }
   
-  /* Each half */
+  /* Each half  WORKSSS
 .wardrobe-side{
     flex: 1;
     min-width: 0;
@@ -565,12 +574,13 @@
     padding: 36px 26px 44px;
     overflow: hidden;
     position: relative;
-}
+}*/
   
   /* Premium subtle separator */
 .wardrobe-side + .wardrobe-side{
     border-left: 10px solid rgba(20,74,51,0.10);
     color:#144a33;
+    box-shadow: -18px 0 40px rgba(20,74,51,0.06);
 }
   
 /* Labels */
@@ -594,7 +604,7 @@
     color: #144a33;
 }
   
-/* Hover expand (85% takeover feel) */
+/* Hover expand (85% takeover feel) WORKS
 .wardrobe-split:hover .wardrobe-side{
     flex: 0.42;
     filter: saturate(0.92);
@@ -602,9 +612,34 @@
 }
   
 .wardrobe-split:hover .wardrobe-side:hover{
-    flex: 2.6; /* ~85% */
+    flex: 2.6; /* ~85% 
     filter: saturate(1);
     opacity: 1;
+}*/
+.wardrobe-side{
+    flex: 1 1 0;
+    min-width: 0;
+    will-change: flex-grow, filter, opacity, transform;
+    transition:
+      flex-grow 0.75s cubic-bezier(.18,.9,.18,1),
+      opacity 0.55s ease,
+      filter 0.55s ease,
+      transform 0.55s ease;
+}
+/* Default hover state = both shrink slightly NEWWWW */
+.wardrobe-split:hover .wardrobe-side{
+    flex-grow: 1;
+    opacity: 0.55;
+    filter: blur(1.5px) saturate(0.90);
+    transform: scale(0.992);
+}
+
+/* Hovered side grows */
+.wardrobe-split:hover .wardrobe-side:hover{
+    flex-grow: 6; /* gives the 80–85% takeover */
+    opacity: 1;
+    filter: blur(0) saturate(1);
+    transform: scale(1);
 }
   
   /* Make inner content compact for split */
