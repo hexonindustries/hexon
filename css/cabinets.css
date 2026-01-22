@@ -528,7 +528,7 @@
 }
 /* center divider line */
 .wardrobe-divider{
-    position: absolute;
+    position: relative;
     top: 22px;
     bottom: 22px;
     left: 50%;
