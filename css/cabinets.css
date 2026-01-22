@@ -526,7 +526,7 @@
     background: linear-gradient(180deg, #ffffff, #fbfbfb);
     border: 1px solid rgba(0,0,0,0.06);
 }
-/* center divider line */
+/* center divider line 
 .wardrobe-divider{
     position: relative;
     top: 22px;
@@ -536,7 +536,7 @@
     transform: translateX(-50%);
     background: rgba(20,74,51,0.10);
     z-index: 2;
-}
+}*/
 /* GOLD ACCENT TAG */
 .wardrobe-accent-tag {
     display: inline-flex;
@@ -569,7 +569,7 @@
   
   /* Premium subtle separator */
 .wardrobe-side + .wardrobe-side{
-    border-left: 1px solid rgba(20,74,51,0.10);
+    border-left: 3px solid rgba(20,74,51,0.10);
 }
   
 /* Labels */
