@@ -591,6 +591,7 @@
 .wardrobe-side + .wardrobe-side{
     border-left: 10px solid rgba(20,74,51,0.10);
     color:#144a33;
+    opacity: 1;
     box-shadow: -18px 0 40px rgba(20,74,51,0.06);
 }
   
