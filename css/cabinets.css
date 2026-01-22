@@ -569,7 +569,8 @@
   
   /* Premium subtle separator */
 .wardrobe-side + .wardrobe-side{
-    border-left: 3px solid rgba(20,74,51,0.10);
+    border-left: 10px solid rgba(20,74,51,0.10);
+    color:#144a33;
 }
   
 /* Labels */
