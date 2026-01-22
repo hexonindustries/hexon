@@ -537,20 +537,20 @@
     background: rgba(20,74,51,0.10);
     z-index: 2;
 }*/
-/* GOLD ACCENT TAG */
+/* GOLD ACCENT TAG 
 .wardrobe-accent-tag{
     display: inline-block;
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #b8933f; /* gold but subtle */
+    color: #b8933f; /* gold but subtle 
     margin-bottom: 16px;
     padding-bottom: 10px;
     position: relative;
 }
 
-/* underline */
+/* underline 
 .wardrobe-accent-tag::after{
     content: "";
     position: absolute;
@@ -564,17 +564,28 @@
 .wardrobe-side--closet .wardrobe-accent-tag::after{
     left: auto;
     right: 0;
-}
+}*/
   
-  /* Each half  WORKSSS
+/* Each half  WORKSSS*/
 .wardrobe-side{
     flex: 1;
     min-width: 0;
-    transition: flex 0.55s cubic-bezier(.2,.9,.2,1);
+    /*transition: flex 0.55s cubic-bezier(.2,.9,.2,1);*/
     padding: 36px 26px 44px;
     overflow: hidden;
     position: relative;
-}*/
+
+
+
+
+    
+    will-change: flex-grow, filter, opacity, transform;
+    transition:
+      flex-grow 0.75s cubic-bezier(.18,.9,.18,1),
+      opacity 0.55s ease,
+      filter 0.55s ease,
+      transform 0.55s ease;
+}
   
   /* Premium subtle separator */
 .wardrobe-side + .wardrobe-side{
