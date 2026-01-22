@@ -558,7 +558,6 @@
 }
 .wardrobe-side--closet .wardrobe-side-header{
     text-align: right;
-    position: inherit;
 }
   
 /* Hover expand (85% takeover feel) */
@@ -690,5 +689,4 @@
 }
 .wardrobe-side--closet .wardrobe-side-header p{
     text-align: right;
-    position: absolute;
 }

@@ -432,95 +432,49 @@ if (!isMobile) {
 }
 
 
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    if (!hamburger || !mobileMenu) return;
-
-    hamburger.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('active');
-        hamburger.classList.toggle('active', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+    const split = document.getElementById("wardrobeSplit");
+    if (!split) return;
+  
+    const isMobile = window.matchMedia("(max-width: 900px)").matches;
+    if (!isMobile) return;
+  
+    const left = split.querySelector('.wardrobe-side--column');
+    const right = split.querySelector('.wardrobe-side--closet');
+  
+    function reset() {
+      split.classList.remove("is-column-open", "is-closet-open");
+      split.classList.add("is-reset");
+    }
+  
+    function openColumn() {
+      split.classList.remove("is-reset", "is-closet-open");
+      split.classList.add("is-column-open");
+    }
+  
+    function openCloset() {
+      split.classList.remove("is-reset", "is-column-open");
+      split.classList.add("is-closet-open");
+    }
+  
+    // start neutral
+    reset();
+  
+    left.addEventListener("click", () => {
+      if (split.classList.contains("is-column-open")) {
+        reset();
+      } else {
+        openColumn();
+      }
     });
-
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        });
+  
+    right.addEventListener("click", () => {
+      if (split.classList.contains("is-closet-open")) {
+        reset();
+      } else {
+        openCloset();
+      }
     });
 });
-*/
-    /*
-    const closeBtn= document.querySelector(".mobile-close");
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
-        });
-    }
-    
-    // tap outside nav closes menu
-    mobileMenu.addEventListener("click", (e) => {
-        if (e.target === mobileMenu) {
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
-        }
-    });
-    */
-
-
   
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    const closeBtn = document.querySelector(".mobile-close");
-  
-    if (!hamburger || !mobileMenu) return;
-  
-    function openMenu() {
-      mobileMenu.classList.add("active");
-      hamburger.classList.add("active");
-      hamburger.setAttribute("aria-expanded", "true");
-      document.body.style.overflow = "hidden";
-    }
-  
-    function closeMenu() {
-      mobileMenu.classList.remove("active");
-      hamburger.classList.remove("active");
-      hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    }
-  
-    hamburger.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.contains("active");
-      isOpen ? closeMenu() : openMenu();
-    });
-  
-    // Close button
-    closeBtn?.addEventListener("click", closeMenu);
-  
-    // Tap outside drawer closes menu
-    mobileMenu.addEventListener("click", (e) => {
-      if (e.target === mobileMenu) closeMenu();
-    });
-  
-    // ESC closes
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  
-    // Clicking links closes
-    document.querySelectorAll(".mobile-nav a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-});
-*/
