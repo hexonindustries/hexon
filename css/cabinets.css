@@ -952,8 +952,8 @@
         font-size: 18px;
     }
     .wardrobe-side--closet .wardrobe-close {
-        left: auto;
-        right: 0;
+        right: auto;
+        left: 0;
     }
     /*
     .wardrobe-split.is-reset .wardrobe-side{
