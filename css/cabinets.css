@@ -941,5 +941,46 @@
       filter: blur(1.4px);
     }
 }
+/* Close button */
+.wardrobe-close{
+    position: absolute;
+    top: 16px;
+    right: 14px;
+  
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+  
+    border: 1px solid rgba(20,74,51,0.18);
+    background: rgba(255,255,255,0.92);
+    color: #144a33;
+  
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1;
+  
+    display: grid;
+    place-items: center;
+  
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+  
+/* Show close button only when something is open */
+@media (max-width: 900px){
+    .wardrobe-split.is-column-open .wardrobe-side--column .wardrobe-close,
+    .wardrobe-split.is-closet-open .wardrobe-side--closet .wardrobe-close{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+}
   
   
