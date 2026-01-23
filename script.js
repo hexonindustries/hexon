@@ -377,10 +377,8 @@ shadeCards.forEach(card => {
 
         const shade = card.dataset.shade;
         const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
-        const newSrc1 = `/assets/wardrobe/wardrobe-${shade}.webp`;
-
         kitchenPreview.classList.add("fade-out");
-        wardrobePreview.classList.add("fade-out");
+       
         setTimeout(() => {
             kitchenPreview.src = newSrc;
             kitchenPreview.onload = () =>{
@@ -388,8 +386,21 @@ shadeCards.forEach(card => {
             }
             
         }, 200);
+
+    });
+    card.addEventListener('click', () => {
+        if (card.classList.contains('active')) return;
+
+        shadeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        centerActiveShade(card);
+
+        const shade = card.dataset.shade;
+        const newSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
+        wardrobePreview.classList.add("fade-out");
+       
         setTimeout(() => {
-            wardrobePreview.src = newSrc1;
+            wardrobePreview.src = newSrc;
             wardrobePreview.onload = () =>{
                 wardrobePreview.classList.remove('fade-out');
             }
@@ -397,6 +408,8 @@ shadeCards.forEach(card => {
         }, 200);
 
     });
+
+
 });
 
 /* Vertical arrows */
