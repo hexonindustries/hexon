@@ -799,11 +799,11 @@
 
 
 @media (max-width: 900px){
-
+    /*
     .wardrobe-split{
-      flex-direction: row;
+      flex-direction: column;
       min-height: auto;
-    }
+    }*/
   
     .wardrobe-split-hint{
       display: none;
@@ -838,5 +838,56 @@
     .wardrobe-accent-tag{
         font-size: 25px;
     }
+
+
+    /* Stack layout looks premium + readable */
+    .wardrobe-split{
+        flex-direction: column;
+    }
+
+    /* disable hover logic completely on mobile */
+    .wardrobe-split:hover .wardrobe-side,
+    .wardrobe-split:hover .wardrobe-side:hover{
+        flex-grow: 1 !important;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+    }
+
+    /* default state = both full */
+    .wardrobe-side{
+        flex-grow: 1;
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
+
+    /* ACTIVE: Column opened */
+    .wardrobe-split.is-column-open .wardrobe-side--column{
+        flex-grow: 6;
+    }
+    .wardrobe-split.is-column-open .wardrobe-side--closet{
+        flex-grow: 1;
+        opacity: 0.25;
+        filter: blur(1.4px);
+    }
+
+    /* ACTIVE: Closet opened */
+    .wardrobe-split.is-closet-open .wardrobe-side--closet{
+        flex-grow: 6;
+    }
+    .wardrobe-split.is-closet-open .wardrobe-side--column{
+        flex-grow: 1;
+        opacity: 0.25;
+        filter: blur(1.4px);
+    }
+
+    /* hide divider on stacked mobile */
+    .wardrobe-side + .wardrobe-side{
+        border-left: 0;
+        border-top: 3px solid rgba(20,74,51,0.18);
+    }
+
+
 }
   
