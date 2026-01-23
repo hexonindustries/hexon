@@ -951,6 +951,10 @@
     .wardrobe-accent-tag{
         font-size: 18px;
     }
+    .wardrobe-side--closet .wardrobe-close {
+        left: auto;
+        right: 0;
+    }
     /*
     .wardrobe-split.is-reset .wardrobe-side{
       flex: 1;
