@@ -219,5 +219,13 @@ document.addEventListener("DOMContentLoaded", () => {
         split.classList.contains("is-closet-open") ? reset() : openCloset();
       }
     });
+    split.querySelectorAll(".wardrobe-close").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation(); // stops triggering the open logic
+          reset();
+        });
+    });
+      
 });
+
   

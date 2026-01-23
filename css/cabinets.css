@@ -903,11 +903,42 @@
 
 }*/
 @media (max-width: 900px){
+    /* Default: 50/50 */
+    .wardrobe-side{
+        flex: 1 1 0;
+    }
+
+    /* ACTIVE: Column opened (96% feel) */
+    .wardrobe-split.is-column-open .wardrobe-side--column{
+        flex: 24 1 0 !important;
+    }
+    .wardrobe-split.is-column-open .wardrobe-side--closet{
+        flex: 1 1 0 !important;
+        opacity: 0.25;
+        filter: blur(1.4px);
+    }
+
+    /* ACTIVE: Closet opened (96% feel) */
+    .wardrobe-split.is-closet-open .wardrobe-side--closet{
+        flex: 24 1 0 !important;
+    }
+    .wardrobe-split.is-closet-open .wardrobe-side--column{
+        flex: 1 1 0 !important;
+        opacity: 0.25;
+        filter: blur(1.4px);
+    }
+
+    /* RESET */
+    .wardrobe-split.is-reset .wardrobe-side{
+        flex: 1 1 0 !important;
+        opacity: 1;
+        filter: none;
+    }
 
     .wardrobe-split{
       flex-direction: row;
     }
-  
+    /*
     .wardrobe-split.is-reset .wardrobe-side{
       flex: 1;
       opacity: 1;
@@ -917,7 +948,7 @@
         font-size: 18px;
     }
   
-    /* Column open */
+    /* Column open 
     .wardrobe-split.is-column-open .wardrobe-side--column{
       flex: 24;
       opacity: 1;
@@ -929,7 +960,7 @@
       filter: blur(1.4px);
     }
   
-    /* Closet open */
+    /* Closet open 
     .wardrobe-split.is-closet-open .wardrobe-side--closet{
       flex: 24;
       opacity: 1;
@@ -939,7 +970,7 @@
       flex: 1;
       opacity: 0.25;
       filter: blur(1.4px);
-    }
+    }*/
 }
 /* Close button */
 .wardrobe-close{
