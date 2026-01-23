@@ -907,6 +907,13 @@
     .wardrobe-side{
         flex: 1 1 0;
     }
+    .wardrobe-split-hint{
+        display: none;
+    }
+    .wardrobe-split-hint-mobile{
+        display: inline-flex;
+    }
+
 
     /* ACTIVE: Column opened (96% feel) */
     .wardrobe-split.is-column-open .wardrobe-side--column{
@@ -937,6 +944,9 @@
 
     .wardrobe-split{
       flex-direction: row;
+    }
+    .wardrobe-accent-tag{
+        font-size: 18px;
     }
     /*
     .wardrobe-split.is-reset .wardrobe-side{
