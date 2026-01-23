@@ -389,7 +389,7 @@ shadeCards.forEach(card => {
             
         }, 200);
         setTimeout(() => {
-            wardrobePreview.src = newSrc;
+            wardrobePreview.src = newSrc1;
             wardrobePreview.onload = () =>{
                 wardrobePreview.classList.remove('fade-out');
             }
