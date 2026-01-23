@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 });
-*/
+
 document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
@@ -514,4 +514,4 @@ document.addEventListener("DOMContentLoaded", () => {
       else openCloset();
     });
 });
-  
+*/
