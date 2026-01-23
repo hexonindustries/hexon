@@ -549,8 +549,12 @@
     padding-bottom: 10px;
     position: relative;
     font-size: 35px;
+}*/
+.wardrobe-divider,
+.wardrobe-split-hint,
+.wardrobe-split-hint-mobile{
+  pointer-events: none;
 }
-
 /* underline */
 .wardrobe-side-header h3::after{
     content: "";

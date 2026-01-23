@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 */
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
@@ -138,5 +139,47 @@ document.addEventListener("DOMContentLoaded", () => {
         else openCloset();
       }
     });
+});*/
+document.addEventListener("DOMContentLoaded", () => {
+    const split = document.querySelector(".wardrobe-split");
+    if (!split) return;
+  
+    function reset() {
+      split.classList.remove("is-column-open", "is-closet-open");
+      split.classList.add("is-reset");
+    }
+  
+    function openColumn() {
+      split.classList.add("is-column-open");
+      split.classList.remove("is-closet-open", "is-reset");
+    }
+  
+    function openCloset() {
+      split.classList.add("is-closet-open");
+      split.classList.remove("is-column-open", "is-reset");
+    }
+  
+    // default state
+    reset();
+  
+    split.addEventListener("click", (e) => {
+      // ignore clicks on actual links
+      if (e.target.closest("a, button")) return;
+  
+      const rect = split.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const isLeft = clickX < rect.width / 2;
+  
+      if (isLeft) {
+        // toggle left
+        if (split.classList.contains("is-column-open")) reset();
+        else openColumn();
+      } else {
+        // toggle right
+        if (split.classList.contains("is-closet-open")) reset();
+        else openCloset();
+      }
+    });
 });
+  
   
