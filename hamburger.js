@@ -99,35 +99,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
   
-    const col = split.querySelector(".wardrobe-side--column");
-    const clo = split.querySelector(".wardrobe-side--closet");
+    const column = split.querySelector(".wardrobe-side--column");
+    const closet = split.querySelector(".wardrobe-side--closet");
   
     function reset() {
       split.classList.remove("is-column-open", "is-closet-open");
     }
   
     function openColumn() {
-      split.classList.remove("is-closet-open");
       split.classList.add("is-column-open");
+      split.classList.remove("is-closet-open");
     }
   
     function openCloset() {
-      split.classList.remove("is-column-open");
       split.classList.add("is-closet-open");
+      split.classList.remove("is-column-open");
     }
   
-    col?.addEventListener("click", (e) => {
-      // prevent clicking links inside
+    // ✅ ONE click handler only (prevents both opening)
+    split.addEventListener("click", (e) => {
+      // ignore clicks on links/buttons inside
       if (e.target.closest("a, button")) return;
   
-      if (split.classList.contains("is-column-open")) reset();
-      else openColumn();
-    });
+      const clickedColumn = e.target.closest(".wardrobe-side--column");
+      const clickedCloset = e.target.closest(".wardrobe-side--closet");
   
-    clo?.addEventListener("click", (e) => {
-      if (e.target.closest("a, button")) return;
+      // if click was not inside either side, ignore
+      if (!clickedColumn && !clickedCloset) return;
   
-      if (split.classList.contains("is-closet-open")) reset();
-      else openCloset();
+      // ✅ TOGGLE behaviour
+      if (clickedColumn) {
+        if (split.classList.contains("is-column-open")) reset();
+        else openColumn();
+      }
+  
+      if (clickedCloset) {
+        if (split.classList.contains("is-closet-open")) reset();
+        else openCloset();
+      }
     });
 });
+  
