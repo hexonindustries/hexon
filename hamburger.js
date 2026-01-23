@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else openCloset();
       }
     });
-});*/
+});*//*
 document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
@@ -183,6 +183,40 @@ document.addEventListener("DOMContentLoaded", () => {
         if (split.classList.contains("is-closet-open")) reset();
         else openCloset();
         return;
+      }
+    });
+});
+*/
+document.addEventListener("DOMContentLoaded", () => {
+    const split = document.querySelector(".wardrobe-split");
+    if (!split) return;
+  
+    function reset() {
+      split.classList.remove("is-column-open", "is-closet-open");
+      split.classList.add("is-reset");
+    }
+    function openColumn() {
+      split.classList.add("is-column-open");
+      split.classList.remove("is-closet-open", "is-reset");
+    }
+    function openCloset() {
+      split.classList.add("is-closet-open");
+      split.classList.remove("is-column-open", "is-reset");
+    }
+  
+    reset();
+  
+    split.addEventListener("click", (e) => {
+      if (e.target.closest("a, button")) return;
+  
+      const isColumn = e.target.closest(".wardrobe-side--column");
+      const isCloset = e.target.closest(".wardrobe-side--closet");
+  
+      if (isColumn) {
+        split.classList.contains("is-column-open") ? reset() : openColumn();
+      }
+      if (isCloset) {
+        split.classList.contains("is-closet-open") ? reset() : openCloset();
       }
     });
 });

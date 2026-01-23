@@ -808,7 +808,7 @@
     text-align: right;
 }
 
-
+/*
 @media (max-width: 900px){
     
     .wardrobe-split{
@@ -823,26 +823,26 @@
       display: inline-flex;
     }
   
-    /* Default: 50/50 */
+    /* Default: 50/50 
     .wardrobe-side{
         padding: 26px 18px 30px;
     }
   
-    /* when one is active */
+    /* when one is active 
     .wardrobe-split.is-column-open .wardrobe-side--column{ flex: 6; }
     .wardrobe-split.is-column-open .wardrobe-side--closet{ flex: 1; opacity: 0.35; filter: blur(1.4px); }
   
     .wardrobe-split.is-closet-open .wardrobe-side--closet{ flex: 6; }
     .wardrobe-split.is-closet-open .wardrobe-side--column{ flex: 1; opacity: 0.35; filter: blur(1.4px); }
   
-    /* remove blur if reset */
+    /* remove blur if reset 
     .wardrobe-split.is-reset .wardrobe-side{
         flex: 1;
         opacity: 1;
         filter: none;
     }
   
-    /* make divider softer on mobile */
+    /* make divider softer on mobile 
     .wardrobe-divider{
         opacity: 0.35;
     }
@@ -856,16 +856,16 @@
         flex-direction: row;
     }*/
 
-    /* disable hover logic completely on mobile */
+    /* disable hover logic completely on mobile 
     .wardrobe-split:hover .wardrobe-side,
     .wardrobe-split:hover .wardrobe-side:hover{
         flex-grow: 1 !important;
         opacity: 1 !important;
         filter: none !important;
         transform: none !important;
-    }
+    }*/
 
-    /* default state = both full */
+    /* default state = both full 
     .wardrobe-side{
         flex-grow: 1;
         opacity: 1;
@@ -873,7 +873,7 @@
         transform: none;
     }
 
-    /* ACTIVE: Column opened */
+    /* ACTIVE: Column opened 
     .wardrobe-split.is-column-open .wardrobe-side--column{
         flex-grow: 6;
     }
@@ -883,7 +883,7 @@
         filter: blur(1.4px);
     }
 
-    /* ACTIVE: Closet opened */
+    /* ACTIVE: Closet opened 
     .wardrobe-split.is-closet-open .wardrobe-side--closet{
         flex-grow: 6;
     }
@@ -893,12 +893,50 @@
         filter: blur(1.4px);
     }
 
-    /* hide divider on stacked mobile */
+    /* hide divider on stacked mobile 
     .wardrobe-side + .wardrobe-side{
         border-left: 0;
         border-top: 3px solid rgba(20,74,51,0.18);
     }
 
 
+
+}*/
+@media (max-width: 900px){
+
+    .wardrobe-split{
+      flex-direction: row;
+    }
+  
+    .wardrobe-split.is-reset .wardrobe-side{
+      flex: 1;
+      opacity: 1;
+      filter: none;
+    }
+  
+    /* Column open */
+    .wardrobe-split.is-column-open .wardrobe-side--column{
+      flex: 6;
+      opacity: 1;
+      filter: none;
+    }
+    .wardrobe-split.is-column-open .wardrobe-side--closet{
+      flex: 1;
+      opacity: 0.25;
+      filter: blur(1.4px);
+    }
+  
+    /* Closet open */
+    .wardrobe-split.is-closet-open .wardrobe-side--closet{
+      flex: 6;
+      opacity: 1;
+      filter: none;
+    }
+    .wardrobe-split.is-closet-open .wardrobe-side--column{
+      flex: 1;
+      opacity: 0.25;
+      filter: blur(1.4px);
+    }
 }
+  
   
