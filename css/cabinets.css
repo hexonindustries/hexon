@@ -799,11 +799,11 @@
 
 
 @media (max-width: 900px){
-    /*
+    
     .wardrobe-split{
-      flex-direction: column;
+      flex-direction: row;
       min-height: auto;
-    }*/
+    }
   
     .wardrobe-split-hint{
       display: none;
@@ -841,9 +841,9 @@
 
 
     /* Stack layout looks premium + readable */
-    .wardrobe-split{
-        flex-direction: column;
-    }
+    /*.wardrobe-split{
+        flex-direction: row;
+    }*/
 
     /* disable hover logic completely on mobile */
     .wardrobe-split:hover .wardrobe-side,
