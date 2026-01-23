@@ -577,7 +577,10 @@
     left: auto;
     right: 0;
 }
-  
+.wardrobe-side--closet .wardrobe-side-header p {
+    left: auto;
+    right: 0;
+}
 /* Each half  WORKSSS*/
 .wardrobe-side{
     flex: 1;
@@ -804,9 +807,6 @@
 .wardrobe-side--closet .wardrobe-side-header{
     text-align: right;
 }
-.wardrobe-side--closet .wardrobe-side-header p{
-    text-align: right;
-}
 
 
 @media (max-width: 900px){
@@ -825,7 +825,7 @@
   
     /* Default: 50/50 */
     .wardrobe-side{
-      padding: 26px 18px 30px;
+        padding: 26px 18px 30px;
     }
   
     /* when one is active */
@@ -837,14 +837,14 @@
   
     /* remove blur if reset */
     .wardrobe-split.is-reset .wardrobe-side{
-      flex: 1;
-      opacity: 1;
-      filter: none;
+        flex: 1;
+        opacity: 1;
+        filter: none;
     }
   
     /* make divider softer on mobile */
     .wardrobe-divider{
-      opacity: 0.35;
+        opacity: 0.35;
     }
     .wardrobe-accent-tag{
         font-size: 25px;

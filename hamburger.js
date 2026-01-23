@@ -144,6 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
   
+    const columnSide = split.querySelector(".wardrobe-side--column");
+    const closetSide = split.querySelector(".wardrobe-side--closet");
+  
     function reset() {
       split.classList.remove("is-column-open", "is-closet-open");
       split.classList.add("is-reset");
@@ -159,27 +162,28 @@ document.addEventListener("DOMContentLoaded", () => {
       split.classList.remove("is-column-open", "is-reset");
     }
   
-    // default state
+    // default
     reset();
   
-    split.addEventListener("click", (e) => {
-      // ignore clicks on actual links
+    // IMPORTANT: Use pointer events (works on mobile + desktop)
+    split.addEventListener("pointerdown", (e) => {
+      // ignore clicks on links/buttons inside
       if (e.target.closest("a, button")) return;
   
-      const rect = split.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const isLeft = clickX < rect.width / 2;
+      const tappedColumn = e.target.closest(".wardrobe-side--column");
+      const tappedCloset = e.target.closest(".wardrobe-side--closet");
   
-      if (isLeft) {
-        // toggle left
+      if (tappedColumn) {
         if (split.classList.contains("is-column-open")) reset();
         else openColumn();
-      } else {
-        // toggle right
+        return;
+      }
+  
+      if (tappedCloset) {
         if (split.classList.contains("is-closet-open")) reset();
         else openCloset();
+        return;
       }
     });
 });
-  
   
