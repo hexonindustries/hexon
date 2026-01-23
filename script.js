@@ -331,16 +331,38 @@ const kitchenImages = [
 ];
 kitchenImages.forEach(shade =>{
     const img = new Image();
-    img.src = `/assets/kitchen/kitchen-${shade}.png`;
+    img.src = `/assets/kitchen/kitchen-${shade}.webp`;
 
 });
 
 kitchenImages.forEach(shade =>{
     const img1 = new Image();
-    img1.src = `/assets/shades/${shade}.png`;
+    img1.src = `/assets/shades/${shade}.webp`;
 
 });
 
+const wardrobeImages = [
+    "white",
+    "gray",
+    "champagne",
+    "light-wood",
+    "walnut",
+    "charcoal",
+    "cappuccino",
+    "pearl-white"
+];
+wardrobeImages.forEach(shade =>{
+    const img = new Image();
+    img.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
+
+});
+
+wardrobeImages.forEach(shade =>{
+    const img1 = new Image();
+    img1.src = `/assets/shades/${shade}.webp`;
+
+});
+const wardrobePreview = document.getElementById('wardrobePreview');
 const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
@@ -354,12 +376,22 @@ shadeCards.forEach(card => {
         centerActiveShade(card);
 
         const shade = card.dataset.shade;
-        const newSrc = `/assets/kitchen/kitchen-${shade}.png`;
+        const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
+        const newSrc1 = `/assets/wardrobe/wardrobe-${shade}.webp`;
+
         kitchenPreview.classList.add("fade-out");
+        wardrobePreview.classList.add("fade-out");
         setTimeout(() => {
             kitchenPreview.src = newSrc;
             kitchenPreview.onload = () =>{
                 kitchenPreview.classList.remove('fade-out');
+            }
+            
+        }, 200);
+        setTimeout(() => {
+            wardrobePreview.src = newSrc;
+            wardrobePreview.onload = () =>{
+                wardrobePreview.classList.remove('fade-out');
             }
             
         }, 200);
@@ -375,6 +407,8 @@ document.querySelector('.shade-arrow1.up').onclick = () => {
 document.querySelector('.shade-arrow1.down').onclick = () => {
     shadeList.scrollBy({ top: 100, behavior: 'smooth' });
 };
+
+
 
 
 
