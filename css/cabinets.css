@@ -913,10 +913,13 @@
       opacity: 1;
       filter: none;
     }
+    .wardrobe-accent-tag{
+        font-size: 18px;
+    }
   
     /* Column open */
     .wardrobe-split.is-column-open .wardrobe-side--column{
-      flex: 6;
+      flex: 24;
       opacity: 1;
       filter: none;
     }
@@ -928,7 +931,7 @@
   
     /* Closet open */
     .wardrobe-split.is-closet-open .wardrobe-side--closet{
-      flex: 6;
+      flex: 24;
       opacity: 1;
       filter: none;
     }
