@@ -835,5 +835,8 @@
     .wardrobe-divider{
       opacity: 0.35;
     }
+    .wardrobe-accent-tag{
+        font-size: 25px;
+    }
 }
   
