@@ -1026,5 +1026,34 @@
       transform: translateX(0);
     }
 }
+@media (max-width: 900px){
+
+    /* Make each overview block stack vertically */
+    .wardrobe-side .category-overview{
+      display: grid;
+      grid-template-columns: 1fr !important;  /* 1 column */
+      gap: 14px !important;
+    }
+  
+    /* Force text first, image below */
+    .wardrobe-side .overview-text{
+      order: 1;
+    }
+    .wardrobe-side .overview-image{
+      order: 2;
+    }
+  
+    /* Make image full width and visible */
+    .wardrobe-side .overview-image img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    .wardrobe-side .overview-image img{
+        box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+    }
+}
+  
   
   
