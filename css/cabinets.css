@@ -544,17 +544,17 @@
     font-weight: 900;
     letter-spacing: 0.12em;
     /*text-transform: uppercase;
-    color: #b8933f; /* gold but subtle 
+    color: #b8933f; /* gold but subtle */
     margin-bottom: 16px;
     padding-bottom: 10px;
     position: relative;
-    font-size: 35px;*/
+    font-size: 35px;
 
 
     font-size: 40px;
     font-weight: 800;
     color: #144a33;
-    margin: 0 0 6px;
+    /*margin: 0 0 6px;*/
 }
 .wardrobe-divider,
 .wardrobe-split-hint,
