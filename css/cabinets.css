@@ -536,27 +536,34 @@
     transform: translateX(-50%);
     background: rgba(20,74,51,0.10);
     z-index: 2;
-}*/
-/* GOLD ACCENT TAG 
+}
+ GOLD ACCENT TAG */
 .wardrobe-accent-tag{
     display: inline-block;
-    font-size: 12px;
+    /*font-size: 12px;
     font-weight: 900;
-    /*letter-spacing: 0.12em;*/
+    letter-spacing: 0.12em;
     /*text-transform: uppercase;
     color: #b8933f; /* gold but subtle 
     margin-bottom: 16px;
     padding-bottom: 10px;
     position: relative;
-    font-size: 35px;
-}*/
+    font-size: 35px;*/
+
+
+    font-size: 40px;
+    font-weight: 800;
+    color: #144a33;
+    margin: 0 0 6px;
+}
 .wardrobe-divider,
 .wardrobe-split-hint,
 .wardrobe-split-hint-mobile{
   pointer-events: none;
 }
+
 /* underline */
-.wardrobe-side-header h3::after{
+.wardrobe-accent-tag::after{
     content: "";
     position: absolute;
     left: 0;
@@ -566,7 +573,7 @@
     border-radius: 999px;
     background: linear-gradient(90deg, #c9a14a, rgba(200,160,70,0.15));
 }
-.wardrobe-side--closet .wardrobe-side-header h3::after{
+.wardrobe-side--closet .wardrobe-accent-tag::after{
     left: auto;
     right: 0;
 }
