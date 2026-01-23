@@ -904,7 +904,7 @@
 }*/
 @media (max-width: 900px){
     .wardrobe-side + .wardrobe-side{
-        border: 3px solid rgba(20,74,51,0.18);
+        border-left: 3px solid rgba(20,74,51,0.18);
     }
     /* Default: 50/50 */
     .wardrobe-side{
