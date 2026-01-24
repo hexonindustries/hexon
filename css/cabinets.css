@@ -1101,6 +1101,20 @@
     .wardrobe-side .category-overview.reverse .overview-image {
         order: 2;
     }
+    .wardrobe-split.is-column-open .wardrobe-split-hint-mobile,
+    .wardrobe-split.is-closet-open .wardrobe-split-hint-mobile{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-6px);
+        pointer-events: none;
+    }
+
+  /* SHOW hint again when reset */
+    .wardrobe-split.is-reset .wardrobe-split-hint-mobile{
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+    }
+
 }
   
 @media (max-width: 900px){
