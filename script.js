@@ -352,14 +352,14 @@ const wardrobeImages = [
     "pearl-white"
 ];
 wardrobeImages.forEach(shade =>{
-    const img = new Image();
-    img.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
+    const img2 = new Image();
+    img2.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
 
 });
 
 wardrobeImages.forEach(shade =>{
-    const img1 = new Image();
-    img1.src = `/assets/shades/${shade}.webp`;
+    const img3 = new Image();
+    img3.src = `/assets/shades/${shade}.webp`;
 
 });
 const wardrobePreview = document.getElementById('wardrobePreview');
