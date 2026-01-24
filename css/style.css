@@ -908,6 +908,12 @@ section p{
         box-shadow: none;
     }
 }
+@media (hover: none) {
+    .application-card:hover .card-overlay {
+        opacity: 0; /* disable hover reveal on touch devices */
+        transform: translateY(12px);
+    }
+}
 
 /* MOBILE TAP STATE */
 .application-card.active .card-overlay {

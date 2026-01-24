@@ -129,6 +129,28 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
+const appCards = document.querySelectorAll('.application-card');
+
+appCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        e.stopPropagation(); // ⛔ prevent body click from firing
+
+        const isActive = card.classList.contains('active');
+
+        // Close all first
+        appCards.forEach(c => c.classList.remove('active'));
+
+        // Re-open only if it wasn't already open
+        if (!isActive) {
+            card.classList.add('active');
+        }
+    });
+});
+document.addEventListener('click', () => {
+    appCards.forEach(c => c.classList.remove('active'));
+});
+
+/*
 document.querySelectorAll('.application-card').forEach(card => {
     card.addEventListener('click', () => {
         // Close other cards
@@ -140,7 +162,7 @@ document.querySelectorAll('.application-card').forEach(card => {
         card.classList.toggle('active');
     });
 });
-
+*/
 document.querySelectorAll('.group-title').forEach(btn => {
     btn.addEventListener('click', () => {
         const content = btn.nextElementSibling;
