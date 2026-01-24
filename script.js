@@ -399,11 +399,11 @@ shadeCards.forEach(card => {
         centerActiveShade(card);
 
         const shade = card.dataset.shade;
-        const newSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
+        const newWardrobeSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
         wardrobePreview.classList.add("fade-out");
     
         setTimeout(() => {
-            wardrobePreview.src = newSrc;
+            wardrobePreview.src = newWardrobeSrc;
             wardrobePreview.onload = () =>{
                 wardrobePreview.classList.remove('fade-out');
             }
