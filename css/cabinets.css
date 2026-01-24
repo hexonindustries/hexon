@@ -620,7 +620,12 @@
     max-width: 620px;   /* keeps premium readable width */
     margin-left: auto;  /* push block to the right */
 }
-
+.wardrobe-side--closet .wardrobe-side-header{
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    text-align: right;
+}
 .wardrobe-side--closet .wardrobe-accent-tag::after{
     left: auto;
     right: 0;
