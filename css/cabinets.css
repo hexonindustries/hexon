@@ -943,6 +943,11 @@
     .wardrobe-side{
         flex: 1 1 0;
     }
+    .wardrobe-split{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
     .wardrobe-split-hint{
         display: none;
     }
@@ -983,6 +988,7 @@
     }
     .wardrobe-accent-tag{
         font-size: 22px;
+        font-weight: 850px;
     }
     .wardrobe-side--closet .wardrobe-close {
         right: auto;
@@ -1069,11 +1075,16 @@
 }
 @media (max-width: 900px){
 
-    /* Make each overview block stack vertically */
+    /* Make each overview block stack vertically 
     .wardrobe-side .category-overview{
       display: grid;
-      grid-template-columns: 1fr !important;  /* 1 column */
+      grid-template-columns: 1fr !important;  /* 1 column 
       gap: 14px !important;
+    }*/
+    .wardrobe-side .category-overview{
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
     }
   
     /* Force text first, image below */
@@ -1087,12 +1098,12 @@
     /* Make image full width and visible */
     .wardrobe-side .overview-image img{
       width: 100%;
-      max-width: 100%;
       height: auto;
       border-radius: 16px;
+      display: block;
     }
     .wardrobe-side .overview-image img{
-        box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+        box-shadow: 0 18px 40px rgba(0,0,0,0.18);
     }
     .wardrobe-side .category-overview.reverse .overview-text {
         order: 1;
@@ -1118,6 +1129,7 @@
 }
   
 @media (max-width: 900px){
+    
 
     .wardrobe-side .category-overview{
       display: flex;
