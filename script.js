@@ -343,47 +343,6 @@ kitchenImages.forEach(shade =>{
 
 
 
-const kitchenPreview = document.getElementById('kitchenPreview');
-const shadeCards = document.querySelectorAll('.shade-card1');
-const shadeList = document.getElementById('shadeList');
-
-shadeCards.forEach(card => {
-    card.addEventListener('click', () => {
-        if (card.classList.contains('active')) return;
-
-        shadeCards.forEach(c => c.classList.remove('active'));
-        card.classList.add('active');
-        centerActiveShade(card);
-
-        const shade = card.dataset.shade;
-        const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
-        kitchenPreview.classList.add("fade-out");
-       
-        setTimeout(() => {
-            kitchenPreview.src = newSrc;
-            kitchenPreview.onload = () =>{
-                kitchenPreview.classList.remove('fade-out');
-            }
-            
-        }, 200);
-
-    });
-
-});
-
-
-/* Vertical arrows */
-document.querySelector('.shade-arrow1.up').onclick = () => {
-    shadeList.scrollBy({ top: -100, behavior: 'smooth' });
-};
-
-document.querySelector('.shade-arrow1.down').onclick = () => {
-    shadeList.scrollBy({ top: 100, behavior: 'smooth' });
-};
-
-
-
-
 const wardrobeImages = [
     "white",
     "gray",
@@ -406,6 +365,81 @@ wardrobeImages.forEach(shade =>{
 
 });
 
+
+
+const kitchenPreview = document.getElementById('kitchenPreview');
+const shadeCards = document.querySelectorAll('.shade-card1');
+const shadeList = document.getElementById('shadeList');
+/*
+shadeCards.forEach(card => {
+    card.addEventListener('click', () => {
+        if (card.classList.contains('active')) return;
+
+        shadeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        centerActiveShade(card);
+
+        const shade = card.dataset.shade;
+        const newSrc = `/assets/kitchen/kitchen-${shade}.webp`;
+        kitchenPreview.classList.add("fade-out");
+       
+        setTimeout(() => {
+            kitchenPreview.src = newSrc;
+            kitchenPreview.onload = () =>{
+                kitchenPreview.classList.remove('fade-out');
+            }
+            
+        }, 200);
+
+    });
+
+});*/
+
+shadeCards.forEach(card => {
+    card.addEventListener('click', () => {
+        if (card.classList.contains('active')) return;
+
+        shadeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        centerActiveShade(card);
+
+        const shade = card.dataset.shade;
+
+        // --- KITCHEN ---
+        const kitchenSrc = `/assets/kitchen/kitchen-${shade}.webp`;
+        if (kitchenPreview) {
+            kitchenPreview.classList.add("fade-out");
+            setTimeout(() => {
+                kitchenPreview.src = kitchenSrc;
+                kitchenPreview.onload = () => kitchenPreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- WARDROBE ---
+        const wardrobeSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
+        if (wardrobePreview) {
+            wardrobePreview.classList.add("fade-out");
+            setTimeout(() => {
+                wardrobePreview.src = wardrobeSrc;
+                wardrobePreview.onload = () => wardrobePreview.classList.remove('fade-out');
+            }, 200);
+        }
+    });
+});
+
+
+/* Vertical arrows */
+document.querySelector('.shade-arrow1.up').onclick = () => {
+    shadeList.scrollBy({ top: -100, behavior: 'smooth' });
+};
+
+document.querySelector('.shade-arrow1.down').onclick = () => {
+    shadeList.scrollBy({ top: 100, behavior: 'smooth' });
+};
+
+
+
+/*
 const wardrobePreview = document.getElementById('wardrobePreview');
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -429,7 +463,7 @@ shadeCards.forEach(card => {
 
     });
 });
-
+*/
 
 
 function centerActiveShade(card) {
