@@ -341,28 +341,8 @@ kitchenImages.forEach(shade =>{
 
 });
 
-const wardrobeImages = [
-    "white",
-    "gray",
-    "champagne",
-    "light-wood",
-    "walnut",
-    "charcoal",
-    "cappuccino",
-    "pearl-white"
-];
-wardrobeImages.forEach(shade =>{
-    const img2 = new Image();
-    img2.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
 
-});
 
-wardrobeImages.forEach(shade =>{
-    const img3 = new Image();
-    img3.src = `/assets/shades/${shade}.webp`;
-
-});
-const wardrobePreview = document.getElementById('wardrobePreview');
 const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
@@ -390,6 +370,43 @@ shadeCards.forEach(card => {
     });
 
 });
+
+
+/* Vertical arrows */
+document.querySelector('.shade-arrow1.up').onclick = () => {
+    shadeList.scrollBy({ top: -100, behavior: 'smooth' });
+};
+
+document.querySelector('.shade-arrow1.down').onclick = () => {
+    shadeList.scrollBy({ top: 100, behavior: 'smooth' });
+};
+
+
+
+
+const wardrobeImages = [
+    "white",
+    "gray",
+    "champagne",
+    "light-wood",
+    "walnut",
+    "charcoal",
+    "cappuccino",
+    "pearl-white"
+];
+wardrobeImages.forEach(shade =>{
+    const img2 = new Image();
+    img2.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
+
+});
+
+wardrobeImages.forEach(shade =>{
+    const img3 = new Image();
+    img3.src = `/assets/shades/${shade}.webp`;
+
+});
+
+const wardrobePreview = document.getElementById('wardrobePreview');
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
         if (card.classList.contains('active')) return;
@@ -412,17 +429,6 @@ shadeCards.forEach(card => {
 
     });
 });
-
-/* Vertical arrows */
-document.querySelector('.shade-arrow1.up').onclick = () => {
-    shadeList.scrollBy({ top: -100, behavior: 'smooth' });
-};
-
-document.querySelector('.shade-arrow1.down').onclick = () => {
-    shadeList.scrollBy({ top: 100, behavior: 'smooth' });
-};
-
-
 
 
 
