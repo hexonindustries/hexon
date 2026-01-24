@@ -791,7 +791,7 @@
     padding: 0 24px;
 }
 .section-header--spacious {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .section-header--dark{
@@ -879,7 +879,7 @@
         margin-top: 10px;
     }
     .section-header--spacious {
-        padding-top: 48px;
+        padding-top: 28px;
         padding-bottom: 0px;
     }
 }
