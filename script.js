@@ -388,6 +388,9 @@ shadeCards.forEach(card => {
         }, 200);
 
     });
+
+});
+shadeCards.forEach(card => {
     card.addEventListener('click', () => {
         if (card.classList.contains('active')) return;
 
@@ -398,7 +401,7 @@ shadeCards.forEach(card => {
         const shade = card.dataset.shade;
         const newSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
         wardrobePreview.classList.add("fade-out");
-       
+    
         setTimeout(() => {
             wardrobePreview.src = newSrc;
             wardrobePreview.onload = () =>{
@@ -408,8 +411,6 @@ shadeCards.forEach(card => {
         }, 200);
 
     });
-
-
 });
 
 /* Vertical arrows */
