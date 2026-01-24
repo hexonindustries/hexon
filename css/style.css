@@ -242,11 +242,11 @@ html, body {
     font-weight: 500;
     opacity: 1;
 }
-.nav-links h2 a {
+.nav-links h3 a {
     color: #1f6b4a;
     text-decoration: none;
     /*500*/
-    font-weight: 700;
+    font-weight: 600;
     opacity: 1;
 }
   
