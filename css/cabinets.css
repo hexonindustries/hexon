@@ -571,11 +571,6 @@
  GOLD ACCENT TAG */
 .wardrobe-accent-tag{
     display: inline-block;
-    /*font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    /*text-transform: uppercase;
-    color: #b8933f; /* gold but subtle */
     margin-bottom: 16px;
     padding-bottom: 10px;
     position: relative;
@@ -586,6 +581,13 @@
     font-weight: 800;
     color: #144a33;
     /*margin: 0 0 6px;*/
+}
+.zone-narrative--gold .wardrobe-accent-tag{
+    color:#ffffff;
+}
+.zone-narrative--gold .wardrobe-accent-tag::after{
+    background: linear-gradient(90deg, #ffffff, rgba(200,160,70,0.15));
+
 }
 .wardrobe-divider,
 .wardrobe-split-hint,
