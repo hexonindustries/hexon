@@ -370,6 +370,7 @@ wardrobeImages.forEach(shade =>{
 const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
+const wardrobePreview = document.getElementById('wardrobePreview');
 /*
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -440,7 +441,7 @@ document.querySelector('.shade-arrow1.down').onclick = () => {
 
 
 /*
-const wardrobePreview = document.getElementById('wardrobePreview');
+
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
         if (card.classList.contains('active')) return;
