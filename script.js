@@ -319,7 +319,7 @@ if (shadeSlider && prevShade && nextShade) {
     });
 }
 
-const kitchenImages = [
+const allshades = [
     "white",
     "gray",
     "champagne",
@@ -329,41 +329,24 @@ const kitchenImages = [
     "cappuccino",
     "pearl-white"
 ];
-kitchenImages.forEach(shade =>{
+allshades.forEach(shade =>{
     const img = new Image();
     img.src = `/assets/kitchen/kitchen-${shade}.webp`;
 
 });
 
-kitchenImages.forEach(shade =>{
+allshades.forEach(shade =>{
     const img1 = new Image();
     img1.src = `/assets/shades/${shade}.webp`;
 
 });
 
-
-
-const wardrobeImages = [
-    "white",
-    "gray",
-    "champagne",
-    "light-wood",
-    "walnut",
-    "charcoal",
-    "cappuccino",
-    "pearl-white"
-];
-wardrobeImages.forEach(shade =>{
+allshades.forEach(shade =>{
     const img2 = new Image();
     img2.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
 
 });
 
-wardrobeImages.forEach(shade =>{
-    const img3 = new Image();
-    img3.src = `/assets/shades/${shade}.webp`;
-
-});
 
 
 
