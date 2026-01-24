@@ -187,8 +187,15 @@ html, body {
 .dropdown-column a:hover {
     color: #1f6b4a;
 }
-
+.dropdown-column a::after {
+    content: "→";
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(-2px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
 .dropdown-column a:hover::after {
+    opacity: 1;
     transform: translateX(2px);
 }
 
