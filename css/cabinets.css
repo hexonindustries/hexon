@@ -982,7 +982,7 @@
       flex-direction: row;
     }
     .wardrobe-accent-tag{
-        font-size: 18px;
+        font-size: 22px;
     }
     .wardrobe-side--closet .wardrobe-close {
         right: auto;
@@ -1093,6 +1093,13 @@
     }
     .wardrobe-side .overview-image img{
         box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+    }
+    .wardrobe-side .category-overview.reverse .overview-text {
+        order: 1;
+    }
+    
+    .wardrobe-side .category-overview.reverse .overview-image {
+        order: 2;
     }
 }
   
