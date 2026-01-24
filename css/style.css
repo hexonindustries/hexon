@@ -152,6 +152,7 @@ html, body {
 }
 .dropdown-column h4 a::after {
     content: "→";
+    margin-left: 3px;
     font-size: 14px;
     opacity: 0;
     transform: translateX(-2px);
