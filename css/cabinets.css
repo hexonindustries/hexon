@@ -591,6 +591,12 @@
     background: linear-gradient(90deg, #ffffff, rgba(200,160,70,0.15));
 
 }
+@media (max-width: 900px){
+    .zone-narrative--gold .wardrobe-accent-tag{
+        font-size: 20px;
+    }
+    
+}
 .wardrobe-divider,
 .wardrobe-split-hint,
 .wardrobe-split-hint-mobile{
@@ -608,6 +614,13 @@
     border-radius: 999px;
     background: linear-gradient(90deg, #c9a14a, rgba(200,160,70,0.15));
 }
+/* Prevent text blocks from shrinking toward center */
+.wardrobe-side--closet .overview-text{
+    width: 100%;
+    max-width: 620px;   /* keeps premium readable width */
+    margin-left: auto;  /* push block to the right */
+}
+
 .wardrobe-side--closet .wardrobe-accent-tag::after{
     left: auto;
     right: 0;
