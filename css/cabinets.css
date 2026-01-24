@@ -584,6 +584,8 @@
 }
 .zone-narrative--gold .wardrobe-accent-tag{
     color:#ffffff;
+    font-size: 25px;
+    font-weight: 600;
 }
 .zone-narrative--gold .wardrobe-accent-tag::after{
     background: linear-gradient(90deg, #ffffff, rgba(200,160,70,0.15));
