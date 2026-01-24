@@ -385,6 +385,13 @@
         text-justify: inter-word;
         hyphens: auto;
     }
+    .category-overview.reverse .overview-text {
+        order: 1;
+    }
+    
+    .category-overview.reverse .overview-image {
+        order: 2;
+    }
 }
 
 .overview-number {
