@@ -242,6 +242,13 @@ html, body {
     font-weight: 500;
     opacity: 1;
 }
+.nav-links h2 a {
+    color: #1f6b4a;
+    text-decoration: none;
+    /*500*/
+    font-weight: 700;
+    opacity: 1;
+}
   
 .nav-links a:hover {
     color: #144a33;
