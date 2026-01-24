@@ -182,7 +182,6 @@ html, body {
     color: #333;
     text-decoration: none;
     font-size: 14px;
-    margin-right: 3px;
 }
 
 .dropdown-column a:hover {
@@ -190,6 +189,7 @@ html, body {
 }
 .dropdown-column a::after {
     content: "→";
+    padding-left: 4px;
     font-size: 14px;
     opacity: 0;
     transform: translateX(-2px);
