@@ -988,6 +988,10 @@
         right: auto;
         left: 0;
     }
+    .wardrobe-split.is-column-open .wardrobe-side--column,
+    .wardrobe-split.is-closet-open .wardrobe-side--closet{
+        width: 100%;
+    }
     /*
     .wardrobe-split.is-reset .wardrobe-side{
       flex: 1;
