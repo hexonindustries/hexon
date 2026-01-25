@@ -321,6 +321,8 @@
     right: 110px;
 }
 
+
+
 /* Only affect comparison sections, not global category-overview */
 .comparison-block{
     align-items: start; /* prevents vertical misalignment */
@@ -342,6 +344,8 @@
 .comparison-block.reverse .overview-image{
     order: 1;
 }
+
+
 
 .category-overview img {
     width: 100%;
@@ -385,6 +389,14 @@
 
     .overview-divider {
         width: 48px;
+    }
+    .comparison-block.reverse .overview-text{
+        order: 1;
+    }
+    
+    .comparison-block.reverse .comparison-image-wrap,
+    .comparison-block.reverse .overview-image{
+        order: 2;
     }
 }
 .category-overviews > h2 {
