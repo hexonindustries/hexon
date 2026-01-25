@@ -285,15 +285,23 @@
 .category-overview.reverse .overview-text {
     order: 2;
 }
-
+/*
 .category-overview.reverse .overview-image {
     order: 1;
+}*/
+.category-overview.reverse .comparison-image-wrap {
+    order: 1;
+}
+/*
+.comparison-image-wrap,
+.overview-text{
+    align-self: center;
 }
 
 .overview-image,
 .overview-text {
     align-self: center;
-}
+}*/
 
 
 .category-overview.reverse .overview-text {
