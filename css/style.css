@@ -1037,7 +1037,7 @@ section p{
     content: "";
     position: absolute;
     top: 1%;
-    bottom: 2%;
+    bottom: 1%;
     /*
     top: 6%;
     bottom: 6%;*/
@@ -1060,3 +1060,4 @@ section p{
     z-index: 2;
     pointer-events: none;
 }
+
