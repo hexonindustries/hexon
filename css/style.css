@@ -885,6 +885,7 @@ section p{
     max-width: 300px;
     justify-content: center;
     text-justify: inter-word;
+    text-transform: uppercase;
 
 }
 
