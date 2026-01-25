@@ -885,7 +885,7 @@ section p{
     max-width: 300px;
     justify-content: center;
     text-justify: inter-word;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 
 }
 
@@ -1037,7 +1037,7 @@ section p{
     content: "";
     position: absolute;
     top: 1%;
-    bottom: 0%;
+    bottom: 2%;
     /*
     top: 6%;
     bottom: 6%;*/
