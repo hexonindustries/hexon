@@ -1036,8 +1036,8 @@ section p{
     content: "";
     position: absolute;
     
-    top: 6%;/*
-    bottom: 6%;*/
+    top: 6%;
+    bottom: 6%;
     left: 50%;
     width: 5px;
     transform: translateX(-50%);
