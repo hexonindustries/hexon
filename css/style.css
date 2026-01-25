@@ -1039,7 +1039,7 @@ section p{
     top: 6%;
     bottom: 6%;*/
     left: 50%;
-    width: 4px;
+    width: 5px;
     transform: translateX(-50%);
     /*
     background: linear-gradient(
