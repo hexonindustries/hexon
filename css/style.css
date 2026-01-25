@@ -1035,8 +1035,8 @@ section p{
 .comparison-image-wrap::after{
     content: "";
     position: absolute;
-    /*
-    top: 6%;
+    
+    top: 6%;/*
     bottom: 6%;*/
     left: 50%;
     width: 5px;
