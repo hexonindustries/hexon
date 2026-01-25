@@ -967,7 +967,7 @@ section p{
 .comparison-label{
     position: absolute;
     /*top: -18px;*/
-    top: -55px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -990,6 +990,7 @@ section p{
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 /* Left side — wood (subtle/desaturated tone) */
@@ -1027,5 +1028,6 @@ section p{
         gap: 10px;
         /*top: -14px;*/
         top: -34px;
+        white-space: normal;
     }
 }
