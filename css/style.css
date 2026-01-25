@@ -967,7 +967,7 @@ section p{
 .comparison-label{
     position: absolute;
     /*top: -18px;*/
-    top: -30px;
+    top: -55px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1026,6 +1026,6 @@ section p{
         padding: 8px 14px;
         gap: 10px;
         /*top: -14px;*/
-        top: -24px;
+        top: -34px;
     }
 }
