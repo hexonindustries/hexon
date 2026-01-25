@@ -568,7 +568,7 @@
 .category-overview.reverse .overview-text {
     order: 2;
 }
-
+/*
 .category-overview.reverse .overview-image {
     order: 1;
 }
@@ -577,7 +577,7 @@
 .overview-text {
     align-self: center;
 }
-
+*/
 
 .category-overview.reverse .overview-text {
     text-align: left;
