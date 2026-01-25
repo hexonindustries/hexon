@@ -321,6 +321,27 @@
     right: 110px;
 }
 
+/* Only affect comparison sections, not global category-overview */
+.comparison-block{
+    align-items: start; /* prevents vertical misalignment */
+}
+
+/* Make both image wrappers behave the same */
+.comparison-block .comparison-image-wrap,
+.comparison-block .overview-image{
+    position: relative;
+    align-self: start;
+}
+
+/* Reverse layout ONLY for comparison blocks */
+.comparison-block.reverse .overview-text{
+    order: 2;
+}
+
+.comparison-block.reverse .comparison-image-wrap,
+.comparison-block.reverse .overview-image{
+    order: 1;
+}
 
 .category-overview img {
     width: 100%;
