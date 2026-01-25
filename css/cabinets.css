@@ -5,6 +5,9 @@
 .category-hero--kitchen{
     background-image: url("/assets/hero/kitchen-hero.webp");
 }
+.category-hero--kitchen{
+    background-image: url("/assets/hero/wardrobe-hero.webp");
+}
 .kitchen {
     background-image: url("/assets/cabinet/kitchen-card.webp");
 }
