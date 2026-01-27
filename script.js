@@ -610,10 +610,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 */
 
-
+/*
 const isTouchDevice = window.matchMedia("(hover: none)").matches;
 
-/* ================= DESKTOP TILT ================= */
+/* ================= DESKTOP TILT ================= 
 if (!isTouchDevice) {
     document.querySelectorAll('.hexon-flip-card').forEach(card => {
         const inner = card.querySelector('.hexon-flip-inner');
@@ -635,7 +635,7 @@ if (!isTouchDevice) {
     });
 }
 
-/* ================= MOBILE TAP FLIP ================= */
+/* ================= MOBILE TAP FLIP ================= 
 if (isTouchDevice) {
     document.querySelectorAll('.hexon-flip-card').forEach(card => {
         card.addEventListener('click', (e) => {
@@ -648,5 +648,38 @@ if (isTouchDevice) {
     document.addEventListener('click', () => {
         document.querySelectorAll('.hexon-flip-card.is-flipped')
             .forEach(c => c.classList.remove('is-flipped'));
+    });
+}*/
+const isTouch = window.matchMedia("(hover: none)").matches;
+
+/* ================= DESKTOP TILT ================= */
+if (!isTouch) {
+    document.querySelectorAll('.hexon-flip-card').forEach(card => {
+        const inner = card.querySelector('.hexon-flip-inner');
+
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const rotateY = ((x / rect.width) - 0.5) * 10;
+            const rotateX = ((y / rect.height) - 0.5) * -10;
+
+            inner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            inner.style.transform = '';
+        });
+    });
+}
+
+/* ================= MOBILE TAP FLIP ================= */
+if (isTouch) {
+    document.querySelectorAll('.hexon-flip-card').forEach(card => {
+        card.addEventListener('click', function(e){
+            e.stopPropagation();
+            this.classList.toggle('is-flipped');
+        });
     });
 }
