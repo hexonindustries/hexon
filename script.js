@@ -630,3 +630,20 @@ document.querySelectorAll('.hexon-flip-card').forEach(card => {
     });
 });
 
+// MOBILE COIN FLIP
+if (window.matchMedia("(hover: none)").matches) {
+    document.querySelectorAll('.hexon-flip-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            card.classList.toggle('is-flipped');
+        });
+    });
+
+    // Optional: tap outside closes all
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.hexon-flip-card.is-flipped')
+            .forEach(c => c.classList.remove('is-flipped'));
+    });
+}
+
+

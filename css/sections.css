@@ -950,10 +950,10 @@
     transform-style: preserve-3d;
     border-radius: 50%;
 }
-
+/*
 .hexon-flip-card:hover .hexon-flip-inner{
     transform: rotateY(180deg);
-}
+}*/
 
 /* Shared faces */
 .hexon-flip-front,
@@ -1067,9 +1067,39 @@
     max-width: 200px;
 }
 
-
+/*
 @media (hover:none){
     .hexon-flip-card:active .hexon-flip-inner{
         transform: rotateY(180deg);
+    }
+}*/
+/* DESKTOP HOVER */
+@media (hover: hover) {
+    .hexon-flip-card:hover .hexon-flip-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* MOBILE TAP */
+.hexon-flip-card.is-flipped .hexon-flip-inner {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+    .cabinet-why-grid {
+        gap: 28px;
+    }
+
+    .hexon-flip-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hexon-flip-back h3 {
+        font-size: 15px;
+    }
+
+    .hexon-flip-back p {
+        font-size: 12px;
     }
 }
