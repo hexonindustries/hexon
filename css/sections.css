@@ -1018,7 +1018,7 @@
     transform: scale(1.15);
 
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.18));
-    z-index: 2;
+    /*z-index: 2;*/
     transition: transform 0.6s ease;
 }
 
