@@ -611,27 +611,32 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 
 
-document.querySelectorAll('.hexon-flip-card').forEach(card => {
-    const inner = card.querySelector('.hexon-flip-inner');
+const isTouchDevice = window.matchMedia("(hover: none)").matches;
 
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+/* ================= DESKTOP TILT ================= */
+if (!isTouchDevice) {
+    document.querySelectorAll('.hexon-flip-card').forEach(card => {
+        const inner = card.querySelector('.hexon-flip-inner');
 
-        const rotateY = ((x / rect.width) - 0.5) * 10;
-        const rotateX = ((y / rect.height) - 0.5) * -10;
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-        inner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+            const rotateY = ((x / rect.width) - 0.5) * 10;
+            const rotateX = ((y / rect.height) - 0.5) * -10;
+
+            inner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            inner.style.transform = '';
+        });
     });
+}
 
-    card.addEventListener('mouseleave', () => {
-        inner.style.transform = '';
-    });
-});
-
-// MOBILE COIN FLIP
-if (window.matchMedia("(hover: none)").matches) {
+/* ================= MOBILE TAP FLIP ================= */
+if (isTouchDevice) {
     document.querySelectorAll('.hexon-flip-card').forEach(card => {
         card.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -639,11 +644,9 @@ if (window.matchMedia("(hover: none)").matches) {
         });
     });
 
-    // Optional: tap outside closes all
+    // Tap outside closes ALL coins
     document.addEventListener('click', () => {
         document.querySelectorAll('.hexon-flip-card.is-flipped')
             .forEach(c => c.classList.remove('is-flipped'));
     });
 }
-
-
