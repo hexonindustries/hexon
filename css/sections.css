@@ -1067,12 +1067,12 @@
     max-width: 200px;
 }
 
-/*
+
 @media (hover:none){
     .hexon-flip-card:active .hexon-flip-inner{
         transform: rotateY(180deg);
     }
-}*/
+}
 /* DESKTOP HOVER */
 @media (hover: hover) {
     .hexon-flip-card:hover .hexon-flip-inner {
