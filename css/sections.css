@@ -979,6 +979,10 @@
                 inset 0 -10px 18px rgba(0,0,0,0.08),
                 0 25px 60px rgba(0,0,0,0.18);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 .hexon-flip-front::before{
     content:"";
@@ -1004,9 +1008,17 @@
 
 /* Icon */
 .hexon-flip-front img{
-    max-width: 140px;
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.18));
     z-index: 2;
+    transition: transform 0.6s ease;
+}
+
+/* Subtle depth on hover */
+.hexon-flip-card:hover .hexon-flip-front img {
+    transform: scale(1.08);
 }
 
 /* Light sweep shine */
@@ -1029,9 +1041,15 @@
 
 /* ========== BACK (TEXT) ========== */
 .hexon-flip-back{
-    background: #ffffff;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f7f7f7 60%, #ececec 100%);
     transform: rotateY(180deg);
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 50%;
+    padding: 36px 34px;
     box-shadow: 0 25px 60px rgba(0,0,0,0.12);
 }
 
@@ -1046,6 +1064,7 @@
     font-size: 14px;
     line-height: 1.6;
     color: #4a4a4a;
+    max-width: 200px;
 }
 
 
