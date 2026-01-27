@@ -1116,3 +1116,10 @@
         font-size: 12px;
     }
 }
+.hexon-flip-front,
+.hexon-flip-back,
+.hexon-flip-front img,
+.coin-shine,
+.coin-rim {
+    pointer-events: none;
+}
