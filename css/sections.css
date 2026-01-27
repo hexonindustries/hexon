@@ -1074,11 +1074,7 @@
 }
 
 
-@media (hover:none){
-    .hexon-flip-card:active .hexon-flip-inner{
-        transform: rotateY(180deg);
-    }
-}
+
 /* DESKTOP HOVER */
 @media (hover: hover) {
     .hexon-flip-card:hover .hexon-flip-inner {
@@ -1086,21 +1082,32 @@
     }
 }
 
-/* MOBILE TAP */
-.hexon-flip-card.is-flipped .hexon-flip-inner {
-    transform: rotateY(180deg);
-}
-
-@media (max-width: 768px) {
+/* ================= MOBILE ONLY ================= */
+@media (hover: none) {
     .cabinet-why-grid {
         gap: 28px;
     }
 
-    .hexon-flip-card {
-        width: 150px;
-        height: 150px;
+    /* Bigger coins */
+    .hexon-flip-card{
+        width: 200px;
+        height: 200px;
     }
 
+    /* Disable desktop hover scale */
+    .hexon-flip-card:hover .hexon-flip-front img {
+        transform: none;
+    }
+
+    /* REAL flip trigger */
+    .hexon-flip-card.is-flipped .hexon-flip-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Remove tilt transforms completely */
+    .hexon-flip-inner {
+        transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
+    }
     .hexon-flip-back h3 {
         font-size: 15px;
     }
