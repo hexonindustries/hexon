@@ -1029,7 +1029,8 @@ section p{
         gap: 10px;
         /*top: -14px;*/
         top: -34px;
-        white-space: normal;
+        /*white-space: normal;*/
+        white-space: nowrap;
     }
 }
 /* Divider line inside comparison image */
