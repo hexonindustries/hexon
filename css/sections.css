@@ -1083,7 +1083,8 @@
 }
 
 /* ================= MOBILE ONLY ================= */
-@media (hover: none) {
+/*@media (hover: none) {*/
+@media (max-width: 900px) {
     .cabinet-why-grid {
         gap: 28px;
     }

@@ -684,7 +684,7 @@ if (isTouch) {
     });
 }*/
 document.addEventListener('DOMContentLoaded', () => {
-    const isTouch = window.matchMedia("(hover: none)").matches;
+    const isTouch = window.matchMedia("(max-width: 900px)").matches;
 
     /* ================= DESKTOP TILT ================= */
     if (!isTouch) {
