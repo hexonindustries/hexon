@@ -710,11 +710,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ================= MOBILE TAP FLIP ================= */
     if (isTouch) {
+        /*
         document.querySelectorAll('.hexon-flip-card').forEach(card => {
             card.addEventListener('click', function(e){
                 e.stopPropagation();
                 this.classList.toggle('is-flipped');
             });
+        });
+        */
+        const cards = document.querySelectorAll('.hexon-flip-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                // Close others
+                cards.forEach(c => {
+                    if (c !== card) c.classList.remove('is-flipped');
+                });
+
+                // Toggle this one
+                card.classList.toggle('is-flipped');
+            });
+        });
+
+        // Tap outside closes all
+        document.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('is-flipped'));
         });
     }
 });
