@@ -708,16 +708,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ================= MOBILE TAP FLIP ================= */
+    /* ================= MOBILE TAP FLIP ================= 
     if (isTouch) {
-        /*
-        document.querySelectorAll('.hexon-flip-card').forEach(card => {
-            card.addEventListener('click', function(e){
-                e.stopPropagation();
-                this.classList.toggle('is-flipped');
-            });
-        });
-        */
         const cards = document.querySelectorAll('.hexon-flip-card');
 
         cards.forEach(card => {
@@ -738,5 +730,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', () => {
             cards.forEach(c => c.classList.remove('is-flipped'));
         });
-    }
+    }*/
 });

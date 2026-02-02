@@ -47,146 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
   
-
-/* WARDROBE CSS */
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    const split = document.getElementById("wardrobeSplit");
-    if (!split) return;
-  
-    const isMobile = window.matchMedia("(max-width: 900px)").matches;
-    if (!isMobile) return;
-  
-    const left = split.querySelector('.wardrobe-side--column');
-    const right = split.querySelector('.wardrobe-side--closet');
-  
-    function reset() {
-      split.classList.remove("is-column-open", "is-closet-open");
-      split.classList.add("is-reset");
-    }
-  
-    function openColumn() {
-      split.classList.remove("is-reset", "is-closet-open");
-      split.classList.add("is-column-open");
-    }
-  
-    function openCloset() {
-      split.classList.remove("is-reset", "is-column-open");
-      split.classList.add("is-closet-open");
-    }
-  
-    // start neutral
-    reset();
-  
-    left.addEventListener("click", () => {
-      if (split.classList.contains("is-column-open")) {
-        reset();
-      } else {
-        openColumn();
-      }
-    });
-  
-    right.addEventListener("click", () => {
-      if (split.classList.contains("is-closet-open")) {
-        reset();
-      } else {
-        openCloset();
-      }
-    });
-});
-*/
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    const split = document.querySelector(".wardrobe-split");
-    if (!split) return;
-  
-    const column = split.querySelector(".wardrobe-side--column");
-    const closet = split.querySelector(".wardrobe-side--closet");
-  
-    function reset() {
-      split.classList.remove("is-column-open", "is-closet-open");
-    }
-  
-    function openColumn() {
-      split.classList.add("is-column-open");
-      split.classList.remove("is-closet-open");
-    }
-  
-    function openCloset() {
-      split.classList.add("is-closet-open");
-      split.classList.remove("is-column-open");
-    }
-  
-    // ✅ ONE click handler only (prevents both opening)
-    split.addEventListener("click", (e) => {
-      // ignore clicks on links/buttons inside
-      if (e.target.closest("a, button")) return;
-  
-      const clickedColumn = e.target.closest(".wardrobe-side--column");
-      const clickedCloset = e.target.closest(".wardrobe-side--closet");
-  
-      // if click was not inside either side, ignore
-      if (!clickedColumn && !clickedCloset) return;
-  
-      // ✅ TOGGLE behaviour
-      if (clickedColumn) {
-        if (split.classList.contains("is-column-open")) reset();
-        else openColumn();
-      }
-  
-      if (clickedCloset) {
-        if (split.classList.contains("is-closet-open")) reset();
-        else openCloset();
-      }
-    });
-});*//*
-document.addEventListener("DOMContentLoaded", () => {
-    const split = document.querySelector(".wardrobe-split");
-    if (!split) return;
-  
-    const columnSide = split.querySelector(".wardrobe-side--column");
-    const closetSide = split.querySelector(".wardrobe-side--closet");
-  
-    function reset() {
-      split.classList.remove("is-column-open", "is-closet-open");
-      split.classList.add("is-reset");
-    }
-  
-    function openColumn() {
-      split.classList.add("is-column-open");
-      split.classList.remove("is-closet-open", "is-reset");
-    }
-  
-    function openCloset() {
-      split.classList.add("is-closet-open");
-      split.classList.remove("is-column-open", "is-reset");
-    }
-  
-    // default
-    reset();
-  
-    // IMPORTANT: Use pointer events (works on mobile + desktop)
-    split.addEventListener("pointerdown", (e) => {
-      // ignore clicks on links/buttons inside
-      if (e.target.closest("a, button")) return;
-  
-      const tappedColumn = e.target.closest(".wardrobe-side--column");
-      const tappedCloset = e.target.closest(".wardrobe-side--closet");
-  
-      if (tappedColumn) {
-        if (split.classList.contains("is-column-open")) reset();
-        else openColumn();
-        return;
-      }
-  
-      if (tappedCloset) {
-        if (split.classList.contains("is-closet-open")) reset();
-        else openCloset();
-        return;
-      }
-    });
-});
-*/
+/* WARDROBE SPLIT SECTION */
 document.addEventListener("DOMContentLoaded", () => {
     const split = document.querySelector(".wardrobe-split");
     if (!split) return;
@@ -227,5 +88,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
       
 });
+
+/* MOBILE COIN SLIDE */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const coins = document.querySelectorAll('.hexon-flip-card');
+    const panel = document.getElementById('coinInfoPanel');
+    const title = document.getElementById('coinInfoTitle');
+    const text = document.getElementById('coinInfoText');
+
+    function closePanel(){
+        panel.classList.remove('active');
+        coins.forEach(c => {
+            c.classList.remove('active','dimmed');
+        });
+    }
+
+    coins.forEach(coin => {
+        coin.addEventListener('click', e => {
+            e.stopPropagation();
+
+            const isAlreadyActive = coin.classList.contains('active');
+
+            closePanel();
+
+            if (!isAlreadyActive){
+                coin.classList.add('active');
+                coins.forEach(c => {
+                    if (c !== coin) c.classList.add('dimmed');
+                });
+
+                title.textContent = coin.dataset.title;
+                text.textContent = coin.dataset.text;
+
+                panel.classList.add('active');
+            }
+        });
+    });
+
+    document.addEventListener('click', closePanel);
+});
+
 
   
