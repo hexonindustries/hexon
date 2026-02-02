@@ -1165,14 +1165,14 @@
     /*Remove tilt transforms completely */
     .hexon-flip-inner {
         transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
-    }/*
+    }
     .hexon-flip-back h3 {
         font-size: 15px;
     }
 
     .hexon-flip-back p {
         font-size: 12px;
-    }*/
+    }
 }
 .hexon-flip-front,
 .hexon-flip-back,
