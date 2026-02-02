@@ -1177,6 +1177,26 @@
         font-size: 12px;
     }
 }
+@media (max-width: 900px) {
+
+    /* Disable ALL hover effects */
+    .hexon-flip-card:hover .hexon-flip-inner,
+    .hexon-flip-card:hover .hexon-flip-front img {
+        transform: none !important;
+    }
+
+    /* Stop any transform coming from flip system */
+    .hexon-flip-inner {
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* Prevent accidental tap highlighting */
+    .hexon-flip-card {
+        -webkit-tap-highlight-color: transparent;
+        perspective: none;
+    }
+}
 .hexon-flip-front,
 .hexon-flip-back,
 .hexon-flip-front img,
