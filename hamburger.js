@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 });
 
-/* MOBILE COIN SLIDE */
+/* MOBILE COIN SLIDE 
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -129,6 +129,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', closePanel);
 });
+*/
+document.addEventListener('DOMContentLoaded', () => {
 
+    const cards = document.querySelectorAll('.hexon-flip-card');
+    const panel = document.getElementById('coinInfoPanel');
+    const title = document.getElementById('coinInfoTitle');
+    const text = document.getElementById('coinInfoText');
+
+    cards.forEach(card => {
+        card.addEventListener('click', e => {
+            e.stopPropagation();
+
+            const isOpen = card.classList.contains('active');
+
+            // Reset all
+            document.body.classList.remove('panel-open');
+            cards.forEach(c => {
+                c.classList.remove('active');
+                c.classList.remove('dimmed');
+            });
+            panel.classList.remove('active');
+
+            if (!isOpen) {
+                title.textContent = card.dataset.title;
+                text.textContent = card.dataset.text;
+
+                document.body.classList.add('panel-open');
+                card.classList.add('active');
+                panel.classList.add('active');
+
+                cards.forEach(c => {
+                    if (c !== card) c.classList.add('dimmed');
+                });
+            }
+        });
+    });
+
+    // Tap outside closes
+    document.addEventListener('click', () => {
+        document.body.classList.remove('panel-open');
+        panel.classList.remove('active');
+        cards.forEach(c => {
+            c.classList.remove('active');
+            c.classList.remove('dimmed');
+        });
+    });
+
+});
 
   

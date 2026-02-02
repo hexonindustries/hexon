@@ -1119,11 +1119,11 @@
         position: relative;
     }
 
-    .hexon-flip-card.active{
+    .panel-open .hexon-flip-card.active{
         transform: translateX(-40%);
     }
 
-    .hexon-flip-card.dimmed{
+    .panel-open .hexon-flip-card.dimmed{
         opacity: 0.25;
         transform: scale(0.85);
     }/*
