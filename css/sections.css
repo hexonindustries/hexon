@@ -1126,10 +1126,10 @@
     .hexon-flip-card.dimmed{
         opacity: 0.25;
         transform: scale(0.85);
-    }
+    }/*
     .hexon-flip-back{
         transform: none;
-    }
+    }*/
 }
 
 /* DESKTOP HOVER */
@@ -1162,10 +1162,10 @@
         transform: rotateY(180deg);
     }*/
 
-    /* Remove tilt transforms completely 
+    Remove tilt transforms completely 
     .hexon-flip-inner {
         transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
-    }
+    }/*
     .hexon-flip-back h3 {
         font-size: 15px;
     }
