@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 */
+/*
 document.addEventListener('DOMContentLoaded', () => {
 
     const cards = document.querySelectorAll('.hexon-flip-card');
@@ -187,4 +188,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-  
+*/
+document.addEventListener('DOMContentLoaded', () => {
+
+    const cards = document.querySelectorAll('.hexon-flip-card');
+    const panel = document.getElementById('coinInfoPanel');
+    const title = document.getElementById('coinInfoTitle');
+    const text = document.getElementById('coinInfoText');
+
+    cards.forEach(card => {
+        card.addEventListener('pointerup', function(e) {
+            e.stopPropagation();
+
+            const isActive = this.classList.contains('active');
+
+            // reset
+            document.body.classList.remove('panel-open');
+            panel.classList.remove('active');
+            cards.forEach(c => {
+                c.classList.remove('active');
+                c.classList.remove('dimmed');
+            });
+
+            if (!isActive) {
+                title.textContent = this.dataset.title;
+                text.textContent = this.dataset.text;
+
+                document.body.classList.add('panel-open');
+                this.classList.add('active');
+                panel.classList.add('active');
+
+                cards.forEach(c => {
+                    if (c !== this) c.classList.add('dimmed');
+                });
+            }
+        });
+    });
+
+    // outside tap closes
+    document.addEventListener('pointerup', (e) => {
+        if (
+            e.target.closest('.hexon-flip-card') ||
+            e.target.closest('.coin-info-panel')
+        ) return;
+
+        document.body.classList.remove('panel-open');
+        panel.classList.remove('active');
+        cards.forEach(c => {
+            c.classList.remove('active');
+            c.classList.remove('dimmed');
+        });
+    });
+
+});
