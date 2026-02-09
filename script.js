@@ -350,7 +350,8 @@ const allshades = [
     "charcoal",
     "cappuccino",
     "pearl-white",
-    "olive-green"
+    "olive-green",
+    "deep-blue"
 ];
 allshades.forEach(shade =>{
     const img = new Image();
