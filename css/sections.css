@@ -1206,10 +1206,10 @@
 .hexon-flip-card{
     pointer-events: auto;
 }
-
+/*
 @media (max-width: 900px) {
 
-    /* Disable hover & active states completely */
+    /* Disable hover & active states completely 
     .hexon-flip-card,
     .hexon-flip-card * {
         -webkit-tap-highlight-color: transparent;
@@ -1226,8 +1226,9 @@
         transform: none !important;
     }
 
-    /* CRITICAL: stop Safari hover emulation */
+     CRITICAL: stop Safari hover emulation 
     .hexon-flip-card {
         touch-action: manipulation;
     }
 }
+*/
