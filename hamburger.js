@@ -197,7 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = document.getElementById('coinInfoText');
 
     cards.forEach(card => {
-        card.addEventListener('pointerup', function(e) {
+        card.addEventListener('pointerdown', function(e) {
+            e.preventDefault();
             e.stopPropagation();
 
             const isActive = this.classList.contains('active');
