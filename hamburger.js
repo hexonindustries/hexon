@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = document.getElementById('coinInfoText');
 
     cards.forEach(card => {
-        card.addEventListener('touchstart', function(e) {
+        card.addEventListener('pointerdown', function(e) {
             e.preventDefault();
             e.stopPropagation();
 
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (c !== this) c.classList.add('dimmed');
                 });
             }
-        }, {passive: false});
+        });
     });
 
     // outside tap closes
@@ -239,5 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
             c.classList.remove('active');
             c.classList.remove('dimmed');
         });
-    }, {passive: true});
+    });
+
 });
