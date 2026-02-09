@@ -531,10 +531,10 @@ if (!isMobile) {
 
 /*CABINET WHY CARDS*/ 
 document.addEventListener('DOMContentLoaded', () => {
-    const isTouch = window.matchMedia("(max-width: 900px)").matches;
+    const isDesktop = window.matchMedia("(hover: hover)").matches;
 
     /* ================= DESKTOP TILT ================= */
-    if (!isTouch) {
+    if (isDesktop) {
         document.querySelectorAll('.hexon-flip-card').forEach(card => {
             const inner = card.querySelector('.hexon-flip-inner');
 
@@ -554,6 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    if(!isDesktop) return;
 
     /* ================= MOBILE TAP FLIP ================= 
     if (isTouch) {
