@@ -370,6 +370,11 @@ allshades.forEach(shade =>{
     img2.src = `/assets/wardrobe/wardrobe-${shade}.webp`;
 
 });
+allshades.forEach(shade =>{
+    const img3 = new Image();
+    img3.src = `/assets/tv/tv-${shade}.webp`;
+
+});
 
 
 
@@ -378,6 +383,7 @@ const kitchenPreview = document.getElementById('kitchenPreview');
 const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
 const wardrobePreview = document.getElementById('wardrobePreview');
+const tvPreview = document.getElementById('tvPreview');
 /*
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -430,6 +436,16 @@ shadeCards.forEach(card => {
             setTimeout(() => {
                 wardrobePreview.src = wardrobeSrc;
                 wardrobePreview.onload = () => wardrobePreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- tv ---
+        const tvSrc = `/assets/tv/tv-${shade}.webp`;
+        if (tvPreview) {
+            tvPreview.classList.add("fade-out");
+            setTimeout(() => {
+                tvPreview.src = tvSrc;
+                tvPreview.onload = () => tvPreview.classList.remove('fade-out');
             }, 200);
         }
     });

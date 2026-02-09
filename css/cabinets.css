@@ -242,6 +242,26 @@
     opacity: 0;
     transform: scale(1.01);
 }
+.tv-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.tv-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.tv-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
 /* SHADE SELECTOR */
 .shade-selector {
     display: flex;
