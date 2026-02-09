@@ -89,47 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 });
 
-/* MOBILE COIN SLIDE 
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const coins = document.querySelectorAll('.hexon-flip-card');
-    const panel = document.getElementById('coinInfoPanel');
-    const title = document.getElementById('coinInfoTitle');
-    const text = document.getElementById('coinInfoText');
-
-    function closePanel(){
-        panel.classList.remove('active');
-        coins.forEach(c => {
-            c.classList.remove('active','dimmed');
-        });
-    }
-
-    coins.forEach(coin => {
-        coin.addEventListener('click', e => {
-            e.stopPropagation();
-
-            const isAlreadyActive = coin.classList.contains('active');
-
-            closePanel();
-
-            if (!isAlreadyActive){
-                coin.classList.add('active');
-                coins.forEach(c => {
-                    if (c !== coin) c.classList.add('dimmed');
-                });
-
-                title.textContent = coin.dataset.title;
-                text.textContent = coin.dataset.text;
-
-                panel.classList.add('active');
-            }
-        });
-    });
-
-    document.addEventListener('click', closePanel);
-});
-*/
+/*
 document.addEventListener('DOMContentLoaded', () => {
 
     const cards = document.querySelectorAll('.hexon-flip-card');
@@ -177,5 +137,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+*/
+document.addEventListener('DOMContentLoaded', () => {
 
+    const cards = document.querySelectorAll('.hexon-flip-card');
+    const panel = document.getElementById('coinInfoPanel');
+    const title = document.getElementById('coinInfoTitle');
+    const text = document.getElementById('coinInfoText');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const isActive = this.classList.contains('active');
+
+            // Reset everything first
+            document.body.classList.remove('panel-open');
+            cards.forEach(c => {
+                c.classList.remove('active');
+                c.classList.remove('dimmed');
+            });
+            panel.classList.remove('active');
+
+            // If it wasn't already open, open it
+            if (!isActive) {
+                title.textContent = this.dataset.title;
+                text.textContent = this.dataset.text;
+
+                document.body.classList.add('panel-open');
+                this.classList.add('active');
+                panel.classList.add('active');
+
+                cards.forEach(c => {
+                    if (c !== this) c.classList.add('dimmed');
+                });
+            }
+        });
+    });
+
+    // Tap outside closes panel
+    document.addEventListener('click', () => {
+        document.body.classList.remove('panel-open');
+        panel.classList.remove('active');
+        cards.forEach(c => {
+            c.classList.remove('active');
+            c.classList.remove('dimmed');
+        });
+    });
+
+});
   
