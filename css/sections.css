@@ -1206,32 +1206,7 @@
 .hexon-flip-card{
     pointer-events: auto;
 }
-/*
-@media (max-width: 900px) {
 
-    /* Disable hover & active states completely 
-    .hexon-flip-card,
-    .hexon-flip-card * {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-    }
-
-    .hexon-flip-card:hover,
-    .hexon-flip-card:active {
-        transform: none !important;
-    }
-
-    .hexon-flip-card:hover .hexon-flip-front img,
-    .hexon-flip-card:active .hexon-flip-front img {
-        transform: none !important;
-    }
-
-     CRITICAL: stop Safari hover emulation 
-    .hexon-flip-card {
-        touch-action: manipulation;
-    }
-}
-*/
 
 @media (max-width: 900px){
     .hexon-flip-inner{
