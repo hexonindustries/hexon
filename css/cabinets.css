@@ -8,6 +8,9 @@
 .category-hero--wardrobe{
     background-image: url("/assets/hero/wardrobe-hero.webp");
 }
+.category-hero--tv{
+    background-image: url("/assets/hero/tv-hero.webp");
+}
 .kitchen {
     background-image: url("/assets/cabinet/kitchen-card.webp");
 }
