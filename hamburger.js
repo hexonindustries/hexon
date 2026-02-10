@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // outside tap closes
-    document.addEventListener('pointerup', (e) => {
+    document.addEventListener('pointerdown', (e) => {
         if (
             e.target.closest('.hexon-flip-card') ||
             e.target.closest('.coin-info-panel')
