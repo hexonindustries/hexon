@@ -1162,10 +1162,10 @@
         transform: rotateY(180deg);
     }*/
 
-    /*Remove tilt transforms completely 
+    /*Remove tilt transforms completely */
     .hexon-flip-inner {
         transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
-    }*/
+    }
     .hexon-flip-back{
         display: none;
     }
@@ -1185,11 +1185,11 @@
         transform: none !important;
     }
 
-    /* Stop any transform coming from flip system */
+    /* Stop any transform coming from flip system 
     .hexon-flip-inner {
         transform: none !important;
         transition: none !important;
-    }
+    }*/
 
     /* Prevent accidental tap highlighting */
     .hexon-flip-card {
