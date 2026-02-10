@@ -1112,13 +1112,13 @@
 }
 
 @media (max-width: 900px){
-
+/*
     .hexon-flip-card{
         transition: transform 0.45s ease, opacity 0.45s ease;
         z-index: 5;
         position: relative;
     }
-
+*/
     .panel-open .hexon-flip-card.active{
         transform: translateX(-40%);
     }
