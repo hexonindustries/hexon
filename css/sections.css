@@ -1162,10 +1162,10 @@
         transform: rotateY(180deg);
     }*/
 
-    /*Remove tilt transforms completely */
+    /*Remove tilt transforms completely 
     .hexon-flip-inner {
         transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
-    }
+    }*/
     .hexon-flip-back{
         display: none;
     }
@@ -1232,3 +1232,10 @@
     }
 }
 */
+
+@media (max-width: 900px){
+    .hexon-flip-inner{
+        transform: none !important;
+        transition: none !important;
+    }
+}
