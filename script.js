@@ -375,7 +375,11 @@ allshades.forEach(shade =>{
     img3.src = `/assets/tv/tv-${shade}.webp`;
 
 });
+allshades.forEach(shade =>{
+    const img4 = new Image();
+    img4.src = `/assets/bathroom/bathroom-${shade}.webp`;
 
+});
 
 
 
@@ -384,6 +388,7 @@ const shadeCards = document.querySelectorAll('.shade-card1');
 const shadeList = document.getElementById('shadeList');
 const wardrobePreview = document.getElementById('wardrobePreview');
 const tvPreview = document.getElementById('tvPreview');
+const bathroomPreview = document.getElementById('bathroomPreview');
 /*
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -448,6 +453,16 @@ shadeCards.forEach(card => {
                 tvPreview.onload = () => tvPreview.classList.remove('fade-out');
             }, 200);
         }
+
+        // --- bathroom ---
+        const bathroomSrc = `/assets/bathroom/bathroom-${shade}.webp`;
+        if (bathroomPreview) {
+            bathroomPreview.classList.add("fade-out");
+            setTimeout(() => {
+                bathroomPreview.src = bathroomSrc;
+                bathroomPreview.onload = () => bathroomPreview.classList.remove('fade-out');
+            }, 200);
+        }
     });
 });
 
@@ -463,31 +478,6 @@ document.querySelector('.shade-arrow1.down').onclick = () => {
 
 
 
-/*
-
-shadeCards.forEach(card => {
-    card.addEventListener('click', () => {
-        if (card.classList.contains('active')) return;
-
-        shadeCards.forEach(c => c.classList.remove('active'));
-        card.classList.add('active');
-        centerActiveShade(card);
-
-        const shade = card.dataset.shade;
-        const newWardrobeSrc = `/assets/wardrobe/wardrobe-${shade}.webp`;
-        wardrobePreview.classList.add("fade-out");
-    
-        setTimeout(() => {
-            wardrobePreview.src = newWardrobeSrc;
-            wardrobePreview.onload = () =>{
-                wardrobePreview.classList.remove('fade-out');
-            }
-            
-        }, 200);
-
-    });
-});
-*/
 
 
 function centerActiveShade(card) {
