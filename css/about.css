@@ -53,7 +53,7 @@
 
 .about-hero{
     position: relative;
-    height: 90vh;
+    height: 70vh;
     background: #f5f5f5;
     display: flex;
     align-items: flex-end;
@@ -77,7 +77,7 @@
 
 .robot-img{
     width: 420px;
-    max-width: 70vw;
+    max-width: 170vw;
     pointer-events: none;
 
     /* DARK FACE EFFECT */
@@ -176,7 +176,7 @@
 }
 
 .robot-img{
-    max-width: 70vw;
+    max-width: 170vw;
 }
 .robot-base{
     width: 520px;
