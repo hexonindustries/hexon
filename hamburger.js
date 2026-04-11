@@ -242,3 +242,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+
+// about us robot
+const robot = document.getElementById("robotHead");
+
+document.addEventListener("mousemove", (e) => {
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
+
+    const rotateY = x * 30; // left-right
+    const rotateX = -y * 20; // up-down
+
+    robot.style.transform = `
+        translateX(-50%)
+        rotateY(${rotateY}deg)
+        rotateX(${rotateX}deg)
+    `;
+});
