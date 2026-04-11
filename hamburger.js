@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // about us robot
+/*
 const robot = document.getElementById("robotHead");
 
 document.addEventListener("mousemove", (e) => {
@@ -259,5 +260,27 @@ document.addEventListener("mousemove", (e) => {
         translateX(-50%)
         rotateY(${rotateY}deg)
         rotateX(${rotateX}deg)
+    `;
+});
+*/
+const robot = document.querySelector('.robot-base');
+
+document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+    const rotateY = x * 20;   // stronger movement
+    const rotateX = -y * 12;
+
+    const translateX = x * 20; // side drift
+    const translateY = y * 10;
+
+    robot.style.transform = `
+        translate(-50%, 0)
+        rotateY(${rotateY}deg)
+        rotateX(${rotateX}deg)
+        translateX(${translateX}px)
+        translateY(${translateY}px)
+        scale(1.05)
     `;
 });

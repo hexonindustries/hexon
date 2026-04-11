@@ -64,10 +64,15 @@
 /* ROBOT */
 .robot-wrap{
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    perspective: 1000px;
+}
+.robot-base{
+    width: 420px;
+    transition: transform 0.2s ease-out;
+    will-change: transform;
 }
 
 .robot-img{
@@ -168,4 +173,12 @@
     .hero-text h1{
         font-size: 36px;
     }
+}
+
+.robot-img{
+    max-width: 70vw;
+}
+.robot-base{
+    width: 520px;
+    max-width: none;
 }
