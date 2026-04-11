@@ -380,6 +380,11 @@ allshades.forEach(shade =>{
     img4.src = `/assets/bathroom/bathroom-${shade}.webp`;
 
 });
+allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/crockery/crockery-${shade}.webp`;
+
+});
 
 
 
@@ -389,6 +394,8 @@ const shadeList = document.getElementById('shadeList');
 const wardrobePreview = document.getElementById('wardrobePreview');
 const tvPreview = document.getElementById('tvPreview');
 const bathroomPreview = document.getElementById('bathroomPreview');
+const crockeryPreview = document.getElementById('crockeryPreview');
+
 /*
 shadeCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -461,6 +468,16 @@ shadeCards.forEach(card => {
             setTimeout(() => {
                 bathroomPreview.src = bathroomSrc;
                 bathroomPreview.onload = () => bathroomPreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- crockery ---
+        const crockerySrc = `/assets/crockery/crockery-${shade}.webp`;
+        if (crockeryPreview) {
+            crockeryPreview.classList.add("fade-out");
+            setTimeout(() => {
+                crockeryPreview.src = crockerySrc;
+                crockeryPreview.onload = () => crockeryPreview.classList.remove('fade-out');
             }, 200);
         }
     });
