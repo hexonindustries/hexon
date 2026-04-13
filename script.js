@@ -386,24 +386,24 @@ allshades.forEach(shade =>{
 
 });
 allshades.forEach(shade =>{
-    const img5 = new Image();
-    img5.src = `/assets/office/office-${shade}.webp`;
+    const img6 = new Image();
+    img6.src = `/assets/office/office-${shade}.webp`;
 
 });allshades.forEach(shade =>{
-    const img5 = new Image();
-    img5.src = `/assets/living/living-${shade}.webp`;
+    const img7 = new Image();
+    img7.src = `/assets/living/living-${shade}.webp`;
 
 });allshades.forEach(shade =>{
-    const img5 = new Image();
-    img5.src = `/assets/bookcase/bookcase-${shade}.webp`;
+    const img8 = new Image();
+    img8.src = `/assets/bookcase/bookcase-${shade}.webp`;
 
 });allshades.forEach(shade =>{
-    const img5 = new Image();
-    img5.src = `/assets/washing/washing-${shade}.webp`;
+    const img9 = new Image();
+    img9.src = `/assets/washing/washing-${shade}.webp`;
 
 });allshades.forEach(shade =>{
-    const img5 = new Image();
-    img5.src = `/assets/storage/storage-${shade}.webp`;
+    const img10 = new Image();
+    img10.src = `/assets/storage/storage-${shade}.webp`;
 
 });
 
