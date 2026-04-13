@@ -387,23 +387,23 @@ allshades.forEach(shade =>{
 });
 allshades.forEach(shade =>{
     const img5 = new Image();
-    img5.src = `/assets/office/crockery-${shade}.webp`;
+    img5.src = `/assets/office/office-${shade}.webp`;
 
 });allshades.forEach(shade =>{
     const img5 = new Image();
-    img5.src = `/assets/living/crockery-${shade}.webp`;
+    img5.src = `/assets/living/living-${shade}.webp`;
 
 });allshades.forEach(shade =>{
     const img5 = new Image();
-    img5.src = `/assets/bookcase/crockery-${shade}.webp`;
+    img5.src = `/assets/bookcase/bookcase-${shade}.webp`;
 
 });allshades.forEach(shade =>{
     const img5 = new Image();
-    img5.src = `/assets/washing/crockery-${shade}.webp`;
+    img5.src = `/assets/washing/washing-${shade}.webp`;
 
 });allshades.forEach(shade =>{
     const img5 = new Image();
-    img5.src = `/assets/storage/crockery-${shade}.webp`;
+    img5.src = `/assets/storage/storage-${shade}.webp`;
 
 });
 
