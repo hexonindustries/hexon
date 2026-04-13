@@ -225,6 +225,7 @@
     opacity: 0;
     transform: scale(1.01);
 }
+/* WARDROBE PREVIEW */
 .wardrobe-preview {
     position: relative;
     border-radius: 16px;
@@ -245,6 +246,7 @@
     opacity: 0;
     transform: scale(1.01);
 }
+/* TV PREVIEW */
 .tv-preview {
     position: relative;
     border-radius: 16px;
@@ -265,7 +267,7 @@
     opacity: 0;
     transform: scale(1.01);
 }
-
+/* BATHROOM PREVIEW */
 .bathroom-preview {
     position: relative;
     border-radius: 16px;
@@ -286,7 +288,7 @@
     opacity: 0;
     transform: scale(1.01);
 }
-
+/* CROCKERY PREVIEW */
 .crockery-preview {
     position: relative;
     border-radius: 16px;
@@ -304,6 +306,111 @@
     will-change: opacity, transform;
 }
 .crockery-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
+/* OFFICE PREVIEW */
+.office-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.office-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.office-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
+/* LIVING PREVIEW */
+.living-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.living-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.living-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
+/* BOOKCASE PREVIEW */
+.bookcase-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.bookcase-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.bookcase-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
+/* WASHING PREVIEW */
+.washing-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.washing-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.washing-preview img.fade-out {
+    opacity: 0;
+    transform: scale(1.01);
+}
+/* STORAGE PREVIEW */
+.storage-preview {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 60px rgba(0,0,0,0.12);
+}
+.storage-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*transition: opacity 0.4s ease*/
+    transition: opacity 0.4s ease, transform 0.4s;
+    will-change: opacity, transform;
+}
+.storage-preview img.fade-out {
     opacity: 0;
     transform: scale(1.01);
 }
