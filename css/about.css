@@ -70,14 +70,15 @@
     perspective: 1000px;
 }
 .robot-base{
-    width: 420px;
+    width: 520px;
+    max-width: none;
     transition: transform 0.2s ease-out;
     will-change: transform;
 }
 
 .robot-img{
     width: 420px;
-    max-width: 170vw;
+    max-width: none;
     pointer-events: none;
 
     /* DARK FACE EFFECT */
