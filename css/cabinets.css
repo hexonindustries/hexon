@@ -592,6 +592,18 @@
         max-width: 100%;
         object-fit: contain;
     }
+
+    .office-preview {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .office-preview img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
 }
 .shade-list::-webkit-scrollbar {
     display: none;
