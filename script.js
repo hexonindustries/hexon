@@ -385,7 +385,27 @@ allshades.forEach(shade =>{
     img5.src = `/assets/crockery/crockery-${shade}.webp`;
 
 });
+allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/office/crockery-${shade}.webp`;
 
+});allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/living/crockery-${shade}.webp`;
+
+});allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/bookcase/crockery-${shade}.webp`;
+
+});allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/washing/crockery-${shade}.webp`;
+
+});allshades.forEach(shade =>{
+    const img5 = new Image();
+    img5.src = `/assets/storage/crockery-${shade}.webp`;
+
+});
 
 
 const kitchenPreview = document.getElementById('kitchenPreview');
@@ -395,6 +415,11 @@ const wardrobePreview = document.getElementById('wardrobePreview');
 const tvPreview = document.getElementById('tvPreview');
 const bathroomPreview = document.getElementById('bathroomPreview');
 const crockeryPreview = document.getElementById('crockeryPreview');
+const officePreview = document.getElementById('officePreview');
+const livingPreview = document.getElementById('livingPreview');
+const bookcasePreview = document.getElementById('bookcasePreview');
+const washingPreview = document.getElementById('washingPreview');
+const storagePreview = document.getElementById('storagePreview');
 
 /*
 shadeCards.forEach(card => {
@@ -471,13 +496,63 @@ shadeCards.forEach(card => {
             }, 200);
         }
 
-        // --- crockery ---
+        // --- CROCKERY ---
         const crockerySrc = `/assets/crockery/crockery-${shade}.webp`;
         if (crockeryPreview) {
             crockeryPreview.classList.add("fade-out");
             setTimeout(() => {
                 crockeryPreview.src = crockerySrc;
                 crockeryPreview.onload = () => crockeryPreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- OFFICE ---
+        const officeSrc = `/assets/office/office-${shade}.webp`;
+        if (officePreview) {
+            officePreview.classList.add("fade-out");
+            setTimeout(() => {
+                officePreview.src = officeSrc;
+                officePreview.onload = () => officePreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- LIVING ---
+        const livingSrc = `/assets/living/crockery-${shade}.webp`;
+        if (livingPreview) {
+            livingPreview.classList.add("fade-out");
+            setTimeout(() => {
+                livingPreview.src = livingSrc;
+                livingPreview.onload = () => livingPreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- BOOKCASE ---
+        const bookcaseSrc = `/assets/crockery/crockery-${shade}.webp`;
+        if (bookcasePreview) {
+            bookcasePreview.classList.add("fade-out");
+            setTimeout(() => {
+                bookcasePreview.src = bookcaseSrc;
+                bookcasePreview.onload = () => bookcasePreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- WASHING ---
+        const washingSrc = `/assets/crockery/crockery-${shade}.webp`;
+        if (washingPreview) {
+            washingPreview.classList.add("fade-out");
+            setTimeout(() => {
+                washingPreview.src = washingSrc;
+                washingPreview.onload = () => washingPreview.classList.remove('fade-out');
+            }, 200);
+        }
+
+        // --- STORAGE ---
+        const storageSrc = `/assets/crockery/crockery-${shade}.webp`;
+        if (storagePreview) {
+            storagePreview.classList.add("fade-out");
+            setTimeout(() => {
+                storagePreview.src = storageSrc;
+                storagePreview.onload = () => storagePreview.classList.remove('fade-out');
             }, 200);
         }
     });
